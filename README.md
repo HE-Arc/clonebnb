@@ -1,2 +1,0 @@
-# clonebnb
-Clone airbnb
