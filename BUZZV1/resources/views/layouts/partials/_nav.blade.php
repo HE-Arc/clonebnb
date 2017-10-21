@@ -18,12 +18,12 @@
         </div>
       </li>
       <li class="nav-item {{ set_active_route('login_path') }}">
-        <a class="nav-link" href="#">Se connecter</a>
+        <a class="nav-link" href="{{ route('login_path') }}">Se connecter</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item {{ set_active_route('signup_path') }}">
         <a class="nav-link" href="{{ route('signup_path') }}">S'inscrire</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item {{ set_active_route('contact_path') }}">
         <a class="nav-link {{ set_active_route('contact_path') }}" href="{{ route('contact_path') }}">Contact</a>
       </li>
       <li class="nav-item">

@@ -38,8 +38,19 @@ Route::post('/contact', [
 	'uses'=> 'ContactsController@store'
 ]);
 
-//Page d'inscription
+//Routes d'accès au site
+Route::get('/login', [
+	'as'=>'login_path',
+	'uses'=>'UsersController@login'
+]);
+
 Route::get('/signup', [
 	'as'=>'signup_path',
-	'uses'=>'UserSignupController@create'
+	'uses'=>'UsersController@signup'
 ]);
+
+Route::get('/reset', [
+	'as'=>'reset_path',
+	'uses'=>'UsersController@reset'
+]);
+
