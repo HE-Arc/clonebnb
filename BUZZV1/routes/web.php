@@ -44,13 +44,52 @@ Route::get('/login', [
 	'uses'=>'UsersController@login'
 ]);
 
+//===Inscription, Login, Logout ===
+
+Route::get('/login', [
+	'as'=>'login_path',
+	'uses'=>'UsersLoginController@showLoginForm'
+]);
+
+Route::post('/login', [
+	'as'=>'login_path',
+	'uses'=>'UsersLoginController@login'
+]);
+
 Route::get('/signup', [
 	'as'=>'signup_path',
-	'uses'=>'UsersController@signup'
+	'uses'=>'UsersRegisterController@showRegistrationForm'
 ]);
+
+Route::post('/signup', [
+	'as'=>'signup_path',
+	'uses'=>'UsersRegisterController@register'
+]);
+
+Route::post('/logout', [
+	'as'=>'logout_path',
+	'uses'=>'UsersLogoutController@logout'
+]);
+
+//===Fin Inscription, Login, Logout===
 
 Route::get('/reset', [
 	'as'=>'reset_path',
 	'uses'=>'UsersController@reset'
 ]);
 
+//===Connexion via réseaux sociaux===
+Route::get('auth/facebook', [
+	'as' =>'facebook_path',
+	'uses'=>'FacebookController@redirectToProvider'
+]);
+
+Route::get('auth/facebook/callback', [
+	'as' =>'facebook_callback_path',
+	'uses'=>'FacebookController@handleProviderCallback'
+]);
+
+//===Connexion via réseaux sociaux===
+//Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

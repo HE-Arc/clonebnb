@@ -27,6 +27,7 @@ class CreateUsersTable extends Migration
             $table->boolean('is_confirmed')->default(false);
             $table->string('language')->nullable();
             $table->boolean('is_activated')->default(false);
+            $table->string('facebook_id')->unique()->nullable();
             $table->boolean('cgu')->default(false);
             $table->string('remember_token', 100)->nullable();
             $table->nullableTimestamps();

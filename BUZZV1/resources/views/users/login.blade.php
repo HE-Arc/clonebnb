@@ -7,7 +7,8 @@
 @section('content')
 	<div class="container">
 		<div class="login-form">
-			<form class="modal-content animate" action="/action_page.php">
+			<form class="modal-content animate" action="{{ route('login_path') }}" method="POST">
+        {{ csrf_field() }}
     			<div class="imgcontainer">
             <a href="{{ route('root_path') }}"><img src="{{ asset('images/logo-form.png') }}"></a>
     			</div>
@@ -18,11 +19,11 @@
     			<span style="text-align: center">Ou</span>
     			<div class="container">
     				<div class="icon-in-input">
-    					<input type="text" placeholder="Adresse email" name="uname" required>
+    					<input type="text" value="{{ old('email') }}" placeholder="Adresse email" name="email" required>
       					<i class="fa fa-at fa-lg fa-fw" aria-hidden="true"></i>
     				</div>
     				<div class="icon-in-input">
-      					<input type="password" placeholder="Mot de passe" name="psw" required>
+      					<input type="password" placeholder="Mot de passe" name="password" required>
       					<i class="fa fa-lock fa-lg fa-fw" aria-hidden="true"></i>
     				</div>
       				<button class="btn btn-lg" type="submit" style="background: #FF5A5F !important;">Connexion</button>

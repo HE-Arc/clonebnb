@@ -11,7 +11,7 @@
 				<h2>Contactez nous</h2>
 				<p class="text-muted">Pour toutes questions relatives à nos services</p>
 
-				<form action="{{ route('contact_path') }}" method="POST" novalidate>
+				<form action="{{ route('contact_path') }}" method="POST">
 					{{ csrf_field() }}
 					<div class="form-group {{ $errors->has('name') ? 'has-error' : ''}}">
 						<input for="name" type="text" class="form-control" name="name" placeholder="Nom" required="{{ old('name') }}">

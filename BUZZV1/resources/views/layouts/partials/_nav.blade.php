@@ -17,12 +17,25 @@
           <a class="dropdown-item" href="#">Souhait</a>
         </div>
       </li>
-      <li class="nav-item {{ set_active_route('login_path') }}">
-        <a class="nav-link" href="{{ route('login_path') }}">Se connecter</a>
-      </li>
-      <li class="nav-item {{ set_active_route('signup_path') }}">
-        <a class="nav-link" href="{{ route('signup_path') }}">S'inscrire</a>
-      </li>
+
+      @if(!Auth::check())
+        <li class="nav-item {{ set_active_route('login_path') }}">
+          <a class="nav-link" href="{{ route('login_path') }}">Connexion</a>
+        </li>
+        <li class="nav-item {{ set_active_route('signup_path') }}">
+          <a class="nav-link" href="{{ route('signup_path') }}">Inscription</a>
+        </li>
+      @else 
+        <li class="nav-item {{ set_active_route('logout_path') }}">
+          <a class="nav-link" href="{{ route('logout_path') }}" onclick="event.preventDefault();
+            document.getElementById('logout-form').submit();">Déconnexion</a>
+        </li>
+
+        <form id="logout-form" action="{{ route('logout_path') }}" method="POST" style="display: none;">
+          {{ csrf_field() }}
+        </form>
+      @endif
+
       <li class="nav-item {{ set_active_route('contact_path') }}">
         <a class="nav-link {{ set_active_route('contact_path') }}" href="{{ route('contact_path') }}">Contact</a>
       </li>
