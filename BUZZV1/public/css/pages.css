@@ -1,59 +1,12 @@
-@extends('layouts.master')
-
-@section('title')
-	Page d'accueil
-@stop
-
-{{--Setion qui sera affiché dans le body du layout master--}}
-@section('content')
-	<div class="row">
-  		<div class="col-md-7 banner">
-    		<h1><strong class="text-red">Buzz!</strong></h1>
-    		<h1><span>L'art de consommer utile!</span></h1>
-  		</div>
-	</div>
-	<form>
-  		<div class="row">
-    		<div class="col-md-6">
-    			<input type="text" name="search" class="form-control" placeholder="Que cherchez vous?" id="autolocation">
-    		</div>
-    		<div class="col-md-3">
-    			<input type="text" name="search" class="form-control datepicker" placeholder="Date de début" id="autolocation">
-    		</div>
-    		<div class="col-md-3">
-    			<input type="text" name="search" class="form-control datepicker" placeholder="Date de fin" id="autolocation">
-    		</div>
-  		</div>
-  		<br/><br/>
-
-  		<div class="row">
-    		<div class="col-md-offset-4 col-md-4">
-      			<button type="submit" class="btn btn-normal btn-block">Rechercher</button>
-    		</div>
-  		</div>
-	</form>
-
-	<br/><hr/><br/>
-	<!-- Catégories -->
-	<div><h3>Catégories</h3></div><br/>
-	<div class="row">
-  		@include('layouts.partials._accueil')
-	</div>
-
-	<br/><hr/><br/>
-	<!-- Catégories -->
-	<div><h3>Ca vient de</h3></div><br/>
-	<div class="row">
-	</div>
-@stop
-@section('stylesheet')
-  <style type="text/css">
-  	@import "bootstrap-sprockets";
+@import "bootstrap-sprockets";
 @import "bootstrap";
 @import "toastr";
 @import "fullcalendar";
-a {
-  color: #00A699;
+
+body {
+  color: #565a5c;
+  background-color: #F8F8F8;
+  font-family: "Varela Round", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
 .text-babu, .icon-babu {
@@ -539,6 +492,3 @@ a {
 .error {
   color: #E4584C;
 }
-
-  </style>
-@stop

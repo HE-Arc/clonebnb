@@ -28,4 +28,10 @@ class User extends Model implements AuthenticatableContract
         'password',
     ];
 
+    //Retourner le nom complet de l'utilisateur
+    public function getFullName()
+    {
+        return $this->first_name . ' ' . $this->last_name;
+    }
+
 }
