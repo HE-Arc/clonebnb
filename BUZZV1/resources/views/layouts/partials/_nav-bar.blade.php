@@ -11,13 +11,13 @@
           <span class="caret"></span>
         </a>
         <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">Annonce</a></li>
+          <li><a class="dropdown-item" href="{{ route('advert_path') }}">Annonce</a></li>
           <li><a class="dropdown-item" href="#">Souhait</a></li>
         </ul>
       </li>
       @if(Auth::check())
         <li>
-          <a href="">
+          <a href="#">
             <i class="fa fa-bell fa-2x icon-babu"></i>
             <span class="badge" style="background-color: #FF5A5F; position: relative; top: -15px; left: -5px;" id="navbar_num_of_unread">0</span>
           </a>    
