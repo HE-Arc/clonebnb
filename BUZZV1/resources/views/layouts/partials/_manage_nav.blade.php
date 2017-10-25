@@ -8,22 +8,28 @@
 
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
-          <!---->
-        </ul>
-        <ul class="navbar-nav navbar-right">
-          <li class="nav-item active">
-            <a class="nav-link btn btn-secondary" href="#">Buzzer maintenant<span class="sr-only">(current)</span></a>
-          </li>
-          @if(!Auth::check())
-            <li class="nav-item {{ set_active_route('login_path') }}">
-              <a class="nav-link" href="{{ route('login_path') }}"><img class="img-circle avatar-small" src="{{ asset('images/arrows.png') }}" style="width: 28px">&nbsp;Connexion
+          <li class="nav-item {{ set_active_route('profil_path') }}">
+              <a class="nav-link" href="{{ route('profil_path') }}">Profil
               </a>
             </li>
-            <li class="nav-item {{ set_active_route('signup_path') }}">
-                <a class="nav-link" href="{{ route('signup_path') }}"><img class="img-circle avatar-small" src="{{ asset('images/login.png') }}" style="width: 28px">&nbsp;Inscription
-                </a>
+            <li class="nav-item {{ set_active_route('message_path') }}">
+              <a class="nav-link" href="{{ route('message_path') }}">Messages
+              </a>
             </li>
-          @else
+            <li class="nav-item {{ set_active_route(route('login_path')) }}">
+              <a class="nav-link" href="">Mes annonces
+              </a>
+            </li>
+            <li class="nav-item {{ set_active_route(route('login_path')) }}">
+              <a class="nav-link" href="">Réservations
+              </a>
+            </li>
+
+        </ul>
+        <ul class="navbar-nav navbar-right">
+            <li class="nav-item active">
+              <a class="nav-link btn btn-secondary" href="#">Buzzer maintenant<span class="sr-only">(current)</span></a>
+            </li>
             <li style="margin-top: 8px;>
               <a href="#">&nbsp;&nbsp;
                 <i class="fa fa-bell fa-2x icon-babu" style="color: #01FFE5"></i>
@@ -31,14 +37,14 @@
               </a>    
             </li>
             <li class="dropdown" style="margin-top: 8px;">
-              <a href="#" id="dropdown" class="dropdown-toggle" data-toggle="dropdown"
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"
                 role="button" aria-haspopup="true" aria-expanded="false" style="text-decoration: none; color:yellow">&nbsp;&nbsp;
                 <img class="img-circle avatar-small" src="uploads/avatars/{{ Auth::user()->photo }}" style="width: 28px; border-radius: 50%">&nbsp;
                 {{ Auth::user()->getFullName() }}
               </a>
               <div class="dropdown-menu" aria-labelledby="dropdown01">
                 <a class="dropdown-item" href="{{ route('space_path') }}">Tableau de bord</a>
-                <a class="dropdown-item" href="">Mes annonces</a>
+                <a class="dropdown-item" href="#">Mes annonces</a>
                 <a class="dropdown-item" href="#">Ajouter une annonce</a>
                 <a class="dropdown-item" href="{{ route('profil_path') }}">Editer le profil</a>
                 <hr>
@@ -46,10 +52,6 @@
                 <form id="logout-form" action="{{ route('logout_path') }}" method="POST" style="display: none;">
                   {{ csrf_field() }}
                 </form>
-          @endif
-            <li class="nav-item {{ set_active_route('about_path') }}">
-              <a class="nav-link" href="{{ route('about_path') }}">A propos</a>
-            </li>
         </ul>
       </div>
   </div>

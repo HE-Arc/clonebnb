@@ -1,16 +1,11 @@
-@extends('layouts.master')
+@extends('layouts.management')
 
 @section('title')
   Vos conversations
 @stop
 
 @section('content')
-  <div class="conversation">
-    <div class="col-md-3 text-center">
-      <img class="img-circle avatar-small" src="{{ asset('images/user.png') }}" style="width: 60px">
-      <strong>{{ Auth::user()->getFullName() }}</strong><br><br>
-      <a href="#" class="btn btn-default profil">Voir le profil</a>
-    </div>
+<div class="" style="margin-top: 100px;">
     <div class="col-md-9">
       <div class="panel panel-default">
         <div class="panel-heading" style="background-color: #06A87C; color: #fff; font-weight: bold;">
@@ -34,7 +29,7 @@
         @include('layouts.partials._chat')
       </div>
     </div>
-  </div>
+</div>
 @stop
 
 @section('stylesheet')

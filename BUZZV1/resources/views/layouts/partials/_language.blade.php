@@ -1,4 +1,4 @@
-<option value="{{ Auth::user()->language }}">Bahasa Indonesia</option>
+<option value="id">Bahasa Indonesia</option>
 <option value="ms">Bahasa Melayu</option>
 <option value="ca">Català</option>
 <option value="da">Dansk</option>

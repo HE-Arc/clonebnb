@@ -112,6 +112,12 @@ Route::get('/dashboard', [
 	'uses'=>'DashboardController@showDashboard'
 ]);
 
+
+Route::get('/message', [
+	'as' =>'message_path',
+	'uses'=>'MessagesController@showMessage'
+]);
+
 //===Fin Tableau de bord===
 //Auth::routes();
 

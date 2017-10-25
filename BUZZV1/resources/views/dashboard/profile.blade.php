@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.management')
 
 @section('title')
 	Profil utilisateur
@@ -9,20 +9,20 @@
 <div class="container" style="margin-top: 100px;">
     <!-- Example row of columns -->
     <div class="row">
-    	<div class="col-md">
-    		<div class="col-md-3 text-center input-file-container">
-            <img class="profile_image" src="uploads/avatars/{{ Auth::user()->photo}} ">
-        </div>
-			<div class="sidenav infor_perso">
-				<ul class="sidenav-list" style="list-style-type: none; text-align: left;">
-				    <li>
-				      	<a href="{{ route('profil_path') }}" aria-selected="true" class="sidenav-item">Informations personnelles</a>
-				    </li>
-				    <li>
-				    </li>
-				</ul>
-			</div>
-      		<a href="#" class="btn btn-block" style="background: #FF5A5F !important; color:#fff; font-weight: bold">Voir le profil</a><br><br>
+    	<div class="col-md-3">
+    		<div class="text-center">
+            	<img class="profile_image" src="uploads/avatars/{{ Auth::user()->photo}} ">
+				<div class="sidenav infor_perso">
+					<ul class="sidenav-list" style="list-style-type: none;">
+					    <li>
+					      	<a href="{{ route('profil_path') }}" aria-selected="true" class="sidenav-item">Informations personnelles</a>
+					    </li>
+					    <li>
+					    </li>
+					</ul>
+				</div>
+    		</div>
+    		
     	</div>
 
         <div class="col-md-9">
@@ -64,21 +64,15 @@
 
 		      			<div class="row row-condensed space-4">
 		        			<label class="text-right col-sm-3" for="sex">
-		          			Sexe <i class="fa fa-lock" data-behavior="tooltip" title="Privé"></i>
+		          			Sexe <i class="fa fa-lock" data-behavior="tooltip" title="Privé" style="color: red"></i>
 		        			</label>
 		        			<div class="col-sm-9">
 		          
 		      					<div class="select">
 		        					<select id="sex" name="sex">
-		        						@if(!Auth::user()->sex)
-		        							<option value="" selected="selected">Sexe</option>
-											<option value="Male">Homme</option>
-											<option value="Female">Femme</option>
-										@else
-											<option value="" selected="selected">{{ Auth::user()->sex }}</option>
-											<option value="Male">Homme</option>
-											<option value="Female">Femme</option>
-										@endif
+		        						<option value="" selected="selected">Sexe</option>
+										<option value="Homme">Homme</option>
+										<option value="Femme">Femme</option>
 									</select>
 		      					</div>
 		      				</div>
@@ -86,7 +80,7 @@
       			
 			      		<div class="row row-condensed space-4">
 			        		<label class="text-right col-sm-3" for="">
-			          		Date de naissance <i class="fa fa-lock" data-behavior="tooltip" title="Privé"></i>
+			          		Date de naissance <i class="fa fa-lock" data-behavior="tooltip" title="Privé" style="color: red"></i>
 			        		</label>
 				        	<div class="col-sm-9">
 				          
@@ -114,7 +108,7 @@
 
 		      			<div class="row row-condensed space-4">
 		        			<label class="text-right col-sm-3" for="email">
-		          				Adresse email <i class="fa fa-lock" data-behavior="tooltip" title="Privé"></i>
+		          				Adresse email <i class="fa fa-lock" data-behavior="tooltip" title="Privé" style="color: red"></i>
 		        			</label>
 		        			<div class="col-sm-9">
 		          
@@ -124,7 +118,7 @@
 
 	      			<div class="row row-condensed space-4">
 	        			<label class="text-right col-sm-3" for="phone">
-	          			Numéro de téléphone <i class="fa fa-lock" data-behavior="tooltip" title="Privé"></i>
+	          			Numéro de téléphone <i class="fa fa-lock" data-behavior="tooltip" title="Privé" style="color: red"></i>
 	        			</label>
 	        			<div class="col-sm-9">
 	      					<input id="phone" name="phone" size="30" type="phone" value="{{ Auth::user()->phone }}" required="required"/>
@@ -158,7 +152,7 @@
       				</div>
 
 	      			<div class="row row-condensed space-4">
-        				<label class="col-sm-3" for="">
+        				<label class="text-right col-sm-3" for="">
           				Description 
         				</label>
         				<div class="col-sm-9">

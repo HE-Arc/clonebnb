@@ -3,7 +3,7 @@
 <option value="2">février</option>
 <option value="3">mars</option>
 <option value="4">avril</option>
-<option selected="selected" value="5">mai</option>
+<option value="5">mai</option>
 <option value="6">juin</option>
 <option value="7">juillet</option>
 <option value="8">août</option>

@@ -26,6 +26,7 @@ class UsersController extends Controller
     	$user->phone = $request->get('phone');
     	$user->language = $request->get('language');
     	$user->address = $request->get('address');
+    	$user->sex = $request->get('sex');
     	$user->description = $request->get('description');
     	if($request->hasFile('photo'))
     	{
