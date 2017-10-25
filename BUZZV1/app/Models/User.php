@@ -34,4 +34,10 @@ class User extends Model implements AuthenticatableContract
         return $this->first_name . ' ' . $this->last_name;
     }
 
+    //Retourne le mois de naissance
+
+    public function month()
+    {
+        return date("m",$this->birthday);
+    }
 }

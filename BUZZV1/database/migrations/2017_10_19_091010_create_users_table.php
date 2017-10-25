@@ -22,8 +22,11 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->string('username')->unique()->nullable();
             $table->text('description')->nullable();
-            $table->string('profil-image')->nullable();
-            $table->string('pin_code');
+            $table->string('photo')->default('default.png');
+            $table->string('pin_code')->nullable();
+            $table->string('address')->nullable();
+            $table->string('sex')->nullable();
+            $table->date('date')->nullable();
             $table->boolean('is_confirmed')->default(false);
             $table->string('language')->nullable();
             $table->boolean('is_activated')->default(false);

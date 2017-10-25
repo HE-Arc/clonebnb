@@ -71,6 +71,16 @@ Route::post('/logout', [
 	'uses'=>'UsersLogoutController@logout'
 ]);
 
+Route::get('/profil', [
+	'as' =>'profil_path',
+	'uses'=>'UsersController@showEditForm'
+]);
+
+Route::post('/profil', [
+	'as' =>'profil_path',
+	'uses'=>'UsersController@edit'
+]);
+
 //===Fin Inscription, Login, Logout===
 
 Route::get('/reset', [
@@ -89,7 +99,20 @@ Route::get('auth/facebook/callback', [
 	'uses'=>'FacebookController@handleProviderCallback'
 ]);
 
-//===Connexion via réseaux sociaux===
+//===Fin Connexion via réseaux sociaux===
+
+//===Tableau de bord===
+Route::get('/publish', [
+	'as' =>'publish_listing_path',
+	'uses'=>'PublishController@showPublishForm'
+]);
+
+Route::get('/dashboard', [
+	'as' =>'space_path',
+	'uses'=>'DashboardController@showDashboard'
+]);
+
+//===Fin Tableau de bord===
 //Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

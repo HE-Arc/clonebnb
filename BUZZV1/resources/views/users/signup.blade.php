@@ -5,7 +5,7 @@
 @stop
 
 @section('content')
-  <div class="modal-content">
+  <div class="modal-content" style="margin-top: 200px;">
     <form action="{{ route('signup_path') }}" method="POST" class="animate">
       {{ csrf_field() }}
       <div>
@@ -46,7 +46,7 @@
 
 @section('stylesheet')
   <style type="text/css">
-    /* Full-width input fields */
+
     input[type=text], input[type=password], input[type=email]{
     margin: 8px 0;
     display: inline-block;

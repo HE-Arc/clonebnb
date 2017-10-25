@@ -181,7 +181,10 @@ return [
         Laravel\Socialite\SocialiteServiceProvider::class,
 
         //Flashy
-        MercurySeries\Flashy\FlashyServiceProvider::class
+        MercurySeries\Flashy\FlashyServiceProvider::class,
+
+        //Intervention image
+        Intervention\Image\ImageServiceProvider::class
 
     ],
 
@@ -233,6 +236,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
         'Flashy' => MercurySeries\Flashy\Flashy::class,
+        'Image' => Intervention\Image\Facades\Image::class,
 
     ],
 

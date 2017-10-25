@@ -6,7 +6,7 @@
 @stop
 
 @section('content')
-	<div class="container">
+	<div class="" style="margin-top: 100px">
 		<h2>Qu'est ce que {{ config('app.name') }}</h2>
 		<p>Buzz est une plateforme de location</p>
 	</div>

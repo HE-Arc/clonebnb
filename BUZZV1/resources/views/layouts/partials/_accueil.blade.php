@@ -1,4 +1,3 @@
-
     <div class="col-md-4">
       <div class="">
         <div class="panel-heading preview">
@@ -72,7 +71,7 @@
         </div>
       </div>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-4 test">
       <div class="">
         <div class="panel-heading preview">
           <img src="{{ asset('images/step-ladder.png') }}"><br />
@@ -81,185 +80,24 @@
         </div>
       </div>
     </div>
-    <br /><br /><br />
 
 @section('stylesheet')
-  <style type="text/css">
-a {
-  color: #00A699;
-}
+<style type="text/css">
 
-.text-babu, .icon-babu {
-  color: #00A699;
-}
+  .panel-heading.preview {
+    padding: 50px;
+    text-align: center;
+    background-color: #F9FBFA;
+    margin-bottom: 30px;
+    color: #F96868;
+    min-height: 160px;
+    border-radius: 50px;
+    border: 3px dashed #ff5a5f;
+  }
 
-.text-red, .icon-red {
-  color: #FF5A5F;
-}
+  .panel-heading.preview img {
+    width: 20%;  
+  }
 
-// BUTTONS
-.btn-block {
-  display: block;
-  white-space: normal;
-  width: 100%;
-}
-
-.btn {
-  color: #fff;
-  border-radius: 5px;
-  font-weight: bold;
-  padding: 9px 27px;
-}
-
-.btn-small {
-  padding: 5px 15px;
-  margin-top: 15px;
-}
-
-.btn:hover, .btn:focus {
-  color: #fff;
-}
-
-.btn.btn-default {
-  width: 100%;
-  border-color: #c4c4c4;
-  background: white;
-  color: #484848;
-  border-radius: 2px;
-  padding: 10px 0;
-  margin-top: 10px;
-}
-
-.btn.btn-normal {
-  border: 1px solid #ff5a5f;
-  background-color: #ff5a5f;
-}
-
-.btn.btn-normal:active {
-  outline: none;
-  border-color: #e00007;
-  background-color: #e00007;
-}
-
-.btn.btn-form {
-  border: 1px solid #00A699;
-  background-color: #00A699;
-}
-
-.btn.btn-form:active {
-  outline: none;
-  border-color: #066165;
-  background-color: #066165;
-}
-
-.btn.btn-facebook {
-  border: 1px solid #3B5998;
-  background-color: #3B5998;
-}
-
-.btn.btn-facebook:active {
-  outline: none;
-  border-color: #2d467b;
-  background-color: #2d467b;
-}
-
-// AVATAR
-.avatar-small {
-  width: 28px;
-}
-
-.avatar-medium {
-  width: 48px;
-}
-
-.avatar-large {
-  width: 68px;
-}
-
-.avatar-full {
-  width: 10%;
-}
-
-.panel {}
-.panel-heading.preview {
-  padding: 50px;
-  text-align: center;
-  background-color: #fff;
-  margin-bottom: 30px;
-  color: #F96868;
-  height: 200px;
-}
-
-.panel-heading.preview img {
-  width: 40%;  
-}
-
-// ROOM SHOW
-.amenities li {
-  margin-bottom: 10px;
-  font-size: 16px;
-  list-style-type: none;
-}
-
-.amenities .text-line-through {
-  text-decoration: line-through;
-  color: rgba(0,0,0,0.45);
-  font-size: 14px;
-}
-
-// RESERVATIONS
-.reservation-table td {
-  width: 100%;
-  border: none;
-  border-bottom: 1px solid #dce0e0;
-  padding: 10px;
-}
-
-.reservation-table .total td {
-  font-size: 16px;
-  font-weight: bold;
-  border: none;
-}
-
-.form-control.datepicker {
-  color: #00A699;
-  background-color: white;
-  border: 1px solid #00A699;
-  text-align: center;
-}
-
-.message-alert {
-  color: #d43242;
-  font-size: 14px;
-  padding-top: 10px;
-}
-
-// SEARCH
-#main {
-  height: 100%;
-  overflow: hidden;
-}
-
-#left {
-  padding: 10px 400px 10px 20px;
-  overflow: scroll;
-  height: 100%;
-}
-
-#right {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 450px;
-  height: 100%;
-}
-
-.map_price {
-  text-align: center;
-  font-size: 16px;
-  font-weight: 600;
-  color: #00A699;
-}
-
-  </style>
+</style>
 @stop
