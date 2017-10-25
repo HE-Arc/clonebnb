@@ -1,8 +1,7 @@
-<<<<<<< HEAD
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
 
   <div class="container-fluid">
-    <h4><a class="navbar-brand" href="{{ route('root_path') }}"><img class="img-circle avatar-small" src="{{ asset('images/logo.png') }}"></a></h4>
+    <h4><a class="navbar-brand" href="{{ route('root_path') }}"><img src="{{ asset('images/logo.png') }}"></a></h4>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
       </button>
@@ -48,6 +47,9 @@
                   {{ csrf_field() }}
                 </form>
           @endif
+            <li class="nav-item {{ set_active_route('contact_path') }}">
+              <a class="nav-link" href="{{ route('contact_path') }}">Contactez nous</a>
+            </li>
             <li class="nav-item {{ set_active_route('about_path') }}">
               <a class="nav-link" href="{{ route('about_path') }}">A propos</a>
             </li>

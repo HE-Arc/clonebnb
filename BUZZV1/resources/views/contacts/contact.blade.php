@@ -5,9 +5,9 @@
 @stop
 
 @section('content') 
-	<div class="container">
-		<div class="row" style="margin-top: 100px">
-			<div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offet-1">
+		<div class="container">
+			<div class="row" style="margin-top: 100px">
+			<div class="col-md">
 				<h2>Contactez nous</h2>
 				<p class="text-muted">Pour toutes questions relatives à nos services</p>
 
@@ -35,10 +35,11 @@
 					</div>
 				</form>
 			</div>
+				
+			</div>
 		</div>
-	</div>
 @stop
 
 @section('stylesheet')
-	<link rel="stylesheet" type="text/css" href="{{ asset('css/main.css') }}">
+	
 @stop

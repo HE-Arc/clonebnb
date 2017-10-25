@@ -124,7 +124,10 @@ Route::get('/message', [
 	'uses'=>'MessagesController@showMessage'
 ]);
 
-//===Fin Tableau de bord===
-//Auth::routes();
+//===Afficher les annonces===
+Route::get('/article', [
+	'as' =>'article_path',
+	'uses'=>'ArticlesController@showArticle'
+]);
 
 Route::get('/home', 'HomeController@index')->name('home');
