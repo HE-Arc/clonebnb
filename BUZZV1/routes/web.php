@@ -38,6 +38,12 @@ Route::post('/contact', [
 	'uses'=> 'ContactsController@store'
 ]);
 
+//Publier une annonce
+Route::get('/advert', [
+	'as' => 'advert_path',
+	'uses'=> 'AdvertController@advert'
+]);
+
 //Routes d'accès au site
 Route::get('/login', [
 	'as'=>'login_path',
