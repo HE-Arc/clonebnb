@@ -129,5 +129,13 @@ Route::get('/article', [
 	'as' =>'article_path',
 	'uses'=>'ArticlesController@showArticle'
 ]);
+//===Fin des annonces===
+
+//===Reservation===
+Route::get('/reservation', [
+	'as' =>'reservation_path',
+	'uses'=>'ReservationsController@showReservation'
+]);
+//===Fin Reservation===
 
 Route::get('/home', 'HomeController@index')->name('home');
