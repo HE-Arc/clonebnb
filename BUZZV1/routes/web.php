@@ -44,6 +44,11 @@ Route::get('/advert', [
 	'uses'=> 'AdvertController@advert'
 ]);
 
+Route::post('/advert', [
+	'as' => 'advert_path',
+	'uses'=> 'AdvertController@publish'
+]);
+
 //Routes d'accès au site
 Route::get('/login', [
 	'as'=>'login_path',
