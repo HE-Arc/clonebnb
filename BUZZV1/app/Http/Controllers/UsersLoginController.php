@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Socialite;
 use App\Http\Requests\UserRequest;
 use App\Models\User;
 use Session;
@@ -24,9 +25,30 @@ class UsersLoginController extends Controller
         if (Auth::attempt($data)) {
             flashy()->success('Vous êtes connecté!');
             return redirect()->route('root_path');
-        } 
-        flashy()->error("Nom d'utilisateur ou mot de passe incorrect!");            
+        }
+        flashy()->error("Nom d'utilisateur ou mot de passe incorrect!");
         return Redirect::back();
     }
-}
 
+    /**
+     * Redirect the user to the Google authentication page.
+     *
+     * @return Response
+     */
+    public function redirectToProvider()
+    {
+        return Socialite::driver('google')->redirect();
+    }
+
+    /**
+     * Obtain the user information from GitHub.
+     *
+     * @return Response
+     */
+    public function handleProviderCallback()
+    {
+        $user = Socialite::driver('google')->stateless()->user();
+
+        return $user->token;
+    }
+}

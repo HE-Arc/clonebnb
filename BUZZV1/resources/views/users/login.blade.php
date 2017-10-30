@@ -13,7 +13,7 @@
     			</div>
       		<div>
       			<button class="btn btn-lg" type="submit" style="background: #4568b2 !important;" disabled="disabled">Connexion avec Facebook</button><br />
-      			<button class="btn btn-lg" type="submit" style="background-color: #fff !important; border: 1px solid; color: #484848" disabled="disabled">Connexion avec Google</button>
+      			<a href="{{ route('google_callback_path') }}" class="btn btn-lg" role="button" style="background-color: #fff !important; border: 1px solid; color: #484848">Connexion avec Google</a>
     			</div>
     			<span style="text-align: center">Ou</span>
     				<div class="icon-in-input">
@@ -51,11 +51,11 @@
     background-color: transparent !important;
     padding: 11px;
     width: 90%;
-  }  
+  }
 
   .foot {
-    background-color:#f1f1f1; 
-    padding: 16px; 
+    background-color:#f1f1f1;
+    padding: 16px;
     margin-top: 20px;
   }
 
@@ -102,12 +102,12 @@
   }
 
   @-webkit-keyframes animatezoom {
-      from {-webkit-transform: scale(0)} 
+      from {-webkit-transform: scale(0)}
       to {-webkit-transform: scale(1)}
   }
-      
+
   @keyframes animatezoom {
-      from {transform: scale(0)} 
+      from {transform: scale(0)}
       to {transform: scale(1)}
   }
 
@@ -123,10 +123,10 @@
   }
 
   .modal-content {
-    margin-top: 150px; 
-    width: 40%; 
-    margin-right: auto; 
-    margin-left: auto; 
+    margin-top: 150px;
+    width: 40%;
+    margin-right: auto;
+    margin-left: auto;
     text-align: center
   }
   </style>

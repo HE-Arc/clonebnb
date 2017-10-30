@@ -11,4 +11,28 @@ class DashboardController extends Controller
 	{
 		return view('dashboard.dashboard');
 	}
+
+	//Afficher la liste des favorites
+	public function showFavorite()
+	{
+		return view('dashboard.favorites');
+	}
+
+	//Sauvegarder les favoris
+	public function storeFavorite()
+	{
+	}
+
+	//Afficher le formulaire d'édition d'une annonce
+	public function showPublishForm()
+	{
+		return view('dashboard.publish');
+	}
+
+	//Afficher les messages
+	public function showMessage()
+	{
+		return view('dashboard.message');
+	}
+
 }

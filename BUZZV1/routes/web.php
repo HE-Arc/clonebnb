@@ -100,39 +100,45 @@ Route::get('/reset', [
 ]);
 
 //===Connexion via réseaux sociaux===
-Route::get('auth/facebook', [
-	'as' =>'facebook_path',
-	'uses'=>'FacebookController@redirectToProvider'
+Route::get('login/google', [
+	'as' =>'google_path',
+	'uses'=>'UsersLoginController@redirectToProvider'
 ]);
 
-Route::get('auth/facebook/callback', [
-	'as' =>'facebook_callback_path',
-	'uses'=>'FacebookController@handleProviderCallback'
+Route::get('/login/google/callback', [
+	'as' =>'google_callback_path',
+	'uses'=>'UsersLoginController@handleProviderCallback'
 ]);
 
 //===Fin Connexion via réseaux sociaux===
 
 //===Tableau de bord===
 Route::get('/publish', [
-	'as' =>'publish_listing_path',
-	'uses'=>'PublishController@showPublishForm'
+	'as' =>'publish_path',
+	'uses'=>'DashboardController@showPublishForm'
 ]);
 
 Route::get('/dashboard', [
-	'as' =>'space_path',
+	'as' =>'dashboard_path',
 	'uses'=>'DashboardController@showDashboard'
 ]);
 
 
 Route::get('/message', [
 	'as' =>'message_path',
-	'uses'=>'MessagesController@showMessage'
+	'uses'=>'DashboardController@showMessage'
+]);
+
+
+Route::get('/conversation', [
+	'as' =>'conversation_path',
+	'uses'=>'ConversationsController@showConversation'
 ]);
 
 //===Afficher les annonces===
-Route::get('/article', [
-	'as' =>'article_path',
-	'uses'=>'ArticlesController@showArticle'
+Route::get('/listing', [
+	'as' =>'listing_path',
+	'uses'=>'AdsController@showListing'
 ]);
 //===Fin des annonces===
 
@@ -143,4 +149,13 @@ Route::get('/reservation', [
 ]);
 //===Fin Reservation===
 
-Route::get('/home', 'HomeController@index')->name('home');
+//===Reservation===
+Route::get('/{user_id}/favorites', [
+	'as' =>'favorite_path',
+	'uses'=>'DashboardController@showFavorite'
+]);
+Route::post('/{user_id}/favorites', [
+	'as' =>'favorite_path',
+	'uses'=>'DashboardController@storeFavorite'
+]);
+//===Fin Reservation===

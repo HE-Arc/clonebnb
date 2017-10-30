@@ -1,35 +1,58 @@
-@extends('layouts.management')
+@extends('layouts.slave')
 
 @section('title')
-  Vos conversations
+  Vos messages
 @stop
 
 @section('content')
-<div class="" style="margin-top: 100px;">
-    <div class="col-md-9">
-      <div class="panel panel-default">
-        <div class="panel-heading" style="background-color: #06A87C; color: #fff; font-weight: bold;">
-          <h4>Conversation with {{ Auth::user()->getFullName() }}</h4>
-          <input type="hidden" value="id_conversation">
-        </div>
-        <div class="panel-body">
-          <form>
-            <div class="write_message">
-              <textarea placeholder="Ajouter un nouveau message" class="form-control"></textarea>
-            </div>
-            <input type="hidden" value="id_user"><br>
-            <div class="send">
-              <button style="background-color: #FF5A5F; color: white;"type="submit" class="btn btn-normal">Envoyer le message</button>
-                </div>
-          </form>
-        </div>
-      </div>
+<!-- Content
+	================================================== -->
+	<div class="dashboard-content">
 
-      <div id="chat">
-        @include('layouts.partials._chat')
-      </div>
-    </div>
-</div>
+		<!-- Titlebar -->
+		<div id="titlebar">
+			<div class="row">
+				<div class="col-md-12">
+					<h2>Messages</h2>
+					<!-- Breadcrumbs -->
+					<nav id="breadcrumbs">
+						<ul>
+							<li><a href="#">Accueil</a></li>
+							<li><a href="#">Tableau de bord</a></li>
+							<li>Messages</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+
+			<!-- Listings -->
+			<div class="col-lg-12 col-md-12">
+
+				<div class="messages-container margin-top-0">
+					<div class="messages-headline">
+						<h4>Boîte de reception</h4>
+					</div>
+
+					@include('layouts.partials.dashboard._user_list')
+				</div>
+
+				<!-- Pagination -->
+				<div class="clearfix"></div>
+				<div class="pagination-container margin-top-30 margin-bottom-0 container">
+					<nav class="pagination container">
+						<ul>
+							<li><a href="#" class="current-page">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#"><i class="fa fa-chevron-right"></i></a></li>
+						</ul>
+					</nav>
+				</div>
+				<!-- Pagination / End -->
+
+			</div>
 @stop
 
 @section('stylesheet')
@@ -60,7 +83,6 @@
     .profil {
       width: 200px;
     }
-    
+
   </style>
 @stop
-

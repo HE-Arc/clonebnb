@@ -6,5 +6,5 @@
 
 @section("content")
   Reservation de l'article
-  <div class = "container" style="margin-top:100px">HELLO {{ Auth::user()->username }}</div>
+  <div class = "container" style="margin-top:100px">HELLO @if(Auth::check()) Auth::user()->username @endif</div>
 @stop
