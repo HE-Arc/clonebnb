@@ -1,0 +1,2 @@
+# Projet He-Arc - Développement web  
+Clonebnb est inspiré du site Airbnb qui est une plateforme payante de réservation et de location de logements en ligne. Clonebnb est différent car il offre des locations et des réservations en tout genre, allant d’une simple voiture tout près de chez vous à un appartement de l’autre côté de la Terre. En effet Clonebnb est une plateforme regroupant et organisant en catégorie une série de bien, de matériel à louer.
