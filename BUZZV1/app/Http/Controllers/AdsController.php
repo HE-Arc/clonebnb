@@ -17,4 +17,10 @@ class AdsController extends Controller
     {
       return view('ads.ad_details');
     }
+
+
+    public function publish(Request $request)
+    {
+        echo "INPUT";
+    }
 }
