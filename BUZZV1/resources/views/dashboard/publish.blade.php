@@ -35,7 +35,7 @@
 						<div class="add-listing-headline">
 							<h3><i class="fa fa-file-o"></i> Informations générales</h3>
 						</div>
-						<form action="{{ route('add_advert_path') }}" method="POST">
+						<form action="{{ route('publish_path') }}" method="POST">
 						<div class="row with-forms">
 							<div class="col-md-12">
 								<h5>Titre de l'annonce <i class="tip" data-tip-content="Nom de votre annonce"></i></h5>
