@@ -1,2 +1,3 @@
 # Projet He-Arc - Développement web  
-Clonebnb est inspiré du site Airbnb qui est une plateforme payante de réservation et de location de logements en ligne. Clonebnb est différent car il offre des locations et des réservations en tout genre, allant d’une simple voiture tout près de chez vous à un appartement de l’autre côté de la Terre. En effet Clonebnb est une plateforme regroupant et organisant en catégorie une série de bien, de matériel à louer.
+## Description  
+Buzz est une plateforme payante de réservation et de location d'objets en toute genre, allant d'une voiture tout près de chez vous à un appartement de l'autre côté de la Terre. Les utilisateurs ont la possibilité de mettre en location ou de louer des objets. Tous les objets en location sont organisés sous forme de catégories afin de simplifier la recherche des utilisateurs.
