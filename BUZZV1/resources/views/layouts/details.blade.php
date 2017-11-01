@@ -11,8 +11,6 @@
 <link rel="stylesheet" href="{{ asset('css/style2.css') }}">
 <link rel="stylesheet" href="css/main.css" id="colors">
 
-<link rel="stylesheet" href="css/datedropper.min.css">
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 </head>
@@ -66,29 +64,12 @@
 <script type="text/javascript" src="{{ asset('js/map.js') }}"></script>
 
 
-<link href="css/plugins/datedropper.css" rel="stylesheet" type="text/css">
-<script src="{{ asset('js/datedropper.min.js') }}"></script>
+<link rel="stylesheet" href="css/datedropper.css">
+<script src="{{ asset('js/datedropper.js') }}"></script>
 <script>$('#booking-date').dateDropper();</script>
 
-<script src="scripts/timedropper.js"></script>
-<link rel="stylesheet" type="text/css" href="css/plugins/timedropper.css">
-<script>
-this.$('#booking-time').timeDropper({
-	setCurrentTime: false,
-	meridians: true,
-	primaryColor: "#f91942",
-	borderColor: "#f91942",
-	minutesInterval: '15'
-});
-
-var $clocks = $('.td-input');
-	_.each($clocks, function(clock){
-	clock.value = null;
-});
-</script>
-
 <!-- Booking Widget - Quantity Buttons -->
-<script src="scripts/quantityButtons.js"></script>
+<script src="{{ asset('js/quantityButtons.js') }}"></script>
 
 </body>
 </html>

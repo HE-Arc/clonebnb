@@ -41,14 +41,14 @@
 						<div class="user-name"><span><img src="uploads/avatars/{{ Auth::user()->photo }}" alt=""></span>Mon Compte</div>
 						<ul>
 							<li><a href="dashboard-messages.html"><i class="sl sl-icon-envelope-open"></i> Messages</a></li>
-              <li><a class="dropdown-item" href="{{ route('logout_path') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();"><i class="fa fa-power-off"></i> Déconnexion</a>
-              <form id="logout-form" action="{{ route('logout_path') }}" method="POST" style="display: none;">
+              <li><a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();"><i class="fa fa-power-off"></i> Déconnexion</a>
+              <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                 {{ csrf_field() }}
               </form></li>
 						</ul>
 					</div>
 
-					<a href="dashboard-add-listing.html" class="button border with-icon">Buzzer! maintenant <i class="fa fa-plus"></i></a>
+					<a href="{{ route('publish_path') }}" class="button border with-icon">Buzzer! maintenant <i class="fa fa-plus"></i></a>
 				</div>
 			</div>
 

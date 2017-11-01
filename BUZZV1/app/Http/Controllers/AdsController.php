@@ -11,4 +11,10 @@ class AdsController extends Controller
     {
     	return view('ads.ad');
     }
+
+    //Afficher le détail d'une annonce
+    public function showListingDetails()
+    {
+      return view('ads.ad_details');
+    }
 }

@@ -8,20 +8,16 @@
   <div class="sign-in-form style-1">
 
     <ul class="tabs-nav">
-      @if(Route::currentRouteName() != 'signup_path')
         <li class=""><a href="#tab1">Connexion</a></li>
         <li><a href="#tab2">Inscription</a></li>
-      @else
-        <li><a href="#tab2">Inscription</a></li>
-        <li class=""><a href="#tab1">Connexion</a></li>
-      @endif
+        <li><a href="#tab3">Mot de passe oublié</a></li>
     </ul>
 
     <div class="tabs-container alt">
 
       <!-- Login -->
       <div class="tab-content" id="tab1" style="display: none;">
-        <form action="{{ route('login_path') }}" method="POST" class="login">
+        <form action="{{ route('login') }}" method="POST" class="login">
           {{ csrf_field() }}
           <p class="form-row form-row-wide">
             <label for="email">Email:
@@ -35,9 +31,6 @@
               <i class="fa fa-lock"></i>
               <input class="input-text" type="password" name="password" id="password" required/>
             </label>
-            <span class="lost_password">
-              <a href="#" >Mot de passe perdu?</a>
-            </span>
           </p>
 
           <div class="form-row">
@@ -54,7 +47,7 @@
       <!-- Register -->
       <div class="tab-content" id="tab2" style="display: none;">
 
-        <form action="{{ route('signup_path') }}" method="POST" class="register">
+        <form action="{{ route('register') }}" method="POST" class="register">
           {{ csrf_field() }}
         <p class="form-row form-row-wide">
           <label for="last_name">Prénom:
@@ -93,6 +86,25 @@
         <input type="submit" class="button border fw margin-top-10" name="register" value="S'inscrire" />
         </form>
       </div>
+
+      <!--Mot de passe oublié-->
+      <div class="tab-content" id="tab3" style="display: none;">
+        <form action="{{ route('password.email') }}" method="POST" class="login">
+          {{ csrf_field() }}
+          <p class="form-row form-row-wide">
+            <label for="email">
+              <i class="fa fa-envelope-o"></i>
+              <input type="email" class="input-text" name="email" id="email" placeholder="Adresse email" value="{{ old('email') }}" required/>
+            </label>
+          </p>
+
+          <div class="form-row">
+            <input type="submit" class="button border margin-top-5" name="login" value="Envoyer" />
+          </div>
+
+        </form>
+      </div>
+      <!--Fin mot de passe oublié-->
 
     </div>
   </div>

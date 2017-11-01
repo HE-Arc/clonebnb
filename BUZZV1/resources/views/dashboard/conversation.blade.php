@@ -48,7 +48,7 @@
 
 							<div class="message-bubble">
 								<div class="message-avatar"><img src="uploads/avatars/default.png" alt="" /></div>
-								<div class="message-text"><p>Hello, I want to talk about your great listing! Morbi velit eros, sagittis in facilisis non, rhoncus et erat. Nam posuere tristique sem, eu ultricies tortor lacinia neque imperdiet vitae.</p></div>
+								<div class="message-text"><p>@{{ message }} Hello, I want to talk about your great listing! Morbi velit eros, sagittis in facilisis non, rhoncus et erat. Nam posuere tristique sem, eu ultricies tortor lacinia neque imperdiet vitae.</p></div>
 							</div>
 
 							<div class="message-bubble me">

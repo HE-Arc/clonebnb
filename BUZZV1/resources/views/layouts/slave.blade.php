@@ -31,7 +31,6 @@
         <!--Message flash-->
         {{-- Message flash --}}
         @include('flashy::message')
-        @include('layouts.partials._flash')
         <!--Fin Message flash-->
 
         <!--Contenu-->

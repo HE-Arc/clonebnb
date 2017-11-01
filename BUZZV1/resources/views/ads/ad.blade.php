@@ -1,5 +1,9 @@
 @extends('layouts.master')
 
+@section('title')
+	Annonces
+@stop
+
 @section('content')
 <!-- Content de la page -->
 <div class="fs-container">

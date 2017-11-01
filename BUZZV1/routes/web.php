@@ -49,38 +49,6 @@ Route::post('/advert', [
 	'uses'=> 'AdvertController@publish'
 ]);
 
-//Routes d'accès au site
-Route::get('/login', [
-	'as'=>'login_path',
-	'uses'=>'UsersController@login'
-]);
-
-//===Inscription, Login, Logout ===
-
-Route::get('/login', [
-	'as'=>'login_path',
-	'uses'=>'UsersLoginController@showLoginForm'
-]);
-
-Route::post('/login', [
-	'as'=>'login_path',
-	'uses'=>'UsersLoginController@login'
-]);
-
-Route::get('/signup', [
-	'as'=>'signup_path',
-	'uses'=>'UsersRegisterController@showRegistrationForm'
-]);
-
-Route::post('/signup', [
-	'as'=>'signup_path',
-	'uses'=>'UsersRegisterController@register'
-]);
-
-Route::post('/logout', [
-	'as'=>'logout_path',
-	'uses'=>'UsersLogoutController@logout'
-]);
 
 Route::get('/profil', [
 	'as' =>'profil_path',
@@ -135,10 +103,15 @@ Route::get('/conversation', [
 	'uses'=>'ConversationsController@showConversation'
 ]);
 
-//===Afficher les annonces===
-Route::get('/listing', [
+//===Afficher les annonces, Afficher les détails ===
+Route::get('/listing/{category_id}', [
 	'as' =>'listing_path',
 	'uses'=>'AdsController@showListing'
+]);
+
+Route::get('/details', [
+	'as' =>'details_path',
+	'uses'=>'AdsController@showListingDetails'
 ]);
 //===Fin des annonces===
 
@@ -159,3 +132,7 @@ Route::post('/{user_id}/favorites', [
 	'uses'=>'DashboardController@storeFavorite'
 ]);
 //===Fin Reservation===
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateParentCategoryTable extends Migration
+class CreatePasswordResetsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateParentCategoryTable extends Migration
      */
     public function up()
     {
-        Schema::create('parent_category', function (Blueprint $table) {
+        Schema::create('password_resets', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name')->nullage();
-            $table->string('description')->nullable();
+            $table->string('email')->index();
+            $table->string('token')->index();
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ class CreateParentCategoryTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('parent_category');
+        Schema::dropIfExists('password_resets');
     }
 }

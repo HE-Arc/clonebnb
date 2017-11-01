@@ -38,16 +38,12 @@
 			<div class="right-side">
 				<div class="header-widget">
           @if(!Auth::check())
-					  <a href="#sign-in-dialog" class="sign-in popup-with-zoom-anim">&nbsp;&nbsp;<i class="fa fa-sign-in"></i> Connexion / Inscription</a>
+			<a href="#sign-in-dialog" class="sign-in popup-with-zoom-anim">&nbsp;&nbsp;<i class="fa fa-sign-in"></i> Connexion / Inscription</a>
           @else
             <div class="user-menu">
-              @if(Route::currentRouteName() != 'dashboard_path')
-                  <a href="#"><i class="fa fa-bell fa-2x" style="color: #161414"></i>
-              @else
-                  <a href="#"><i class="fa fa-bell fa-2x" style="color: #fff"></i>
-              @endif
-                <span class="badge" style="background-color: red; color: #fff; position: relative; top: -15px; left: -5px;">0</span>
-              </a>
+                <a href="#"><i class="fa fa-bell fa-2x" style="color: #161414"></i>
+                	<span class="badge" style="background-color: red; color: #fff; position: relative; top: -15px; left: -5px;">0</span>
+              	</a>
             </div>
             <div class="user-menu">
               <div class="user-name"><span><img src="uploads/avatars/{{ Auth::user()->photo }}" alt=""></span>{{ Auth::user()->getFullName() }}</div>
@@ -57,19 +53,15 @@
                   <li><a href="#">Messages</a></li>
                   <li><a href="#">Avis reçus</a></li>
                   <li><a href="{{ route('profil_path') }}">Mon profil</a></li>
-                  <li><a class="dropdown-item" href="{{ route('logout_path') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Se déconnecter</a>
-                  <form id="logout-form" action="{{ route('logout_path') }}" method="POST" style="display: none;">
+                  <li><a class="dropdown-item" href="" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Se déconnecter</a>
+                  <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                     {{ csrf_field() }}
                   </form></li>
                 </ul>
               </div>
           @endif
 
-          @if(Route::currentRouteName() != 'dashboard_path')
-              <a href="dashboard-add-listing.html" class="button border with-icon">Buzzez maintenant <i class="fa fa-plus"></i></a>
-          @else
-              <a href="dashboard-add-listing.html" class="button border with-icon" style="border-color: #fff; color: #fff">Buzzez maintenant <i class="fa fa-plus"></i></a>
-          @endif
+            <a href="{{ route('publish_path') }}" class="button border with-icon">Buzzez maintenant <i class="fa fa-plus"></i></a>
             </div>
 				</div>
 			</div>

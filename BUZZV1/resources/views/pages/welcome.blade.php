@@ -24,7 +24,6 @@
 	</div>
 </div>
 
-
 <!-- Categories -->
 @include('layouts.partials.accueils._categories')
 <!-- Fin Catégories -->
