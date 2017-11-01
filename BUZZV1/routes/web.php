@@ -38,18 +38,6 @@ Route::post('/contact', [
 	'uses'=> 'ContactsController@store'
 ]);
 
-//Publier une annonce
-Route::get('/advert', [
-	'as' => 'advert_path',
-	'uses'=> 'AdvertController@advert'
-]);
-
-Route::post('/advert', [
-	'as' => 'advert_path',
-	'uses'=> 'AdvertController@publish'
-]);
-
-
 Route::get('/profil', [
 	'as' =>'profil_path',
 	'uses'=>'UsersController@showEditForm'
@@ -81,6 +69,14 @@ Route::get('/login/google/callback', [
 //===Fin Connexion via réseaux sociaux===
 
 //===Tableau de bord===
+
+//Publier une annonce
+Route::get('/publish', [
+	'as' =>'publish_path',
+	'uses'=>'DashboardController@publish'
+]);
+
+
 Route::get('/publish', [
 	'as' =>'publish_path',
 	'uses'=>'DashboardController@showPublishForm'
