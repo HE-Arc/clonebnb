@@ -8,8 +8,7 @@
 <!-- CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="{{ asset('css/style2.css') }}">
-<link rel="stylesheet" href="css/main.css" id="colors">
+<link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
@@ -64,8 +63,8 @@
 <script type="text/javascript" src="{{ asset('js/map.js') }}"></script>
 
 
-<link rel="stylesheet" href="css/datedropper.css">
-<script src="{{ asset('js/datedropper.js') }}"></script>
+<link rel="stylesheet" href="{{ asset('css/datedropper.css') }}">
+<script src="{{ asset('js/datedropper.min.js') }}"></script>
 <script>$('#booking-date').dateDropper();</script>
 
 <!-- Booking Widget - Quantity Buttons -->

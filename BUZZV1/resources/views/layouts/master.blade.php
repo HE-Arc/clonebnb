@@ -8,10 +8,8 @@
 <!-- CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="{{ asset('css/style2.css') }}">
+<link rel="stylesheet" href="{{ asset('css/style.css') }}">
 <link rel="stylesheet" href="css/main.css" id="colors">
-
-<link rel="stylesheet" href="css/datedropper.min.css">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
@@ -38,7 +36,7 @@
   <!-- Wrapper / End -->
   <!--Footer-->
   {{-- Le pied de page est différent pour la page article_path --}}
-  @if(Route::currentRouteName() != 'listing_path' )
+  @if(Route::currentRouteName() != 'ads_path' )
    @include('layouts.partials.footers._master_footer')
   @endif
   <!--Fin Footer-->

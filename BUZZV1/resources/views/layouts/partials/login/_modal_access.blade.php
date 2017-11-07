@@ -93,8 +93,9 @@
           {{ csrf_field() }}
           <p class="form-row form-row-wide">
             <label for="email">
+              E-mail:
               <i class="fa fa-envelope-o"></i>
-              <input type="email" class="input-text" name="email" id="email" placeholder="Adresse email" value="{{ old('email') }}" required/>
+              <input type="email" class="input-text" name="email" id="email" value="{{ old('email') }}" required/>
             </label>
           </p>
 

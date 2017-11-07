@@ -18,6 +18,7 @@ class CreateConversations extends Migration
             $table->integer('receiver_id')->nullable();
             $table->integer('sender_id')->nullable();
             $table->timestamps();
+            $table->engine = 'InnoDB';
         });
     }
 

@@ -1,11 +1,11 @@
 <!-- Titlebar -->
 <div id="titlebar" class="listing-titlebar">
   <div class="listing-titlebar-title">
-    <h2>PlayStation 4 <span class="listing-tag">Jeux vidéos</span></h2>
+    <h2>{{ $ad->title }}<span class="listing-tag">{{ $ad->category->name }}</span></h2>
     <span>
       <a href="#listing-location" class="listing-address">
         <i class="fa fa-map-marker"></i>
-        Rue de la terreur 6, 2000 Mars
+        {{ $ad->address }}
       </a>
     </span>
     <div class="star-rating" data-rating="5">

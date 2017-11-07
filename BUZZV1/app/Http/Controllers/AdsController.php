@@ -3,18 +3,27 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Ad;
+use DB;
 
 class AdsController extends Controller
 {
-    //Afficher les annonces
-    public function showListing()
+    public function showListing_()
     {
-    	return view('ads.ad');
+      return view('ads.ad');
+    }
+    //Retourne la liste des annonces donc la catégories est $category_id
+    public function showAds($category_id)
+    {
+      $ads = Ad::where('category_id', '=', $category_id)
+                ->get();
+      return view('ads.ad')->withAds($ads);
     }
 
-    //Afficher le détail d'une annonce
-    public function showListingDetails()
+    //Retourne l'annonce donc l'id est spécifié en paramètre
+    public function showAdDetails($ad_id)
     {
-      return view('ads.ad_details');
+      $ad = Ad::find($ad_id);
+      return view('ads.ad_details')->withAd($ad);
     }
 }

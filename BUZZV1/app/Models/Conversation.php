@@ -6,9 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Conversation extends Model
 {
-    /**
-     * Plusieurs vers un (pusieurs conversations => un user)
-     */
+    
     public function sender()
     {
         return $this->belongsTo('User','sender_id');

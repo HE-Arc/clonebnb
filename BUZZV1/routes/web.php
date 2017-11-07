@@ -38,18 +38,6 @@ Route::post('/contact', [
 	'uses'=> 'ContactsController@store'
 ]);
 
-//Publier une annonce
-Route::get('/advert', [
-	'as' => 'advert_path',
-	'uses'=> 'AdvertController@advert'
-]);
-
-Route::post('/advert', [
-	'as' => 'advert_path',
-	'uses'=> 'AdvertController@publish'
-]);
-
-
 Route::get('/profil', [
 	'as' =>'profil_path',
 	'uses'=>'UsersController@showEditForm'
@@ -65,17 +53,6 @@ Route::post('/profil', [
 Route::get('/reset', [
 	'as'=>'reset_path',
 	'uses'=>'UsersController@reset'
-]);
-
-//===Connexion via réseaux sociaux===
-Route::get('login/google', [
-	'as' =>'google_path',
-	'uses'=>'UsersLoginController@redirectToProvider'
-]);
-
-Route::get('/login/google/callback', [
-	'as' =>'google_callback_path',
-	'uses'=>'UsersLoginController@handleProviderCallback'
 ]);
 
 //===Fin Connexion via réseaux sociaux===
@@ -104,14 +81,14 @@ Route::get('/conversation', [
 ]);
 
 //===Afficher les annonces, Afficher les détails ===
-Route::get('/listing/{category_id}', [
-	'as' =>'listing_path',
-	'uses'=>'AdsController@showListing'
+Route::get('/ads/{category_id}', [
+	'as' =>'ads_path',
+	'uses'=>'AdsController@showAds'
 ]);
 
-Route::get('/details', [
+Route::get('/ad_details/{ad_id}', [
 	'as' =>'details_path',
-	'uses'=>'AdsController@showListingDetails'
+	'uses'=>'AdsController@showAdDetails'
 ]);
 //===Fin des annonces===
 

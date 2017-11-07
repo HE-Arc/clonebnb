@@ -20,10 +20,9 @@ class CreateAdsTable extends Migration
             $table->boolean('online')->default(false);
             $table->boolean('expired')->default(false);
             $table->string('address')->nullable();
-            $table->string('image')->nullable();
-            $table->integer('category_id')->unsigned();
-            $table->foreign('category_id')->references('id')->on('category')->onDelete('cascade');
+            $table->integer('user_id')->nullable()->unsigned();
             $table->timestamps();
+            $table->engine = 'InnoDB';
         });
     }
 

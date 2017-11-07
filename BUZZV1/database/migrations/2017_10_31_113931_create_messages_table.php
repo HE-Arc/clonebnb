@@ -17,11 +17,11 @@ class CreateMessagesTable extends Migration
             $table->increments('id');
             $table->integer('receiver_id')->nullable();
             $table->integer('sender_id')->nullable();
-            $table->integer('conversation_id')->unsigned();
-            $table->foreign('conversation_id')->references('id')->on('conversation')->onDelete('cascade');
+            $table->integer('conversation_id')->nullable()->unsigned();
             $table->text('message')->nullable();
             $table->boolean('status')->default(false);
             $table->timestamps();
+            $table->engine = 'InnoDB';
         });
     }
 

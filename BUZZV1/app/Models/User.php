@@ -12,6 +12,12 @@ use Illuminate\Notifications\Notifiable;
 class User extends Model implements AuthenticatableContract, CanResetPasswordContract
 {
 	use Authenticatable, CanResetPassword, Notifiable;
+
+
+		public function ads()
+		{
+			return $this->hasMany('Ad');
+		}
     /**
      * The attributes that are mass assignable
      *

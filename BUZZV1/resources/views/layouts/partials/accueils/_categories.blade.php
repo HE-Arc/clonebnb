@@ -2,7 +2,7 @@
   <div class="row test">
     @foreach ($categories as $category)
     <div class="col-md-4">
-      <a href="{{ route('listing_path', $category['id']) }}" class="style_prevu_kit">
+      <a href="{{ route('ads_path', $category['id']) }}" class="style_prevu_kit">
       <div class="">
         <div class="panel-heading preview">
           <img src="{{ asset('images/'.$category['icon'].'.png') }}" style="width: 100px"><br />
