@@ -11,6 +11,7 @@
 |
 */
 use App\Mail\ContactMessageCreated;
+use Carbon\Carbon;
 
 //Page d'acceuil
 Route::get('/', [
@@ -62,6 +63,10 @@ Route::get('/publish', [
 	'as' =>'publish_path',
 	'uses'=>'DashboardController@showPublishForm'
 ]);
+Route::post('/publish', [
+	'as' =>'publish_path',
+	'uses'=>'DashboardController@publish'
+]);
 
 Route::get('/dashboard', [
 	'as' =>'dashboard_path',
@@ -86,7 +91,7 @@ Route::get('/ads/{category_id}', [
 	'uses'=>'AdsController@showAds'
 ]);
 
-Route::get('/ad_details/{ad_id}', [
+Route::get('/ad/{ad_id}', [
 	'as' =>'details_path',
 	'uses'=>'AdsController@showAdDetails'
 ]);
@@ -99,17 +104,10 @@ Route::get('/reservation', [
 ]);
 //===Fin Reservation===
 
-//===Reservation===
-Route::get('/{user_id}/favorites', [
-	'as' =>'favorite_path',
-	'uses'=>'DashboardController@showFavorite'
-]);
-Route::post('/{user_id}/favorites', [
-	'as' =>'favorite_path',
-	'uses'=>'DashboardController@storeFavorite'
-]);
-//===Fin Reservation===
+//===Comments===
+Route::post('/ad/{ad_id}/comment', [
+	'as' =>'comment_path',
+	'uses'=>'CommentsController@edit'
+], Carbon::setLocale('fr'));
 
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');

@@ -34,10 +34,7 @@
   </div>
   <!-- Wrapper / End -->
   <!--Footer-->
-  {{-- Le pied de page est différent pour la page article_path --}}
-  @if(Route::currentRouteName() != 'listing_path' )
-   @include('layouts.partials.footers._master_footer')
-  @endif
+  @include('layouts.partials.footers._master_footer')
   <!--Fin Footer-->
 
 <!-- Scripts

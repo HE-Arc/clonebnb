@@ -4,18 +4,18 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-5 col-sm-6">
-			<img class="footer-logo" src="images/logo.png" alt="">
+			<img class="footer-logo" src="/images/logo.png" alt="">
 			<br><br>
 			<p><a>Les règles</a></p>
 		</div>
 
 		<div class="col-md-4 col-sm-6 ">
 			<h4>Liens</h4>
-			<ul class="footer-links">
-				<li><a href="#">Connexion</a></li>
+			<!--<ul class="footer-links">
+				<li><a href="#sign-in-dialog">Connexion</a></li>
 				<li><a href="#">Inscription</a></li>
 				<li><a href="#">Mon compte</a></li>
-			</ul>
+			</ul>-->
 
 			<ul class="footer-links">
 				<li><a href="#">Comment ça marche</a></li>
@@ -32,12 +32,12 @@
 				E-Mail:<span> <a href="{{ route('contact_path') }}"><span style="color: red">long@gmail.com</span></a> </span><br>
 			</div>
 
-			<ul class="social-icons margin-top-20">
+			<!--<ul class="social-icons margin-top-20">
 				<li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
 				<li><a class="twitter" href="#"><i class="icon-twitter"></i></a></li>
 				<li><a class="gplus" href="#"><i class="icon-gplus"></i></a></li>
 				<li><a class="vimeo" href="#"><i class="icon-vimeo"></i></a></li>
-			</ul>
+			</ul>-->
 
 		</div>
 

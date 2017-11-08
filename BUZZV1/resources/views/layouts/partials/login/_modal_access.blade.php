@@ -18,7 +18,7 @@
       <!-- Login -->
       <div class="tab-content" id="tab1" style="display: none;">
         <form action="{{ route('login') }}" method="POST" class="login">
-          {{ csrf_field() }}
+
           <p class="form-row form-row-wide">
             <label for="email">Email:
               <i class="fa fa-envelope-o"></i>

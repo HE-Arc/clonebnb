@@ -46,7 +46,7 @@
               	</a>
             </div>
             <div class="user-menu">
-              <div class="user-name"><span><img src="uploads/avatars/{{ Auth::user()->photo }}" alt=""></span>{{ Auth::user()->getFullName() }}</div>
+              <div class="user-name"><span><img src="/uploads/avatars/{{ Auth::user()->photo }}" alt=""></span>{{ Auth::user()->getFullName() }}</div>
                 <ul>
                   <li><a href="{{ route('dashboard_path') }}">Tableau de bord</a></li>
                   <li><a href="#">Mes annonces</a></li>

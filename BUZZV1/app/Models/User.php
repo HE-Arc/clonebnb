@@ -16,8 +16,14 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 
 		public function ads()
 		{
-			return $this->hasMany('Ad');
+			return $this->hasMany('App\Models\Ad');
 		}
+
+		//Possède plusieurs commentaires
+    public function comment(){
+      return $this->hasMany("App\Models\Comment");
+    }
+
     /**
      * The attributes that are mass assignable
      *
