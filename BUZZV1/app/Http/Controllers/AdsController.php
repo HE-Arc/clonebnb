@@ -3,8 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+<<<<<<< HEAD
 use App\Models\Ad;
 use DB;
+=======
+use Illuminate\Http\Request\AdsRequest;
+>>>>>>> add_advert
 
 class AdsController extends Controller
 {

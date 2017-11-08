@@ -35,11 +35,12 @@
 						<div class="add-listing-headline">
 							<h3><i class="fa fa-file-o"></i> Informations générales</h3>
 						</div>
-
+						<form action="{{ route('publish_path') }}" method="POST">
+							{{ csrf_field() }}
 						<div class="row with-forms">
 							<div class="col-md-12">
 								<h5>Titre de l'annonce <i class="tip" data-tip-content="Nom de votre annonce"></i></h5>
-								<input class="search-field" type="text" value="" required/>
+								<input class="search-field" type="text" name="title" value="{{ old('title') }}" required/>
 							</div>
 						</div>
 
@@ -47,7 +48,7 @@
 
 							<div class="col-md-6">
 								<h5>Catégories</h5>
-								<select class="chosen-select-no-single" >
+								<select class="chosen-select-no-single" name="category_id">
 									<option label="blank">Choisir une catégorie</option>
 									<option>Multimédia</option>
 									<option>Sport</option>
@@ -116,7 +117,7 @@
 
 						<!-- Dropzone -->
 						<div class="submit-section">
-							<form action="/file-upload" class="dropzone" ></form>
+							<!-- <form action="/file-upload" class="dropzone" ></form>-->
 						</div>
 
 					</div>
@@ -133,7 +134,7 @@
 						<!-- Description -->
 						<div class="form">
 							<h5>Description</h5>
-							<textarea class="WYSIWYG" name="summary" cols="40" rows="3" id="summary" spellcheck="true"></textarea>
+							<textarea class="WYSIWYG" name="description" cols="40" rows="3" id="summary" spellcheck="true"></textarea>
 						</div>
 
 						<!-- Row -->
@@ -213,7 +214,7 @@
 												<div class="fm-move"><i class="sl sl-icon-cursor-move"></i></div>
 												<div class="fm-input pricing-name"><input type="text" placeholder="Titre" /></div>
 												<div class="fm-input pricing-ingredients"><input type="text" placeholder="Montant" /></div>
-												<div class="fm-input pricing-price"><input type="text" placeholder="Prix" data-unit="CHF" /></div>
+												<div class="fm-input pricing-price"><input type="text" name="price" value="{{ old('price') }}" placeholder="Prix" data-unit="CHF" /></div>
 												<div class="fm-close"><a class="delete" href="#"><i class="fa fa-remove"></i></a></div>
 											</td>
 										</tr>
@@ -228,9 +229,8 @@
 					</div>
 					<!-- Section / End -->
 
-
-					<a href="#" class="button preview">Prévisualiser <i class="fa fa-arrow-circle-right"></i></a>
-
+					<button type="submit" class="button preview">Prévisualiser <i class="fa fa-arrow-circle-right"></i></button>
+					</form>
 				</div>
 			</div>
 @stop

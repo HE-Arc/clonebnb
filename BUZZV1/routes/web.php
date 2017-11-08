@@ -58,9 +58,16 @@ Route::get('/reset', [
 //===Fin Connexion via réseaux sociaux===
 
 //===Tableau de bord===
+
+//Publier une annonce
 Route::get('/publish', [
 	'as' =>'publish_path',
 	'uses'=>'DashboardController@showPublishForm'
+]);
+
+Route::post('/publish', [
+	'as' =>'publish_path',
+	'uses'=>'DashboardController@publish'
 ]);
 
 Route::get('/dashboard', [
