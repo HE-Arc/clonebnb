@@ -36,6 +36,7 @@
 							<h3><i class="fa fa-file-o"></i> Informations générales</h3>
 						</div>
 						<form action="{{ route('publish_path') }}" method="POST">
+							{{ csrf_field() }}
 						<div class="row with-forms">
 							<div class="col-md-12">
 								<h5>Titre de l'annonce <i class="tip" data-tip-content="Nom de votre annonce"></i></h5>
@@ -116,7 +117,7 @@
 
 						<!-- Dropzone -->
 						<div class="submit-section">
-							<form action="/file-upload" class="dropzone" ></form>
+							<!-- <form action="/file-upload" class="dropzone" ></form>-->
 						</div>
 
 					</div>
@@ -228,9 +229,8 @@
 					</div>
 					<!-- Section / End -->
 
-
-					<a href="#" class="button preview">Prévisualiser <i class="fa fa-arrow-circle-right"></i></a>
-
+					<button type="submit" class="button preview">Prévisualiser <i class="fa fa-arrow-circle-right"></i></button>
+					</form>
 				</div>
 			</div>
 @stop

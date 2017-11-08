@@ -73,13 +73,12 @@ Route::get('/login/google/callback', [
 //Publier une annonce
 Route::get('/publish', [
 	'as' =>'publish_path',
-	'uses'=>'DashboardController@publish'
+	'uses'=>'DashboardController@showPublishForm'
 ]);
 
-
-Route::get('/publish', [
+Route::post('/publish', [
 	'as' =>'publish_path',
-	'uses'=>'DashboardController@showPublishForm'
+	'uses'=>'DashboardController@publish'
 ]);
 
 Route::get('/dashboard', [

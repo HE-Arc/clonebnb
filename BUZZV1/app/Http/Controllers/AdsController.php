@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Http\Request\AdsRequest;
 
 class AdsController extends Controller
 {
@@ -16,11 +17,5 @@ class AdsController extends Controller
     public function showListingDetails()
     {
       return view('ads.ad_details');
-    }
-
-
-    public function publish(Request $request)
-    {
-        echo "INPUT";
     }
 }
