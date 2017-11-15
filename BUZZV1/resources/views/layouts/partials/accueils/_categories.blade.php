@@ -7,7 +7,7 @@
         <div class="panel-heading preview">
           <img src="{{ asset('images/'.$category['icon'].'.png') }}" style="width: 100px"><br />
           <h5><strong>{{ $category['name'] }}</strong></h5>
-          <h3 style="color: #7C3CE6;"><strong>120</strong></h3>
+          <h3 style="color: #7C3CE6;"><strong>{{ $category->adsNumber() }}</strong></h3>
         </div>
       </div>
       </a>

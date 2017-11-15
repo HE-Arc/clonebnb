@@ -8,8 +8,8 @@
         {{ $ad->address }}
       </a>
     </span>
-    <div class="star-rating" data-rating="5">
-      <div class="rating-counter"><a href="#listing-reviews">(31 avis)</a></div>
+    <div class="star-rating" data-rating="{{ $ad->rate() }}">
+      <div class="rating-counter"><a href="#listing-reviews">( {{ $ad->getNumComments() }} )</a></div>
     </div>
   </div>
 </div>

@@ -19,10 +19,4 @@ class PagesController extends Controller
     {
     	return view('pages.about');
     }
-
-    //Liste des catégories
-    public function showCategories()
-    {
-
-    }
 }

@@ -8,7 +8,6 @@
 
 <!-- Dashboard -->
 
-
 	<!-- Contenu -->
 	@include('layouts.partials.dashboard.content')
 	<!-- Fin Contenu -->

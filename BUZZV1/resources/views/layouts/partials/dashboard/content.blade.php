@@ -32,7 +32,7 @@
     <!-- Item -->
     <div class="col-lg-3 col-md-6">
       <div class="dashboard-stat color-1">
-        <div class="dashboard-stat-content"><h4>6</h4> <span>Annonces en ligne</span></div>
+        <div class="dashboard-stat-content"><h4>{{ $ad->onlineAds() }}</h4> <span>Annonces en ligne</span></div>
         <div class="dashboard-stat-icon"><i class="im im-icon-Map2"></i></div>
       </div>
     </div>
@@ -40,7 +40,7 @@
     <!-- Item -->
     <div class="col-lg-3 col-md-6">
       <div class="dashboard-stat color-2">
-        <div class="dashboard-stat-content"><h4>726</h4> <span>Vues</span></div>
+        <div class="dashboard-stat-content"><h4>726</h4> <span>-</span></div>
         <div class="dashboard-stat-icon"><i class="im im-icon-Line-Chart"></i></div>
       </div>
     </div>
@@ -49,7 +49,7 @@
     <!-- Item -->
     <div class="col-lg-3 col-md-6">
       <div class="dashboard-stat color-3">
-        <div class="dashboard-stat-content"><h4>95</h4> <span>Avis</span></div>
+        <div class="dashboard-stat-content"><h4>{{ $comments->total() }}</h4> <span>Avis</span></div>
         <div class="dashboard-stat-icon"><i class="im im-icon-Add-UserStar"></i></div>
       </div>
     </div>
@@ -57,7 +57,7 @@
     <!-- Item -->
     <div class="col-lg-3 col-md-6">
       <div class="dashboard-stat color-4">
-        <div class="dashboard-stat-content"><h4>126</h4> <span>Mis en favoris</span></div>
+        <div class="dashboard-stat-content"><h4>126</h4> <span>-</span></div>
         <div class="dashboard-stat-icon"><i class="im im-icon-Heart"></i></div>
       </div>
     </div>

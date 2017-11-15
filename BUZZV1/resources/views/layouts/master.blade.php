@@ -20,7 +20,7 @@
   <div id="wrapper">
 
     <!-- Entête -->
-    @include('layouts.partials.headers._master_header')
+    @include('layouts.partials.listing._header')
     <!--Fin entête -->
 
     <!--Message flash-->
@@ -35,10 +35,7 @@
   </div>
   <!-- Wrapper / End -->
   <!--Footer-->
-  {{-- Le pied de page est différent pour la page article_path --}}
-  @if(Route::currentRouteName() != 'ads_path' )
    @include('layouts.partials.footers._master_footer')
-  @endif
   <!--Fin Footer-->
 
 <!-- Scripts

@@ -1,6 +1,6 @@
 <!-- Reviews -->
 <div id="listing-reviews" class="listing-section">
-  <h3 class="listing-desc-headline margin-top-75 margin-bottom-20">{{ substr($ad->getNumComments(),1) }} <span>({{ substr($ad->getNumComments(),0,1) }})</span></h3>
+  <h3 class="listing-desc-headline margin-top-75 margin-bottom-20">{{ $ad->getNumComments() }}</h3>
 
   <div class="clearfix"></div>
 

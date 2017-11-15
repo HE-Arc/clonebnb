@@ -65,10 +65,6 @@ Route::get('/publish', [
 	'as' =>'publish_path',
 	'uses'=>'DashboardController@showPublishForm'
 ]);
-Route::post('/publish', [
-	'as' =>'publish_path',
-	'uses'=>'DashboardController@publish'
-]);
 
 Route::post('/publish', [
 	'as' =>'publish_path',
@@ -80,12 +76,30 @@ Route::get('/dashboard', [
 	'uses'=>'DashboardController@showDashboard'
 ]);
 
+Route::get('/my-online-ads', [
+	'as' =>'online_path',
+	'uses'=>'DashboardController@onlineAds'
+]);
+
+Route::get('/reviews', [
+	'as' =>'reviews_path',
+	'uses'=>'DashboardController@reviews'
+]);
+
+Route::get('/my-pending-ads', [
+	'as' =>'pending_path',
+	'uses'=>'DashboardController@pendindAds'
+]);
+
+Route::get('/my-expired-ads', [
+	'as' =>'expired_path',
+	'uses'=>'DashboardController@expiredAds'
+]);
 
 Route::get('/message', [
 	'as' =>'message_path',
 	'uses'=>'DashboardController@showMessage'
 ]);
-
 
 Route::get('/conversation', [
 	'as' =>'conversation_path',

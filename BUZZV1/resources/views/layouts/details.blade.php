@@ -47,25 +47,17 @@
 <script type="text/javascript" src="{{ asset('js/rangeslider.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/magnific-popup.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/waypoints.min.js') }}"></script>
-<script type="text/javascript" src="scripts/counterup.min.js"></script>
+<script type="text/javascript" src="{{ asset('js/counterup.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/jquery-ui.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/tooltips.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/custom.js') }}"></script>
 
 
 <!-- Maps -->
-<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&amp;language=en"></script>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyAoAs-fbvnTAyV7WQG5gDpowPSC25oKv7M"></script>
 <script type="text/javascript" src="{{ asset('js/infobox.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/markerclusterer.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/map.js') }}"></script>
-
-
-<link rel="stylesheet" href="{{ asset('css/datedropper.css') }}">
-<script src="{{ asset('js/datedropper.min.js') }}"></script>
-<script>$('#booking-date').dateDropper();</script>
-
-<!-- Booking Widget - Quantity Buttons -->
-<script src="{{ asset('js/quantityButtons.js') }}"></script>
 
 </body>
 </html>

@@ -14,14 +14,20 @@
     <ul data-submenu-title="Annonces">
       <li><a><i class="fa fa-list"></i> Mes annonces</a>
         <ul>
-          <li><a href="">En ligne <span class="nav-tag green">6</span></a></li>
-          <li><a href="">En attente <span class="nav-tag yellow">1</span></a></li>
-          <li><a href="">Expiré <span class="nav-tag red">2</span></a></li>
+          @if(!empty($ad))
+            <li><a href="{{ route('online_path') }}">En ligne <span class="nav-tag green">{{ $ad->onlineAds() }}</span></a></li>
+            <li><a href="{{ route('pending_path') }}">En attente <span class="nav-tag yellow">{{ $ad->pendingAds() }}</span></a></li>
+            <li><a href="{{ route('expired_path') }}">Expiré <span class="nav-tag red">{{ $ad->expiredAds() }}</span></a></li>
+          @else
+            <li><a href="{{ route('online_path') }}">En ligne <span class="nav-tag green">0</span></a></li>
+            <li><a href="{{ route('pending_path') }}">En attente <span class="nav-tag yellow">0</span></a></li>
+            <li><a href="{{ route('expired_path') }}">Expiré <span class="nav-tag red">0</span></a></li>
+          @endif
         </ul>
       </li>
-      <li><a href=""><i class="fa fa-star"></i> Avis reçus</a></li>
-      <li><a href=""><i class="fa fa-heart"></i> Mes favoris</a></li>
-      <li><a href="{{ route('publish_path') }}"><i class="fa fa-plus"></i> Ajouter une annonce</a></li>
+      <li class="{{ set_active_route('reviews_path') }}"><a href="{{ route('reviews_path') }}"><i class="fa fa-star"></i> Avis </a></li>
+      <li class="{{ set_active_route('profil_path') }}"><a href=""><i class="fa fa-heart"></i> Mes favoris</a></li>
+      <li class="{{ set_active_route('publish_path') }}"><a href="{{ route('publish_path') }}"><i class="fa fa-plus"></i> Ajouter une annonce</a></li>
     </ul>
 
     <ul data-submenu-title="Mon compte">

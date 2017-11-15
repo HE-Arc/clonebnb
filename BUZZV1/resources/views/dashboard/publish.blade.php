@@ -35,33 +35,25 @@
 						<div class="add-listing-headline">
 							<h3><i class="fa fa-file-o"></i> Informations générales</h3>
 						</div>
-						<form action="{{ route('publish_path') }}" method="POST">
+						<form action="{{ route('publish_path') }}" method="POST" enctype="multipart/form-data">
 							{{ csrf_field() }}
 						<div class="row with-forms">
 							<div class="col-md-12">
 								<h5>Titre de l'annonce <i class="tip" data-tip-content="Nom de votre annonce"></i></h5>
-								<input class="search-field" type="text" name="title" value="{{ old('title') }}" required/>
+								<input class="search-field" name="title" type="text" value="{{ old('title') }}" required/>
 							</div>
 						</div>
 
 						<div class="row with-forms">
 
-							<div class="col-md-6">
+							<div class="col-md-12">
 								<h5>Catégories</h5>
 								<select class="chosen-select-no-single" name="category_id">
 									<option label="blank">Choisir une catégorie</option>
-									<option>Multimédia</option>
-									<option>Sport</option>
-									<option>Appartement</option>
-									<option>Informatique</option>
-									<option>Outils</option>
-									<option>Piscine</option>
+									@foreach($categories as $category)
+									<option value="{{ $category['id'] }}">{{ $category['name'] }}</option>
+									@endforeach
 								</select>
-							</div>
-
-							<div class="col-md-6">
-								<h5>Mots clés <i class="tip" data-tip-content="Au maximum 5 en relation avec votre annonce. Utiles pour la recherche"></i></h5>
-								<input type="text" placeholder="Séparez les mots par une virgule">
 							</div>
 
 						</div>
@@ -79,27 +71,22 @@
 
 								<div class="col-md-6">
 									<h5>Rue</h5>
-                  <input type="text" placeholder="">
+                  <input type="text" name="street" placeholder="Entrez la rue" value="{{ explode('-', old('address'))[0] }}" required>
 								</div>
 
 								<div class="col-md-6">
 									<h5>Numéro</h5>
-									<input type="text" placeholder="">
+									<input type="text" name="number" placeholder="Numéro de la rue" required>
 								</div>
 
 								<div class="col-md-6">
 									<h5>NPA</h5>
-									<input type="text">
+									<input type="text" name="npa" placeholder="Code postal" required>
 								</div>
 
 								<div class="col-md-6">
 									<h5>Ville</h5>
-                  <select class="chosen-select-no-single" >
-										<option label="blank">Choisir la ville</option>
-										<option>Lausanne</option>
-										<option>Neuchâtel</option>
-										<option>Bienne</option>
-									</select>
+                  <input type="text" name="city" placeholder="Ville" required>
 								</div>
 
 							</div>
@@ -110,16 +97,11 @@
 
 					<!-- Section -->
 					<div class="add-listing-section margin-top-45">
-
+						<!-- Headline -->
 						<div class="add-listing-headline">
-							<h3><i class="fa fa-image"></i> Image</h3>
+							<h3><i class="fa fa-image"></i> Images <h5><span> La première image sera l'image principale de votre annonce</span></h5></h3>
 						</div>
-
-						<!-- Dropzone -->
-						<div class="submit-section">
-							<!-- <form action="/file-upload" class="dropzone" ></form>-->
-						</div>
-
+						<input type="file" class="" name="image_[]" multiple required>
 					</div>
 					<!-- Section / End -->
 
@@ -134,7 +116,7 @@
 						<!-- Description -->
 						<div class="form">
 							<h5>Description</h5>
-							<textarea class="WYSIWYG" name="description" cols="40" rows="3" id="summary" spellcheck="true"></textarea>
+							<textarea class="WYSIWYG" name="description" cols="40" rows="3" id="description" spellcheck="true" required></textarea>
 						</div>
 
 						<!-- Row -->
@@ -142,17 +124,17 @@
 
 							<div class="col-md-4">
 								<h5>Téléphone <span>(optionnel)</span></h5>
-								<input type="text">
+								<input type="text" name="telephone">
 							</div>
 
 							<div class="col-md-4">
 								<h5>Site <span>(optionnel)</span></h5>
-								<input type="text">
+								<input type="text" name="site">
 							</div>
 
 							<div class="col-md-4">
 								<h5>E-mail <span>(optionnel)</span></h5>
-								<input type="text">
+								<input type="email" name="email">
 							</div>
 
 						</div>
@@ -162,34 +144,20 @@
 
 							<div class="col-md-4">
 								<h5 class="fb-input"><i class="fa fa-facebook-square"></i> Facebook <span>(optionnel)</span></h5>
-								<input type="text" placeholder="https://www.facebook.com/">
+								<input type="text" name="facebook" placeholder="Exemple: https://www.facebook.com/">
 							</div>
 
 							<div class="col-md-4">
 								<h5 class="twitter-input"><i class="fa fa-twitter"></i> Twitter <span>(optionnel)</span></h5>
-								<input type="text" placeholder="https://www.twitter.com/">
+								<input type="text" name="twitter" placeholder="Exemple: https://www.twitter.com/">
 							</div>
 
 							<div class="col-md-4">
 								<h5 class="gplus-input"><i class="fa fa-google-plus"></i> Google Plus <span>(optionnel)</span></h5>
-								<input type="text" placeholder="https://plus.google.com">
+								<input type="text" name="google" placeholder="Exemple: https://plus.google.com">
 							</div>
 
 						</div>
-
-
-						<!-- Checkboxes -->
-						<h5 class="margin-top-30 margin-bottom-10">Caractéristiques <span>(optionnel)</span></h5>
-						<div class="checkboxes in-row margin-bottom-20">
-
-							<input id="check-a" type="checkbox" name="check">
-							<label for="check-a">Assenceur</label>
-
-							<input id="check-b" type="checkbox" name="check">
-							<label for="check-b">Bon voisinage</label>
-
-						</div>
-						<!-- Checkboxes -->
 
 					</div>
 					<!-- Fin Section ->
@@ -198,41 +166,35 @@
 					<div class="add-listing-section margin-top-45">
 
 						<div class="add-listing-headline">
-							<h3><i class="sl sl-icon-book-open"></i> Prix</h3>
-							<!-- Switcher -->
-							<label class="switch"><input type="checkbox" checked><span class="slider round"></span></label>
+							<h3><i class="fa fa-money"></i> Prix</h3>
 						</div>
 
 						<!-- Switcher Content -->
-						<div class="switcher-content">
+						<div class="row with-forms">
 
-							<div class="row">
-								<div class="col-md-12">
-									<table id="pricing-list-container">
-										<tr class="pricing-list-item pattern">
-											<td>
-												<div class="fm-move"><i class="sl sl-icon-cursor-move"></i></div>
-												<div class="fm-input pricing-name"><input type="text" placeholder="Titre" /></div>
-												<div class="fm-input pricing-ingredients"><input type="text" placeholder="Montant" /></div>
-												<div class="fm-input pricing-price"><input type="text" name="price" value="{{ old('price') }}" placeholder="Prix" data-unit="CHF" /></div>
-												<div class="fm-close"><a class="delete" href="#"><i class="fa fa-remove"></i></a></div>
-											</td>
-										</tr>
-									</table>
-									<a href="#" class="button add-pricing-list-item">Ajouter un prix</a>
-									<a href="#" class="button add-pricing-submenu">Ajouter un prix</a>
-								</div>
+							<div class="col-md-4">
+								<h5>Titre</h5>
+								<input type="text" placeholder="Montant journalier" disabled>
+							</div>
+
+							<div class="col-md-4">
+								<h5>Montant</h5>
+								<input type="text" name="price" placeholder="Exemple: 200" required>
+							</div>
+
+							<div class="col-md-4">
+								<h5>Devise</h5>
+								<input type="text" placeholder="CHF" disabled>
 							</div>
 
 						</div>
 
+
 					</div>
 					<!-- Section / End -->
 
-					<button type="submit" class="button preview">Prévisualiser <i class="fa fa-arrow-circle-right"></i></button>
-					</form>
+					<button type="submit" class="button preview">Soumettre</buttom>
+				</form>
 				</div>
 			</div>
 @stop
-<!-- DropZone -->
-<script type="text/javascript" src="js/dropzone.js"></script>

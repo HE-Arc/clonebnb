@@ -5,26 +5,31 @@
 @stop
 
 @section('content')
-<!-- Content de la page -->
-<div class="fs-container">
+<!--Recherche-->
+@include('layouts.partials.listing._listing_title')
+<!--Fin Recherche-->
+<div class="container">
+	<div class="row">
 
-	<div class="fs-inner-container content">
-		<div class="fs-content">
+		<!--Recherche-->
+		@include('layouts.partials.listing._search_bar')
+		<!--Fin Recherche-->
 
-			<!--Recherche et filtre-->
-			@include('layouts.partials.ads._filter')
-			<!--Fin Recherche et filtre-->
 
-			<!--Section affichant les résultats-->
-			@include('layouts.partials.ads._result_list')
-			<!--Fin section des résultats-->
-
+		<div class="col-md-12">
+			<!--Filtre-->
+			@include('layouts.partials.listing._filter')
+			<!--Fin Filtre-->
+				<!--Section affichant les résultats-->
+				@include('layouts.partials.ads._result_list')
+				<!--Fin section des résultats-->
 		</div>
+
 	</div>
-
-	<!-- Carte-->
-	@include('layouts.partials.ads._map')
-	<!--Fin carte-->
-
 </div>
+
+
+<!-- Back To Top Button -->
+<div id="backtotop"><a href="#"></a></div>
+<!-- Wrapper / End -->
 @stop
