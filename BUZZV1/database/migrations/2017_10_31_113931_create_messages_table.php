@@ -21,7 +21,6 @@ class CreateMessagesTable extends Migration
             $table->text('message')->nullable();
             $table->boolean('status')->default(false);
             $table->timestamps();
-            $table->engine = 'InnoDB';
         });
     }
 

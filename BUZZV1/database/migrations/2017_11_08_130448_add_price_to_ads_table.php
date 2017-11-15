@@ -14,7 +14,7 @@ class AddPriceToAdsTable extends Migration
     public function up()
     {
         Schema::table('ads', function (Blueprint $table) {
-            $table->double('price',8,2)->nullable();
+            $table->double('price', 8, 2)->nullable();
         });
     }
 
