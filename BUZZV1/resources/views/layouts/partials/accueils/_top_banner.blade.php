@@ -21,16 +21,14 @@
 
 					<div class="main-search-input-item">
 						<select data-placeholder="All Categories" class="chosen-select" >
-							<option>Toutes les catégories</option>
-							<option>Shops</option>
-							<option>Hotels</option>
-							<option>Restaurants</option>
-							<option>Fitness</option>
-							<option>Events</option>
+						@foreach ($categories as $category)
+							<option value="{{ $category['id'] }}">{{ $category['name'] }}</option>
+						@endforeach
 						</select>
 					</div>
 
 					<button class="button" onclick="window.location.href='listings-half-screen-map-list.html'">Rechercher</button>
+
 
 				</div>
 			</div>
