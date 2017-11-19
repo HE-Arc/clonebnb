@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\AdRequest;
+use App\Http\Requests\DemandRequest;
 use Illuminate\Http\Request;
 use App\Models\Ad;
 use App\Models\Demand;
@@ -111,7 +112,7 @@ class DashboardController extends Controller
 		$demand->description = $request->description;
 		$demand->user_id = Auth::user()->id;
 		$demand->category_id = $request->category_id;
-		if($ad->save())
+		if($demand->save())
 		{
 			flashy()->success("Demande enregistrée!");
 		} else
