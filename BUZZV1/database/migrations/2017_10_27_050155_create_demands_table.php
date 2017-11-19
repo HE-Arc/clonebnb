@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateDemandTable extends Migration
+class CreateDemandsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateDemandTable extends Migration
      */
     public function up()
     {
-        Schema::create('demand', function (Blueprint $table) {
+        Schema::create('demands', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title')->nullable();
             $table->text('description')->nullable();
@@ -29,6 +29,6 @@ class CreateDemandTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('demand');
+        Schema::dropIfExists('demands');
     }
 }
