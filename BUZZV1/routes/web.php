@@ -71,6 +71,17 @@ Route::post('/publish', [
 	'uses'=>'DashboardController@publish'
 ]);
 
+//Publier une demande
+Route::get('/demand', [
+	'as' =>'demand_path',
+	'uses'=>'DashboardController@showDemandForm'
+]);
+
+Route::post('/demand', [
+	'as' =>'demand_path',
+	'uses'=>'DashboardController@addDemand'
+]);
+
 Route::get('/dashboard', [
 	'as' =>'dashboard_path',
 	'uses'=>'DashboardController@showDashboard'
