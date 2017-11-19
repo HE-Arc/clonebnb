@@ -1,7 +1,7 @@
 @extends('layouts.slave')
 
 @section('title')
-	Publier une annonce
+	Publier une demande
 @stop
 
 @section('content')
