@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\AdRequest;
 use Illuminate\Http\Request;
 use App\Models\Ad;
+use App\Models\Demand;
 use App\Models\Comment;
 use App\Models\Media;
 use App\Models\Category;
@@ -91,10 +92,33 @@ class DashboardController extends Controller
 		return view('dashboard.publish')->with('categories',Category::all());
 	}
 
+		//Afficher le formulaire d'édition d'une demande
+	public function showDemandForm()
+	{
+		return view('dashboard.demand')->with('categories', Category::all());
+	}
+
 	//Afficher les messages
 	public function showMessage()
 	{
 		return view('dashboard.message');
+	}
+
+	public function demand(DemandRequest $request)
+	{
+		$demand = new Demand();
+		$demand->title = $request->title;
+		$demand->description = $request->description;
+		$demand->user_id = Auth::user()->id;
+		$demand->category_id = $request->category_id;
+		if($ad->save())
+		{
+			flashy()->success("Demande enregistrée!");
+		} else
+		{
+			flashy()->error("Impossible d'enregistrer votre demande");
+		}
+		return redirect()->back();
 	}
 
 	//Publier une annonce
@@ -135,7 +159,8 @@ class DashboardController extends Controller
 	}
 
 	//Ajouter les média d'une annonces
-	private function addMedia(AdRequest $request, $ad_id){
+	private function addMedia(AdRequest $request, $ad_id)
+	{
 			if($request->hasFile('image_'))
 			{
 				$images = $request->file('image_');
