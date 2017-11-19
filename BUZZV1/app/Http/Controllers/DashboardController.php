@@ -104,7 +104,7 @@ class DashboardController extends Controller
 		return view('dashboard.message');
 	}
 
-	public function demand(DemandRequest $request)
+	public function addDemand(DemandRequest $request)
 	{
 		$demand = new Demand();
 		$demand->title = $request->title;
