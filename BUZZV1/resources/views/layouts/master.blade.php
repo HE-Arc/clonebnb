@@ -8,8 +8,8 @@
 <!-- CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="{{ asset('css/style.css') }}">
-<link rel="stylesheet" href="css/main.css" id="colors">
+<link rel="stylesheet" href="{{ secure_asset('css/style.css') }}">
+<link rel="stylesheet" href="{{ secure_asset('css/main.css) }}" id="colors">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
@@ -42,31 +42,31 @@
 ================================================== -->
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="{{ asset('js/mmenu.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('js/chosen.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('js/slick.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('js/rangeslider.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('js/magnific-popup.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('js/waypoints.min.js') }}"></script>
-<script type="text/javascript" src="scripts/counterup.min.js"></script>
-<script type="text/javascript" src="{{ asset('js/jquery-ui.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('js/tooltips.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('js/custom.js') }}"></script>
+<script type="text/javascript" src="{{ secure_asset('js/mmenu.min.js') }}"></script>
+<script type="text/javascript" src="{{ secure_asset('js/chosen.min.js') }}"></script>
+<script type="text/javascript" src="{{ secure_asset('js/slick.min.js') }}"></script>
+<script type="text/javascript" src="{{ secure_asset('js/rangeslider.min.js') }}"></script>
+<script type="text/javascript" src="{{ secure_asset('js/magnific-popup.min.js') }}"></script>
+<script type="text/javascript" src="{{ secure_asset('js/waypoints.min.js') }}"></script>
+<script type="text/javascript" src="{{ secure_asset('scripts/counterup.min.js') }}"></script>
+<script type="text/javascript" src="{{ secure_asset('js/jquery-ui.min.js') }}"></script>
+<script type="text/javascript" src="{{ secure_asset('js/tooltips.min.js') }}"></script>
+<script type="text/javascript" src="{{ secure_asset('js/custom.js') }}"></script>
 
 
 <!-- Maps -->
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&amp;language=en"></script>
-<script type="text/javascript" src="{{ asset('js/infobox.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('js/markerclusterer.js') }}"></script>
-<script type="text/javascript" src="{{ asset('js/map.js') }}"></script>
+<script type="text/javascript" src="{{ secure_asset('js/infobox.min.js') }}"></script>
+<script type="text/javascript" src="{{ secure_asset('js/markerclusterer.js') }}"></script>
+<script type="text/javascript" src="{{ secure_asset('js/map.js') }}"></script>
 
 
-<link href="css/plugins/datedropper.css" rel="stylesheet" type="text/css">
-<script src="{{ asset('js/datedropper.min.js') }}"></script>
+<link href="{{ secure_asset('css/plugins/datedropper.css') }}" rel="stylesheet" type="text/css">
+<script src="{{ secure_asset('js/datedropper.min.js') }}"></script>
 <script>$('#booking-date').dateDropper();</script>
 
-<script src="scripts/timedropper.js"></script>
-<link rel="stylesheet" type="text/css" href="css/plugins/timedropper.css">
+<script src="{{ secure_asset('scripts/timedropper.js') }}"></script>
+<link rel="stylesheet" type="text/css" href="{{ secure_asset('css/plugins/timedropper.css') }}">
 <script>
 this.$('#booking-time').timeDropper({
 	setCurrentTime: false,
@@ -83,7 +83,7 @@ var $clocks = $('.td-input');
 </script>
 
 <!-- Booking Widget - Quantity Buttons -->
-<script src="scripts/quantityButtons.js"></script>
+<script src="{{ secure_asset('scripts/quantityButtons.js') }}"></script>
 
 </body>
 </html>
