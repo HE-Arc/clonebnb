@@ -18,7 +18,6 @@
 			</ul>-->
 
 			<ul class="footer-links">
-				<li><a href="#">Comment ça marche</a></li>
 				<li><a href="{{ route('about_path') }}">A propos</a></li>
 			</ul>
 			<div class="clearfix"></div>
