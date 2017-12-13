@@ -1,5 +1,5 @@
 <!-- Bannière -->
-<div class="main-search-container dark-overlay">
+<div class="main-search-container dark-overlay" style="background-image:url('images/noelbackground.jpg'); height: 90vh;">
 <div class="main-search-inner">
 
 	<div class="container">
