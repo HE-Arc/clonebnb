@@ -1,10 +1,8 @@
 <?php
 
 namespace App\Models;
-
 use Illuminate\Database\Eloquent\Model;
 use Auth;
-
 class Ad extends Model
 {
   /**
@@ -42,11 +40,15 @@ class Ad extends Model
         return $this->belongsTo('App\Models\User');
     }
 
+    //Possède plusieurs like
+    public function favorites(){
+      return $this->hasMany("App\Models\Favorite");
+    }
+
     //Possède plusieurs commentaires
     public function comments(){
       return $this->hasMany("App\Models\Comment");
     }
-
     //Nombre de commentaires de l'annonce
     public function getNumComments(){
       $num = $this->comments()->count();
@@ -54,11 +56,6 @@ class Ad extends Model
         return $num. ' Commentaire';
       }
       return $num. ' Commentaires';
-    }
-
-    //Nombre total de commentaires d'un user
-    public function countAllComment(){
-      
     }
 
     //Calcul de la moyenne

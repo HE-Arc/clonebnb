@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\AdRequest;
 use Illuminate\Http\Request;
 use App\Models\Ad;
+use App\Models\Favorite;
 use App\Models\Comment;
 use App\Models\Media;
 use App\Models\Category;
@@ -29,12 +30,6 @@ class DashboardController extends Controller
 		return view('dashboard.dashboard', ['ad'=>$ad])->withComments($visitors_comments);
 	}
 
-	//Afficher la liste des favorites
-	public function showFavorite()
-	{
-		return view('dashboard.favorites');
-	}
-
 	//Afficher les Commentaires
 	public function reviews()
 	{
@@ -46,12 +41,6 @@ class DashboardController extends Controller
 				->where('comments.user_id', '!=', Auth::user()->id)
         ->paginate(15);
 		return view('dashboard.reviews')->withComments($comments)->withVisitorsComments($visitors_comments);
-	}
-
-	//Sauvegarder les favoris
-	public function storeFavorite()
-	{
-
 	}
 
 	//Annonce en ligne
@@ -91,6 +80,12 @@ class DashboardController extends Controller
 		return view('dashboard.publish')->with('categories',Category::all());
 	}
 
+	//Afficher les favoris
+	public function favorites(Request $request){
+		$favorites = Favorite::where('user_id','=',Auth::user()->id)->paginate(6);
+		return view('dashboard.favorites')->with('favorites',$favorites);
+	}
+
 	//Afficher les messages
 	public function showMessage()
 	{
@@ -100,7 +95,6 @@ class DashboardController extends Controller
 	//Publier une annonce
 	public function publish(AdRequest $request)
 	{
-
 		$ad = new Ad();
 		$ad->title = $request->title;
 		$ad->description = $request->description;
@@ -131,7 +125,7 @@ class DashboardController extends Controller
 			flashy()->error("Impossible d'enregistrer votre annonce");
 		}
 
-		return redirect()->back();
+		return redirect()->route('pending_path');
 	}
 
 	//Ajouter les média d'une annonces
@@ -151,4 +145,14 @@ class DashboardController extends Controller
 			}
 	}
 
+	//Supprimer un favoris
+	public function deleteFavorite(Request $request)
+  {
+			$fav_id = $request['favid'];
+      $favorite = Favorite::where('id', $fav_id)->first();
+      if (Auth::user() == $favorite->user) {
+				$favorite->delete();
+      }
+			return $request->all();
+  }
 }

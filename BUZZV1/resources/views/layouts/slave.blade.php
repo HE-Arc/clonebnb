@@ -4,6 +4,7 @@
 <title>@yield('title')</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="csrf_token" content="{{ csrf_token() }}" />
 
 <!-- CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -17,7 +18,7 @@
 
 </head>
 
-<body>
+<body id="item">
   <!-- Wrapper -->
   <div id="wrapper">
 
@@ -55,7 +56,6 @@
 <script type="text/javascript" src="{{ asset('js/rangeslider.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/magnific-popup.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/waypoints.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('js/counterup.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/jquery-ui.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/tooltips.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/custom.js') }}"></script>

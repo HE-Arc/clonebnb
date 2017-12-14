@@ -81,6 +81,11 @@ Route::get('/my-online-ads', [
 	'uses'=>'DashboardController@onlineAds'
 ]);
 
+Route::get('/favorites', [
+	'as' =>'favorites_path',
+	'uses'=>'DashboardController@favorites'
+]);
+
 Route::get('/reviews', [
 	'as' =>'reviews_path',
 	'uses'=>'DashboardController@reviews'
@@ -89,6 +94,11 @@ Route::get('/reviews', [
 Route::get('/my-pending-ads', [
 	'as' =>'pending_path',
 	'uses'=>'DashboardController@pendindAds'
+]);
+
+Route::post('/favorites', [
+	'as' => 'delete_fav_path',
+	'uses' => 'DashboardController@deleteFavorite'
 ]);
 
 Route::get('/my-expired-ads', [
@@ -106,10 +116,16 @@ Route::get('/conversation', [
 	'uses'=>'ConversationsController@showConversation'
 ]);
 
-//===Afficher les annonces, Afficher les détails ===
-Route::get('/ads/{category_id}', [
-	'as' =>'ads_path',
-	'uses'=>'AdsController@showAds'
+//===Afficher les annonces, sous forme de grid ===
+Route::get('/ads/grid/{category_id}', [
+	'as' =>'ads_grid_path',
+	'uses'=>'AdsController@showAdsGrid'
+]);
+
+//===Affichage des annonces sous forme de liste ===
+Route::get('/ads/list/{category_id}', [
+	'as' =>'ads_list_path',
+	'uses'=>'AdsController@showAdsList'
 ]);
 
 Route::get('/ad/{ad_id}', [
@@ -117,6 +133,13 @@ Route::get('/ad/{ad_id}', [
 	'uses'=>'AdsController@showAdDetails'
 ]);
 //===Fin des annonces===
+
+//===Recherche===
+Route::get('/ads', [
+	'as' =>'search_path',
+	'uses'=>'AdsController@searchAd'
+]);
+//===Fn recherhe===
 
 //===Reservation===
 Route::get('/reservation', [
@@ -131,4 +154,9 @@ Route::post('/ad/{ad_id}/comment', [
 	'uses'=>'CommentsController@edit'
 ], Carbon::setLocale('fr'));
 
+//===Favorites===
+Route::post('/favorite', [
+	'as' => 'favorite_path',
+	'uses' => 'AdsController@postFavorite'
+]);
 Auth::routes();

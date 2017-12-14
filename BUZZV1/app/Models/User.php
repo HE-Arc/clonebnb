@@ -8,7 +8,6 @@ use Illuminate\Auth\Passwords\CanResetPassword;
 use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Notifications\Notifiable;
-
 class User extends Model implements AuthenticatableContract, CanResetPasswordContract
 {
 	use Authenticatable, CanResetPassword, Notifiable;
@@ -18,6 +17,11 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 		{
 			return $this->hasMany('App\Models\Ad');
 		}
+
+		//Peut avoir plusieurs annonce en favoris
+		public function favorites() {
+      return $this->hasMany("App\Models\Favorite");
+    }
 
 		//Possède plusieurs commentaires
     public function comment(){

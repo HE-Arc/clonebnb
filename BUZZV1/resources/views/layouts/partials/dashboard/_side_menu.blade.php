@@ -26,7 +26,7 @@
         </ul>
       </li>
       <li class="{{ set_active_route('reviews_path') }}"><a href="{{ route('reviews_path') }}"><i class="fa fa-star"></i> Avis </a></li>
-      <li class="{{ set_active_route('profil_path') }}"><a href=""><i class="fa fa-heart"></i> Mes favoris</a></li>
+      <li class="{{ set_active_route('favorites_path') }}"><a href="{{ route('favorites_path') }}"><i class="fa fa-heart"></i> Mes favoris</a></li>
       <li class="{{ set_active_route('publish_path') }}"><a href="{{ route('publish_path') }}"><i class="fa fa-plus"></i> Ajouter une annonce</a></li>
     </ul>
 

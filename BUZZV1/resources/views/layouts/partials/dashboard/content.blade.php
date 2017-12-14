@@ -57,7 +57,7 @@
     <!-- Item -->
     <div class="col-lg-3 col-md-6">
       <div class="dashboard-stat color-4">
-        <div class="dashboard-stat-content"><h4>126</h4> <span>-</span></div>
+        <div class="dashboard-stat-content"><h4>{{ $ad->favorites()->count() }}</h4> <span>-</span></div>
         <div class="dashboard-stat-icon"><i class="im im-icon-Heart"></i></div>
       </div>
     </div>
@@ -90,7 +90,7 @@
     </div>
 
     <!-- Facturations -->
-    <div class="col-lg-6 col-md-12">
+    <!--<div class="col-lg-6 col-md-12">
       <div class="dashboard-list-box invoices with-icons margin-top-20">
         <h4>Facturation</h4>
         <ul>
@@ -145,7 +145,7 @@
 
         </ul>
       </div>
-    </div>
+    </div>-->
 
 
     <!-- Copyrights -->

@@ -47,9 +47,9 @@
                 <div class="user-name"><span><img src="/uploads/avatars/{{ Auth::user()->photo }}" alt=""></span>{{ Auth::user()->getFullName() }}</div>
                   <ul>
                     <li><a href="{{ route('dashboard_path') }}">Tableau de bord</a></li>
-                    <li><a href="#">Mes annonces</a></li>
-                    <li><a href="#">Messages</a></li>
-                    <li><a href="#">Avis reçus</a></li>
+                    <li><a href="{{ route('online_path') }}">Mes annonces</a></li>
+                    <li><a href="{{ route('message_path') }}">Messages</a></li>
+                    <li><a href="{{ route('reviews_path') }}">Avis reçus</a></li>
                     <li><a href="{{ route('profil_path') }}">Mon profil</a></li>
                     <li><a class="dropdown-item" href="" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Se déconnecter</a>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

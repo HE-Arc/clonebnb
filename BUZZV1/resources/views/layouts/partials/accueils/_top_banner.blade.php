@@ -39,11 +39,4 @@
 
 </div>
 
-<!-- Video -->
-<div class="video-container">
-	<video poster="images/main-search-video-poster.jpg" loop autoplay muted>
-		<source src="images/main-search-video.mp4" type="video/mp4">
-	</video>
-</div>
-
 </div>
