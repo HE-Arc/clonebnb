@@ -15,33 +15,25 @@ class AdsController extends Controller
     {
       return view('ads.ad');
     }
-
     /*
     *Retourne la liste des annonces donc la catégories est $category_id
     *Affichage sous forme de grille
     */
     public function showAdsGrid($category_id)
     {
-      if(request()->has('sort_date'))
-      {
-        $ads = Ad::where('category_id', '=', $category_id)
-              ->orderBy('created_at', request('sort_date'))
-              ->paginate(6)->appends('sort_date', request('sort_date'));
-      }
-      else if(request()->has('sort_price'))
-      {
-        $ads = Ad::where('category_id', '=', $category_id)
-              ->orderBy('price', request('sort_price'))
-              ->paginate(6)->appends('sort_price', request('sort_price'));
-      }
-      else
-      {
-        $ads = Ad::where('category_id', '=', $category_id)
-                  ->paginate(6);
-      }
+      $ads = Ad::where(function($query) use ($category_id){
+        //Filtre par catégorie
+        $query->where('category_id',"=", $category_id);
+        //Filtre par mot clé
+        if(request()->has('term')){
+          $query->where("title","LIKE","%".request('term')."%");
+        }
+      })
+      ->paginate(6);
+
       $category = Category::find($category_id);
-      //return view('ads.ad')->withAds($ads)->withCategory($category)->withCategories(Category::All());
-      return view('ads.ad')->withAds($ads)->withCategory($category)->withCategories(Category::All());
+
+      return view('ads.ad')->withAds($ads)->withCategory($category);
     }
 
     /*
@@ -50,24 +42,18 @@ class AdsController extends Controller
     */
     public function showAdsList($category_id)
     {
-      if(request()->has('sort_date'))
-      {
-        $ads = Ad::where('category_id', '=', $category_id)
-              ->orderBy('created_at', request('sort_date'))
-              ->paginate(6)->appends('sort_date', request('sort_date'));
-      }
-      else if(request()->has('sort_price'))
-      {
-        $ads = Ad::where('category_id', '=', $category_id)
-              ->orderBy('price', request('sort_price'))
-              ->paginate(6)->appends('sort_price', request('sort_price'));
-      }
-      else
-      {
-        $ads = Ad::where('category_id', '=', $category_id)
-                  ->paginate(6);
-      }
+      $ads = Ad::where(function($query) use ($category_id){
+        //Filtre par catégorie
+        $query->where('category_id',"=", $category_id);
+        //Filtre par mot clé
+        if(request()->has('term')){
+          $query->where("title","LIKE","%".request('term')."%");
+        }
+      })
+      ->paginate(6);
+
       $category = Category::find($category_id);
+
       return view('ads.ad')->withAds($ads)->withCategory($category);
     }
 
@@ -121,4 +107,25 @@ class AdsController extends Controller
         }
       return null;
     }
+    //Fonction de recherche
+    /*public function searchAd($category_id)
+    {
+    /*if(request()->has('sort_date'))
+    {
+      $ads = Ad::where('category_id', '=', $category_id)
+            ->orderBy('created_at', request('sort_date'))
+            ->paginate(6)->appends('sort_date', request('sort_date'));
+    }
+    else if(request()->has('sort_price'))
+    {
+      $ads = Ad::where('category_id', '=', $category_id)
+            ->orderBy('price', request('sort_price'))
+            ->paginate(6)->appends('sort_price', request('sort_price'));
+    }
+    else
+    {
+      $ads = Ad::where('category_id', '=', $category_id)
+                ->paginate(6);
+    }
+    }*/
 }

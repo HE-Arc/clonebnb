@@ -7,13 +7,13 @@
 @section('content')
 <!-- Content
 	================================================== -->
-	<div class="dashboard-content">
+	<div class="dashboard-content" id="app">
 
 		<!-- Titlebar -->
 		<div id="titlebar">
 			<div class="row">
 				<div class="col-md-12">
-					<h2>Messages</h2>
+					<h2>Messages @{{ message }}</h2>
 					<!-- Breadcrumbs -->
 					<nav id="breadcrumbs">
 						<ul>
@@ -51,7 +51,7 @@
 					</nav>
 				</div>
 				<!-- Pagination / End -->
-
+<script src="public/js/app.js"></script>
 			</div>
 @stop
 

@@ -34,7 +34,6 @@ class CreateUsersTable extends Migration
             $table->boolean('cgu')->default(false);
             $table->string('remember_token', 100)->nullable();
             $table->nullableTimestamps();
-            $table->engine = 'InnoDB';
         });
     }
 

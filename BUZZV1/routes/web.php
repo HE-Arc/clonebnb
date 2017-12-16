@@ -71,6 +71,17 @@ Route::post('/publish', [
 	'uses'=>'DashboardController@publish'
 ]);
 
+//Publier une demande
+Route::get('/demand', [
+	'as' =>'demand_path',
+	'uses'=>'DashboardController@showDemandForm'
+]);
+
+Route::post('/demand', [
+	'as' =>'demand_path',
+	'uses'=>'DashboardController@addDemand'
+]);
+
 Route::get('/dashboard', [
 	'as' =>'dashboard_path',
 	'uses'=>'DashboardController@showDashboard'
@@ -122,6 +133,11 @@ Route::get('/ads/grid/{category_id}', [
 	'uses'=>'AdsController@showAdsGrid'
 ]);
 
+Route::get('/ads/grid/{cat_id}', [
+	'as' =>'ads_grid_path',
+	'uses'=>'AdsController@filter'
+]);
+
 //===Affichage des annonces sous forme de liste ===
 Route::get('/ads/list/{category_id}', [
 	'as' =>'ads_list_path',
@@ -135,10 +151,10 @@ Route::get('/ad/{ad_id}', [
 //===Fin des annonces===
 
 //===Recherche===
-Route::get('/ads', [
-	'as' =>'search_path',
+/*Route::get('/ads', [
+	'as' =>'search_paths',
 	'uses'=>'AdsController@searchAd'
-]);
+]);*/
 //===Fn recherhe===
 
 //===Reservation===

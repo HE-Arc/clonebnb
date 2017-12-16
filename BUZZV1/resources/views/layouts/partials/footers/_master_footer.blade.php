@@ -6,19 +6,12 @@
 		<div class="col-md-5 col-sm-6">
 			<img class="footer-logo" src="/images/logo.png" alt="">
 			<br><br>
-			<p><a>Les règles</a></p>
+			<p >Buzz! est une plateforme de location en tout genre entre particuliers.</p>
 		</div>
 
 		<div class="col-md-4 col-sm-6 ">
 			<h4>Liens</h4>
-			<!--<ul class="footer-links">
-				<li><a href="#sign-in-dialog">Connexion</a></li>
-				<li><a href="#">Inscription</a></li>
-				<li><a href="#">Mon compte</a></li>
-			</ul>-->
-
 			<ul class="footer-links">
-				<li><a href="#">Comment ça marche</a></li>
 				<li><a href="{{ route('about_path') }}">A propos</a></li>
 			</ul>
 			<div class="clearfix"></div>
@@ -31,18 +24,8 @@
 				Télépnone: <span>(+41) 666 66 66 </span><br>
 				E-Mail:<span> <a href="{{ route('contact_path') }}"><span style="color: red">long@gmail.com</span></a> </span><br>
 			</div>
-
-			<!--<ul class="social-icons margin-top-20">
-				<li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-				<li><a class="twitter" href="#"><i class="icon-twitter"></i></a></li>
-				<li><a class="gplus" href="#"><i class="icon-gplus"></i></a></li>
-				<li><a class="vimeo" href="#"><i class="icon-vimeo"></i></a></li>
-			</ul>-->
-
 		</div>
-
 	</div>
-
 	<!-- Copyright -->
 	<div class="row">
 		<div class="col-md-12">

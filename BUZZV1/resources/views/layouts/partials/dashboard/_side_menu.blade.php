@@ -30,6 +30,11 @@
       <li class="{{ set_active_route('publish_path') }}"><a href="{{ route('publish_path') }}"><i class="fa fa-plus"></i> Ajouter une annonce</a></li>
     </ul>
 
+    <ul data-submenu-title="Demandes">
+      <li><a><i class="fa fa-list"></i> Mes demandes</a></li>
+      <li class="{{ set_active_route('demand_path') }}"><a href="{{ route('demand_path') }}"><i class="fa fa-plus"></i> Ajouter une demande</a></li>
+    </ul>
+
     <ul data-submenu-title="Mon compte">
       <li class="{{ set_active_route('profil_path') }}"><a href="{{ route('profil_path') }}"><i class="fa fa-user"></i> Mon profil</a></li>
       <li><a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();"><i class="fa fa-power-off"></i> Se déconnecter</a>

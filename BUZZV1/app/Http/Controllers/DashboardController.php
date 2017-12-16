@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\AdRequest;
+use App\Http\Requests\DemandRequest;
 use Illuminate\Http\Request;
 use App\Models\Ad;
 use App\Models\Favorite;
 use App\Models\Comment;
+use App\Models\Demand;
 use App\Models\Media;
 use App\Models\Category;
 use Auth;
@@ -84,12 +86,36 @@ class DashboardController extends Controller
 	public function favorites(Request $request){
 		$favorites = Favorite::where('user_id','=',Auth::user()->id)->paginate(6);
 		return view('dashboard.favorites')->with('favorites',$favorites);
+
 	}
 
 	//Afficher les messages
 	public function showMessage()
 	{
 		return view('dashboard.message');
+	}
+
+	//Afficher le formulaire d'édition d'une demande
+	public function showDemandForm()
+	{
+		return view('dashboard.demand')->with('categories', Category::all());
+	}
+
+	public function addDemand(DemandRequest $request)
+	{
+		$demand = new Demand();
+		$demand->title = $request->title;
+		$demand->description = $request->description;
+		$demand->user_id = Auth::user()->id;
+		$demand->category_id = $request->category_id;
+		if($demand->save())
+		{
+			flashy()->success("Demande enregistrée!");
+		} else
+		{
+			flashy()->error("Impossible d'enregistrer votre demande");
+		}
+		return redirect()->back();
 	}
 
 	//Publier une annonce
@@ -129,7 +155,8 @@ class DashboardController extends Controller
 	}
 
 	//Ajouter les média d'une annonces
-	private function addMedia(AdRequest $request, $ad_id){
+	private function addMedia(AdRequest $request, $ad_id)
+	{
 			if($request->hasFile('image_'))
 			{
 				$images = $request->file('image_');

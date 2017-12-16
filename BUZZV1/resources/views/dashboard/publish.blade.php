@@ -12,7 +12,7 @@
 		<div id="titlebar">
 			<div class="row">
 				<div class="col-md-12">
-					<h2>Ajouter une annonces</h2>
+					<h2>Ajouter une annonce</h2>
 					<nav id="breadcrumbs">
 						<ul>
 							<li><a href="#">Accueil</a></li>

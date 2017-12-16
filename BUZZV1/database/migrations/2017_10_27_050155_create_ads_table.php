@@ -22,7 +22,6 @@ class CreateAdsTable extends Migration
             $table->string('address')->nullable();
             $table->integer('user_id')->nullable()->unsigned();
             $table->timestamps();
-            $table->engine = 'InnoDB';
         });
     }
 

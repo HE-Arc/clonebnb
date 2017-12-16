@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddPriceToAdsTable extends Migration
+class CreateMediaTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,11 @@ class AddPriceToAdsTable extends Migration
      */
     public function up()
     {
-        Schema::table('ads', function (Blueprint $table) {
-            $table->double('price', 8, 2)->nullable();
+        Schema::create('media', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('name')->nullable();
+            $table->integer('ad_id')->nullable()->unsigned();
+            $table->timestamps();
         });
     }
 
@@ -25,8 +28,6 @@ class AddPriceToAdsTable extends Migration
      */
     public function down()
     {
-        Schema::table('ads', function (Blueprint $table) {
-            $table->dropColumn('price');
-        });
+        Schema::dropIfExists('media');
     }
 }

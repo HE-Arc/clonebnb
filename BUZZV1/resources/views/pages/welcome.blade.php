@@ -10,30 +10,16 @@
 <!-- Bannière -->
 @include('layouts.partials.accueils._top_banner')
 <!-- Fin Bannière -->
-
-<!-- Contenu -->
-<div class="container">
-	<div class="row">
-
-		<div class="col-md-12">
-			<h3 class="headline centered margin-top-75">
-			 	Les Catégories
-			</h3>
-		</div>
-
-	</div>
-</div>
-
 <!-- Categories -->
 @include('layouts.partials.accueils._categories')
 <!-- Fin Catégories -->
 
 <!-- Carousel -->
-@include('layouts.partials.accueils._carousel')
+@include('layouts.partials.accueils._demands')
 <!-- Fin Carousel -->
 
 <!-- Carousel -->
-@include('layouts.partials.accueils._populars')
+@include('layouts.partials.accueils._usage')
 <!-- Fin Carousel -->
 
 <!-- Carousel -->
