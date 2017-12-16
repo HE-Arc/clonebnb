@@ -1,6 +1,3 @@
-<!-- Wrapper -->
-<div id="wrapper">
-
 <!-- Header Container
 ================================================== -->
 <header id="header-container">
@@ -27,26 +24,26 @@
 				</div>
 
 				<!-- Main Navigation -->
-				<nav id="navigation" class="style-1">
-					<ul id="responsive">
+	      <nav id="navigation" class="style-1">
+	        <ul id="responsive">
 
-						<li><a href="{{ route('root_path') }}">Accueil</a>
-						</li>
+	          <li><a href="#">Accueil</a>
+	          </li>
 
-						<li><a class="current" href="#">Quoi faire ?</a>
-							<ul>
-								<li><a href="#">Demandes</a>
-									<ul>
-										<li><a href="listings-list-with-sidebar.html">Créer demande</a></li>
-										<li><a href="listings-list-full-width.html">Voir demandes</a></li>
-									</ul>
-								</li>
-							</ul>
-						</li>
-					</ul>
-				</nav>
-				<div class="clearfix"></div>
-				<!-- Main Navigation / End -->
+	          <li><a class="current" href="#">Quoi faire ?</a>
+	            <ul>
+	              <li><a href="#">Demandes</a>
+	                <ul>
+	                  <li><a href="listings-list-with-sidebar.html">Créer demande</a></li>
+	                  <li><a href="listings-list-full-width.html">Voir demandes</a></li>
+	                </ul>
+	              </li>
+	            </ul>
+	          </li>
+	        </ul>
+	      </nav>
+	      <div class="clearfix"></div>
+	      <!-- Main Navigation / End -->
 
 			</div>
 			<!-- Left Side Content / End -->

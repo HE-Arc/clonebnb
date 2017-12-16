@@ -17,7 +17,7 @@ class AdsTableSeeder extends Seeder
           'online' => 0,
           'expired' => 0,
           'address' => 'Rue de la rue 6, 2000 Neuchâtel',
-          'category_id' => 1,
+          'category_id' => 4,
           'user_id' => 1
       ]);
 
@@ -27,7 +27,7 @@ class AdsTableSeeder extends Seeder
           'online' => 0,
           'expired' => 0,
           'address' => 'Rue de la rue 6, 2000 Neuchâtel',
-          'category_id' => 1,
+          'category_id' => 6,
           'user_id' => 1
       ]);
 
@@ -37,7 +37,7 @@ class AdsTableSeeder extends Seeder
           'online' => 0,
           'expired' => 0,
           'address' => 'Rue de la rue 6, 2000 Neuchâtel',
-          'category_id' => 1,
+          'category_id' => 3,
           'user_id' => 1
       ]);
 
@@ -47,7 +47,7 @@ class AdsTableSeeder extends Seeder
           'online' => 0,
           'expired' => 0,
           'address' => 'Rue de la rue 6, 2000 Neuchâtel',
-          'category_id' => 1,
+          'category_id' => 3,
           'user_id' => 1
       ]);
 
@@ -77,7 +77,7 @@ class AdsTableSeeder extends Seeder
           'online' => 0,
           'expired' => 0,
           'address' => 'Rue de la rue 6, 2000 Neuchâtel',
-          'category_id' => 2,
+          'category_id' => 1,
           'user_id' => 1
       ]);
 

@@ -29,7 +29,7 @@ class AdsController extends Controller
           $query->where("title","LIKE","%".request('term')."%");
         }
       })
-      ->paginate(6);
+      ->paginate(10);
 
       $category = Category::find($category_id);
 
@@ -50,7 +50,7 @@ class AdsController extends Controller
           $query->where("title","LIKE","%".request('term')."%");
         }
       })
-      ->paginate(6);
+      ->paginate(10);
 
       $category = Category::find($category_id);
 

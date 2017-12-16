@@ -37,7 +37,6 @@
 
 </div>
 <div class="container">
-{{ $ads->links() }}
 </div>
 <script>
   var token = '{{ Session::token() }}';

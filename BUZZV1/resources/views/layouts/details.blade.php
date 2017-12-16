@@ -19,7 +19,7 @@
   <div id="wrapper">
 
     <!-- Entête -->
-    @include('layouts.partials.headers._details')
+    @include('layouts.partials.headers._header')
     <!--Fin entête -->
 
     <!--Message flash-->
