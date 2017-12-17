@@ -18,7 +18,7 @@
 					<nav id="breadcrumbs">
 						<ul>
 							<li><a href="#">Accueil</a></li>
-							<li><a href="#">Tableau de bord</a></li>
+							<li><a href="{{ route('dashboard_path') }}">Tableau de bord</a></li>
 							<li>Mon profil</li>
 						</ul>
 					</nav>
@@ -56,27 +56,36 @@
 							<label>Nom</label>
 							<input value="{{ Auth::user()->first_name }}" name="first_name" type="text">
 
-		        	<label>Sexe <i class="fa fa-lock" data-behavior="tooltip" title="Privé" style="color: red"></i></label>
+		        	<label>Sexe </label>
 							<select id="sex" name="sex">
 								<option value="" selected="selected">Sexe</option>
 								<option value="Homme">Homme</option>
 								<option value="Femme">Femme</option>
 							</select>
 
-							<label>Date de naissance <i class="fa fa-lock" data-behavior="tooltip" title="Privé" style="color: red"></i></label>
+							<label>Date de naissance </label>
 							<input value="{{ Auth::user()->birthday }}" name="birthday" type="date">
 
-							<label>Phone <i class="fa fa-lock" data-behavior="tooltip" title="Privé" style="color: red"></i></label>
+							<label>Phone </label>
 							<input value="{{ Auth::user()->phone }}" name="phone" type="tel">
 
-							<label>Email <i class="fa fa-lock" data-behavior="tooltip" title="Privé" style="color: red"></i></label>
+							<label>Email </label>
 							<input value="{{ Auth::user()->email }}" name="email" type="email">
+
+							<label>Facebook </label>
+							<input value="{{ Auth::user()->facebook_id }}" name="facebook_id" type="text">
 
 							<label>Localisation</label>
 							<input value="{{ Auth::user()->address }}" name="address" type="text">
 
 							<label>Langue</label>
-							<input value="{{ Auth::user()->language }}" name="language" type="text">
+							<select id="" name="language">
+								<option value="" selected="selected">choisir une langue</option>
+								<option value="fr">Français</option>
+								<option value="de">Allemand</option>
+								<option value="it">Italien</option>
+								<option value="en">Anglais</option>
+							</select>
 
 							<label>Description</label>
 							<textarea name="description" id="description" cols="30" rows="10" style="margin: 0">

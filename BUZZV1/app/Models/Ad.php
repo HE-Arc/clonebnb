@@ -50,6 +50,7 @@ class Ad extends Model
     public function comments(){
       return $this->hasMany("App\Models\Comment");
     }
+
     //Nombre de commentaires de l'annonce
     public function getNumComments(){
       $num = $this->comments()->count();
@@ -57,6 +58,15 @@ class Ad extends Model
         return $num. ' Commentaire';
       }
       return $num. ' Commentaires';
+    }
+
+    //Nombre de fois d'une annonce est ajoutée en Favoris
+    public function getNumFav(){
+      $num = $this->favorites()->count();
+      if($num <= 1) {
+        return $num. ' personne a ajouté';
+      }
+      return $num. ' personnes ont ajouté';
     }
 
     //Calcul de la moyenne

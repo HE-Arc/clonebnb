@@ -895,6 +895,7 @@ function starRating(ratingElem) {
         var twoStars = starsOutput('star', 'star', 'star empty', 'star empty', 'star empty');
         var oneHalfStar = starsOutput('star', 'star half', 'star empty', 'star empty', 'star empty');
         var oneStar = starsOutput('star', 'star empty', 'star empty', 'star empty', 'star empty');
+        var zeroStar = starsOutput('star empty', 'star empty', 'star empty', 'star empty', 'star empty');
         if (dataRating >= 4.75) {
             $(this).append(fiveStars);
         } else if (dataRating >= 4.25) {

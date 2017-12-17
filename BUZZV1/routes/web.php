@@ -148,6 +148,12 @@ Route::get('/ad/{ad_id}', [
 	'as' =>'details_path',
 	'uses'=>'AdsController@showAdDetails'
 ]);
+
+Route::get('/user/{user_id}', [
+	'as' =>'user_profile_path',
+	'uses'=>'UsersController@showAdUserProfile'
+]);
+
 //===Fin des annonces===
 
 //===Recherche===

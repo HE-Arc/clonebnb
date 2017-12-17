@@ -88,10 +88,9 @@
         </ul>
       </div>
     </div>
-
     <!-- Copyrights -->
     <div class="col-md-12">
-      <div class="copyrights">©2017 · By LONG.</div>
+      <div class="copyrights">&copy;{{ date('Y') }} &middot; By LONG.</div>
     </div>
   </div>
 
