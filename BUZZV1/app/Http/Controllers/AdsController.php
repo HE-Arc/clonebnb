@@ -6,6 +6,7 @@ use App\Models\Ad;
 use App\Models\Favorite;
 use App\Models\Media;
 use App\Models\Category;
+use App\Models\Price;
 use Illuminate\Http\Request;
 use Auth;
 
@@ -64,7 +65,10 @@ class AdsController extends Controller
       //On retourne les médias de l'annonce
       $medias = Media::where('ad_id', '=', $ad_id)
                 ->get();
-      return view('ads.ad_details')->withAd($ad)->withMedias($medias);
+      //Les différents prix de l'annonce
+      $prices = Price::where('ad_id', '=', $ad_id)
+                ->get();
+      return view('ads.ad_details')->withAd($ad)->withMedias($medias)->withPrices($prices);
     }
 
     //Ajouter comme favoris

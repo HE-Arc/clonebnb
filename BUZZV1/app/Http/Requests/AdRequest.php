@@ -25,13 +25,12 @@ class AdRequest extends FormRequest
     {
         return [
             'title'=>'required',
-            'category_id'=>'exists:categories,id', 
+            'category_id'=>'exists:categories,id',
             'street'=>'required',
             'number'=>'required',
             'npa'=>'required',
             'city'=>'required',
             'description'=>'required',
-            'price' =>'required|numeric'
         ];
     }
 }

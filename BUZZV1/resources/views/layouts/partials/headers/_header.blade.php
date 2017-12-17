@@ -24,7 +24,7 @@
       <nav id="navigation" class="style-1">
         <ul id="responsive">
 
-          <li><a href="#">Accueil</a>
+          <li><a href="{{ route('root_path') }}">Accueil</a>
           </li>
 
           <li><a class="current" href="#">Quoi faire ?</a>

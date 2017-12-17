@@ -13,6 +13,5 @@
 <div id="listing-overview" class="listing-section">
 
   <!-- Description -->
-
   <p>{{ $ad->description }}</p>
 </div>

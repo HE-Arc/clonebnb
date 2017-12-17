@@ -19,7 +19,6 @@ class Ad extends Model
      'user_id',
      'image',
      'category_id',
-     'price',
      'telephone',
      'site',
      'email',

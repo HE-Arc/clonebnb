@@ -11,6 +11,7 @@ use App\Models\Comment;
 use App\Models\Demand;
 use App\Models\Media;
 use App\Models\Category;
+use App\Models\Price;
 use Auth;
 use Image;
 use DB;
@@ -126,7 +127,6 @@ class DashboardController extends Controller
 		$ad->description = $request->description;
 		$ad->user_id = Auth::user()->id;
 		$ad->category_id = $request->category_id;
-		$ad->price = $request->price;
 		$ad->telephone = $request->telephone;
 		$ad->site = $request->site;
 		$ad->email = $request->email;
@@ -134,7 +134,6 @@ class DashboardController extends Controller
 		$ad->twitter = $request->twitter;
 		$ad->google = $request->google;
 		$ad->address = $request->street.' '.$request->number.', '.$request->npa.' '.$request->city;
-
 		if($request->hasFile('image_'))
 		{
 			$image = $request->file('image_')[0];
@@ -146,6 +145,7 @@ class DashboardController extends Controller
 
 		if($ad->save()){
 			$this->addMedia($request, $ad->id);
+			$this->addPrice($request, $ad->id);
 			flashy()->success("Annonce enregistrée!. Elle sera mise en ligne après vérification et validation");
 		}else{
 			flashy()->error("Impossible d'enregistrer votre annonce");
@@ -169,6 +169,22 @@ class DashboardController extends Controller
 					$media->name = $filename;
 					$media->save();
 				}
+			}
+	}
+
+	//Ajouter les différents prix de l'annonce
+	private function addPrice(AdRequest $request, $ad_id)
+	{
+			$cats = count($request['category_']);
+			for($i = 0; $i < $cats; $i++)
+			{
+				$price = new Price();
+				$price->category = $request['category_'][$i];
+				$price->title = $request['title_'][$i];
+				$price->description = $request['description_'][$i];
+				$price->amount = $request['price_'][$i];
+				$price->ad_id = $ad_id;
+				$price->save();
 			}
 	}
 

@@ -30,17 +30,17 @@
 				<div id="add-listing">
 
 					<!-- Section -->
+					<form action="{{ route('publish_path') }}" method="POST" enctype="multipart/form-data">
+						{{ csrf_field() }}
 					<div class="add-listing-section">
 
 						<div class="add-listing-headline">
 							<h3><i class="fa fa-file-o"></i> Informations générales</h3>
 						</div>
-						<form action="{{ route('publish_path') }}" method="POST" enctype="multipart/form-data">
-							{{ csrf_field() }}
 						<div class="row with-forms">
 							<div class="col-md-12">
 								<h5>Titre de l'annonce <i class="tip" data-tip-content="Nom de votre annonce"></i></h5>
-								<input class="search-field" name="title" type="text" value="{{ old('title') }}" required/>
+								<input class="search-field" name="title" type="text" value="{{ old('title') }}" />
 							</div>
 						</div>
 
@@ -59,6 +59,7 @@
 						</div>
 
 					</div>
+
 					<div class="add-listing-section margin-top-45">
 
 						<div class="add-listing-headline">
@@ -71,22 +72,22 @@
 
 								<div class="col-md-6">
 									<h5>Rue</h5>
-                  <input type="text" name="street" placeholder="Entrez la rue" value="{{ explode('-', old('address'))[0] }}" required>
+                  <input type="text" name="street" placeholder="Entrez la rue" value="{{ explode('-', old('address'))[0] }}" >
 								</div>
 
 								<div class="col-md-6">
 									<h5>Numéro</h5>
-									<input type="text" name="number" placeholder="Numéro de la rue" required>
+									<input type="text" name="number" placeholder="Numéro de la rue" >
 								</div>
 
 								<div class="col-md-6">
 									<h5>NPA</h5>
-									<input type="text" name="npa" placeholder="Code postal" required>
+									<input type="text" name="npa" placeholder="Code postal" >
 								</div>
 
 								<div class="col-md-6">
 									<h5>Ville</h5>
-                  <input type="text" name="city" placeholder="Ville" required>
+                  <input type="text" name="city" placeholder="Ville" >
 								</div>
 
 							</div>
@@ -94,17 +95,15 @@
 						</div>
 					</div>
 
-
 					<!-- Section -->
 					<div class="add-listing-section margin-top-45">
 						<!-- Headline -->
 						<div class="add-listing-headline">
 							<h3><i class="fa fa-image"></i> Images <h5><span> La première image sera l'image principale de votre annonce</span></h5></h3>
 						</div>
-						<input type="file" class="" name="image_[]" multiple required>
+						<input type="file" class="" name="image_[]" multiple >
 					</div>
 					<!-- Section / End -->
-
 
 					<!-- Section -->
 					<div class="add-listing-section margin-top-45">
@@ -116,7 +115,7 @@
 						<!-- Description -->
 						<div class="form">
 							<h5>Description</h5>
-							<textarea class="WYSIWYG" name="description" cols="40" rows="3" id="description" spellcheck="true" required></textarea>
+							<textarea class="WYSIWYG" name="description" cols="40" rows="3" id="description" spellcheck="true" ></textarea>
 						</div>
 
 						<!-- Row -->
@@ -160,38 +159,37 @@
 						</div>
 
 					</div>
-					<!-- Fin Section ->
 
-					<!-- Section -->
 					<div class="add-listing-section margin-top-45">
 
+						<!-- Headline -->
 						<div class="add-listing-headline">
-							<h3><i class="fa fa-money"></i> Prix</h3>
+							<h3><i class="fa fa-dollar"></i> Pricing</h3>
 						</div>
 
-						<!-- Switcher Content -->
-						<div class="row with-forms">
+						<div class="">
 
-							<div class="col-md-4">
-								<h5>Titre</h5>
-								<input type="text" placeholder="Montant journalier" disabled>
-							</div>
-
-							<div class="col-md-4">
-								<h5>Montant</h5>
-								<input type="text" name="price" placeholder="Exemple: 200" required>
-							</div>
-
-							<div class="col-md-4">
-								<h5>Devise</h5>
-								<input type="text" placeholder="CHF" disabled>
+							<div class="row">
+								<div class="col-md-12">
+									<table id="pricing-list-container">
+										<tr class="pricing-list-item pattern">
+											<td>
+												<div class="fm-move"><i class="fa fa-arrows-alt"></i></div>
+												<div class="fm-input pricing-name"><input type="text" name="category_[]" placeholder="Category"/></div>
+												<div class="fm-input pricing-name"><input type="text" name="title_[]" placeholder="Title"/></div>
+												<div class="fm-input pricing-ingredients"><input type="text" name="description_[]" placeholder="Description"/></div>
+												<div class="fm-input pricing-price"><input type="text" name="price_[]" placeholder="Price" data-unit="USD"/></div>
+												<div class="fm-close"><a class="delete" href="#"><i class="fa fa-remove"></i></a></div>
+											</td>
+										</tr>
+									</table>
+									<a href="#" class="button add-pricing-list-item">Add Item</a>
+								</div>
 							</div>
 
 						</div>
-
 
 					</div>
-					<!-- Section / End -->
 
 					<button type="submit" class="button preview">Soumettre</buttom>
 				</form>

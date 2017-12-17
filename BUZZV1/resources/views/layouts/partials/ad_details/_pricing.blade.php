@@ -5,54 +5,18 @@
   <div class="show-more">
     <div class="pricing-list-container">
 
-      <!-- Food List -->
-      <h4>Burgers</h4>
+      @foreach($prices as $price)
+      <h4>{{ $price->category }}</h4>
       <ul>
         <li>
-          <h5>Classic Burger</h5>
-          <p>Beef, salad, mayonnaise, spicey relish, cheese</p>
-          <span>$6</span>
-        </li>
-        <li>
-          <h5>Cheddar Burger</h5>
-          <p>Cheddar cheese, lettuce, tomato, onion, dill pickles</p>
-          <span>$6</span>
-        </li>
-        <li>
-          <h5>Veggie Burger</h5>
-          <p>Panko crumbed and fried, grilled peppers and mushroom</p>
-          <span>$6</span>
-        </li>
-        <li>
-          <h5>Chicken Burger</h5>
-          <p>Cheese, chicken fillet, avocado, bacon, tomatoes, basil</p>
-          <span>$6</span>
+          <h5>{{ $price->title }}</h5>
+          <p>{{ $price->description }}</p>
+          <span>{{ $price->amount }} <strong>CHF</strong></span>
         </li>
       </ul>
-
-      <!-- Food List -->
-      <h4>Drinks</h4>
-      <ul>
-        <li>
-          <h5>Frozen Shake</h5>
-          <span>$4</span>
-        </li>
-        <li>
-          <h5>Orange Juice</h5>
-          <span>$4</span>
-        </li>
-        <li>
-          <h5>Beer</h5>
-          <span>$4</span>
-        </li>
-        <li>
-          <h5>Water</h5>
-          <span>Free</span>
-        </li>
-      </ul>
-
+      @endforeach
     </div>
   </div>
-  <a href="#" class="show-more-button" data-more-title="Voir plus" data-less-title="Show Less"><i class="fa fa-angle-down"></i></a>
+  <a href="#" class="show-more-button" data-more-title="Voir plus" data-less-title="Afficher moins"><i class="fa fa-angle-down"></i></a>
 </div>
 <!-- Food Menu / End -->
