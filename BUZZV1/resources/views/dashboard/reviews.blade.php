@@ -6,8 +6,7 @@
 
 @section('content')
 
-<!-- Content
-	================================================== -->
+<!-- Content -->
 	<div class="dashboard-content">
 
 		<div id="titlebar">
@@ -65,10 +64,6 @@
             @endforeach
 					</ul>
 				</div>
-<<<<<<< HEAD
-
-=======
->>>>>>> fb86cf5b572b24630344c261550a68d90bd52d2a
 			</div>
 
 			<!-- Listings -->
@@ -96,9 +91,6 @@
             @endforeach
 					</ul>
 				</div>
-<<<<<<< HEAD
-=======
 			</div>
 		</div>
->>>>>>> fb86cf5b572b24630344c261550a68d90bd52d2a
 @stop
