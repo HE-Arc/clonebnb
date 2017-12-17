@@ -11,11 +11,11 @@ class MediaTableSeeder extends Seeder
      */
     public function run()
     {
-      DB::table('media')->insert([
+      DB::table('medias')->insert([
           'name' => 'Asus-VP278H.jpg',
           'ad_id' => '1'
       ]);
-      DB::table('media')->insert([
+      DB::table('medias')->insert([
           'name' => 'Microsoft-Surface-Pro-i5-128GB-4GB-.jpg',
           'ad_id' => '2'
       ]);

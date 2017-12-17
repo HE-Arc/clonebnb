@@ -105,25 +105,4 @@ class AdsController extends Controller
         }
       return null;
     }
-    //Fonction de recherche
-    /*public function searchAd($category_id)
-    {
-    /*if(request()->has('sort_date'))
-    {
-      $ads = Ad::where('category_id', '=', $category_id)
-            ->orderBy('created_at', request('sort_date'))
-            ->paginate(6)->appends('sort_date', request('sort_date'));
-    }
-    else if(request()->has('sort_price'))
-    {
-      $ads = Ad::where('category_id', '=', $category_id)
-            ->orderBy('price', request('sort_price'))
-            ->paginate(6)->appends('sort_price', request('sort_price'));
-    }
-    else
-    {
-      $ads = Ad::where('category_id', '=', $category_id)
-                ->paginate(6);
-    }
-    }*/
 }
