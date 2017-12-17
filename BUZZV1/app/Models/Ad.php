@@ -25,6 +25,8 @@ class Ad extends Model
      'facebook',
      'twitter',
      'google',
+     'latitude',
+     'longitude'
    ];
 
     //Appartient à une catégorie

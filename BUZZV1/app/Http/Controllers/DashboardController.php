@@ -134,6 +134,8 @@ class DashboardController extends Controller
 		$ad->twitter = $request->twitter;
 		$ad->google = $request->google;
 		$ad->address = $request->street.' '.$request->number.', '.$request->npa.' '.$request->city;
+		$ad->latitude = $request->latitude;
+		$ad->longitude = $request->longitude;
 		if($request->hasFile('image_'))
 		{
 			$image = $request->file('image_')[0];

@@ -40,14 +40,14 @@
 						<div class="row with-forms">
 							<div class="col-md-12">
 								<h5>Titre de l'annonce <i class="tip" data-tip-content="Nom de votre annonce"></i></h5>
-								<input class="search-field" name="title" type="text" value="{{ old('title') }}" />
+								<input class="search-field" name="title" type="text" value="{{ old('title') }}" required/>
 							</div>
 						</div>
 
 						<div class="row with-forms">
 
 							<div class="col-md-12">
-								<h5>Catégories</h5>
+								<h5>Catégories <i class="tip" data-tip-content="Choisissez la catégorie de votre annonce. Si vous ne savez pas laquelle choisir, choisissez la catégorie autre."></i></h5>
 								<select class="chosen-select-no-single" name="category_id">
 									<option label="blank">Choisir une catégorie</option>
 									@foreach($categories as $category)
@@ -71,23 +71,35 @@
 							<div class="row with-forms">
 
 								<div class="col-md-6">
-									<h5>Rue</h5>
+									<h5>Rue <i class="tip" data-tip-content="Nom de la rue"></i></h5>
                   <input type="text" name="street" placeholder="Entrez la rue" value="{{ explode('-', old('address'))[0] }}" >
 								</div>
 
 								<div class="col-md-6">
-									<h5>Numéro</h5>
+									<h5>Numéro <i class="tip" data-tip-content="Numéro de la rue"></i></h5>
 									<input type="text" name="number" placeholder="Numéro de la rue" >
 								</div>
 
 								<div class="col-md-6">
-									<h5>NPA</h5>
+									<h5>NPA <i class="tip" data-tip-content="Numéro postal"></i></h5>
 									<input type="text" name="npa" placeholder="Code postal" >
 								</div>
 
-								<div class="col-md-6">
-									<h5>Ville</h5>
+								<div class="col-md-6" style="margin-bottom: 20px;">
+									<h5>Ville <i class="tip" data-tip-content="Nom de la ville"></i></h5>
                   <input type="text" name="city" placeholder="Ville" >
+								</div>
+								<h5 style="text-align: center; font-size: 20px;">
+									<!--target="_blank" pour ouvrir dans une nouvelle page-->
+									<a href="https://www.coordonnees-gps.fr/conversion-coordonnees-gps" target="_blank"><i class="fa fa-link"></i>Pour une localisation précise</a>
+								</h5>
+								<div class="col-md-6">
+									<h5>Latitude (Optionnel)<i class="tip" data-tip-content="Latitude"></i></h5>
+                  <input type="text" name="latitude" placeholder="Latitude">
+								</div>
+								<div class="col-md-6">
+									<h5>Longitude (Optionnel)<i class="tip" data-tip-content="Longitude"></i></h5>
+                  <input type="text" name="longitude" placeholder="Longitude" >
 								</div>
 
 							</div>
@@ -101,7 +113,7 @@
 						<div class="add-listing-headline">
 							<h3><i class="fa fa-image"></i> Images <h5><span> La première image sera l'image principale de votre annonce</span></h5></h3>
 						</div>
-						<input type="file" class="" name="image_[]" multiple >
+						<input type="file" class="" name="image_[]" multiple required>
 					</div>
 					<!-- Section / End -->
 
@@ -114,8 +126,8 @@
 
 						<!-- Description -->
 						<div class="form">
-							<h5>Description</h5>
-							<textarea class="WYSIWYG" name="description" cols="40" rows="3" id="description" spellcheck="true" ></textarea>
+							<h5>Description <i class="tip" data-tip-content="Donnez une description claire et complète de votre annonce de location."></i></h5>
+							<textarea class="WYSIWYG" name="description" cols="40" rows="3" id="description" spellcheck="true" required></textarea>
 						</div>
 
 						<!-- Row -->
@@ -137,7 +149,6 @@
 							</div>
 
 						</div>
-
 
 						<div class="row with-forms">
 
@@ -164,7 +175,7 @@
 
 						<!-- Headline -->
 						<div class="add-listing-headline">
-							<h3><i class="fa fa-dollar"></i> Pricing</h3>
+							<h3><i class="fa fa-dollar"></i> Pricing<i class="tip" data-tip-content="Vous pouvez spécifier plusieurs prix. Exemple: Catégorie: Mensuel. Titre: Prix 3 mois. Description: Réduction pour 3 mois"></i></h3>
 						</div>
 
 						<div class="">
@@ -175,15 +186,23 @@
 										<tr class="pricing-list-item pattern">
 											<td>
 												<div class="fm-move"><i class="fa fa-arrows-alt"></i></div>
-												<div class="fm-input pricing-name"><input type="text" name="category_[]" placeholder="Category"/></div>
-												<div class="fm-input pricing-name"><input type="text" name="title_[]" placeholder="Title"/></div>
-												<div class="fm-input pricing-ingredients"><input type="text" name="description_[]" placeholder="Description"/></div>
-												<div class="fm-input pricing-price"><input type="text" name="price_[]" placeholder="Price" data-unit="USD"/></div>
+												<div class="fm-input pricing-name">
+													<input type="text" name="category_[]" placeholder="Categorie" required/>
+												</div>
+												<div class="fm-input pricing-name">
+													<input type="text" name="title_[]" placeholder="Titre" required/>
+												</div>
+												<div class="fm-input pricing-ingredients">
+													<input type="text" name="description_[]" placeholder="Description" required/>
+												</div>
+												<div class="fm-input pricing-price">
+													<input type="text" name="price_[]" placeholder="Prix" data-unit="CHF" required/>
+												</div>
 												<div class="fm-close"><a class="delete" href="#"><i class="fa fa-remove"></i></a></div>
 											</td>
 										</tr>
 									</table>
-									<a href="#" class="button add-pricing-list-item">Add Item</a>
+									<a href="#" class="button add-pricing-list-item">Ajouter un prix</a>
 								</div>
 							</div>
 
