@@ -15,8 +15,8 @@
 					<nav id="breadcrumbs">
 						<ul>
 							<li><a href="#">Home</a></li>
-							<li><a href="#">Dashboard</a></li>
-							<li>Bookmarks</li>
+							<li><a href="{{ route('dashboard_path') }}">Dashboard</a></li>
+							<li>Favoris</li>
 						</ul>
 					</nav>
 				</div>

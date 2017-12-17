@@ -10,11 +10,17 @@
 	================================================== -->
 	<div class="dashboard-content">
 
-		<!-- Titlebar -->
 		<div id="titlebar">
 			<div class="row">
 				<div class="col-md-12">
 					<h2>Avis</h2>
+					<nav id="breadcrumbs">
+						<ul>
+							<li><a href="{{ route('root_path') }}">Accueil</a></li>
+							<li><a href="{{ route('dashboard_path') }}">Tableau de bord</a></li>
+							<li>Avis</li>
+						</ul>
+					</nav>
 				</div>
 			</div>
 		</div>
@@ -25,22 +31,6 @@
 			<div class="col-lg-6 col-md-12">
 
 				<div class="dashboard-list-box margin-top-0">
-
-					<!-- Sort by -->
-					<!--<div class="sort-by">
-						<div class="sort-by-select">
-							<select data-placeholder="Default order" class="chosen-select-no-single">
-								<option>All Listings</option>
-								<option>Tom's Restaurant</option>
-								<option>Sticky Band</option>
-								<option>Hotel Govendor</option>
-								<option>Burger House</option>
-								<option>Airport</option>
-								<option>Think Coffee</option>
-							</select>
-						</div>
-					</div>-->
-
 					<h4>Avis reçus <span>({{ $visitors_comments->total() }})</span></h4>
 
 					<!-- Reply to review popup -->
@@ -105,5 +95,4 @@
 					</ul>
 				</div>
         {{ $comments->links() }}
-
 @stop

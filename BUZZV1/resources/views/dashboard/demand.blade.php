@@ -16,7 +16,7 @@
 					<nav id="breadcrumbs">
 						<ul>
 							<li><a href="#">Accueil</a></li>
-							<li><a href="#">Tableau de bord</a></li>
+							<li><a href="{{ route('dashboard_path') }}">Tableau de bord</a></li>
 							<li>Ajouter une demande</li>
 						</ul>
 					</nav>

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 use Auth;
 use Image;
+use App\Models\User;
 
 class UsersController extends Controller
 {
@@ -16,7 +17,7 @@ class UsersController extends Controller
     }
 
     //Editer le profil
-    public function edit(Request $request) 
+    public function edit(Request $request)
     {
     	$user = Auth::user();
 
@@ -26,6 +27,7 @@ class UsersController extends Controller
     	$user->phone = $request->get('phone');
     	$user->language = $request->get('language');
     	$user->address = $request->get('address');
+      $user->facebook_id = $request->get('facebook_id');
     	$user->sex = $request->get('sex');
     	$user->description = $request->get('description');
     	if($request->hasFile('photo'))
@@ -37,8 +39,15 @@ class UsersController extends Controller
     		$user->photo = $filename;
     	}
     	$user->save();
-   
-    	flashy()->success("Mise à jour réussie");    
+
+    	flashy()->success("Mise à jour réussie");
     	return redirect()->route('profil_path');
+    }
+
+    //Afficher le profile du user
+    public function showAdUserProfile($user_id)
+    {
+      $user = User::where('id',$user_id)->first();
+      return view('user.user_profile')->withUser($user);
     }
 }
