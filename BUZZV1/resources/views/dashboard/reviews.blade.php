@@ -31,11 +31,6 @@
 			<div class="col-lg-6 col-md-12">
 
 				<div class="dashboard-list-box margin-top-0">
-<<<<<<< .mine
-
-=======
-
->>>>>>> .theirs
 					<h4>Avis reçus <span>({{ $visitors_comments->total() }})</span></h4>
 
 					<!-- Reply to review popup -->
