@@ -64,5 +64,11 @@ class CategoriesTableSeeder extends Seeder
           'description' => 'Locations de chambres',
           'icon' => "bed",
       ]);
+
+      DB::table('categories')->insert([
+          'name' => 'Autres',
+          'description' => 'Locations diverses',
+          'icon' => "dot",
+      ]);
     }
 }

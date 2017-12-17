@@ -7,8 +7,7 @@
 
     <ul data-submenu-title="Principal">
       <li class="{{ set_active_route('dashboard_path') }}"><a href="{{ route('dashboard_path') }}"><i class="fa fa-cog"></i> Tableau de bord</a></li>
-      <li class="{{ set_active_route('message_path') }}"><a href="{{ route('message_path') }}"><i class="fa fa-envelope-o"></i> Messages <span class="nav-tag messages">2</span></a></li>
-      <li class="{{ set_active_route('message_path') }}"><a href=""><i class="fa fa-calendar-check-o"></i> Réservations </a></li>
+      <li class="{{ set_active_route('messages_path') }}"><a href="{{ route('message_path') }}"><i class="fa fa-envelope-o"></i> Messages <span class="nav-tag messages">2</span></a></li>
     </ul>
 
     <ul data-submenu-title="Annonces">

@@ -35,10 +35,6 @@
 
           <div class="form-row">
             <input type="submit" class="button border margin-top-5" name="login" value="Connexion" />
-            <div class="checkboxes margin-top-10">
-              <input id="remember-me" type="checkbox" name="check">
-              <label for="remember-me">Se souvenir de moi</label>
-            </div>
           </div>
 
         </form>

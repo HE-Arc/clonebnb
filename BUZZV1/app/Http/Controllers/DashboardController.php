@@ -11,6 +11,7 @@ use App\Models\Comment;
 use App\Models\Demand;
 use App\Models\Media;
 use App\Models\Category;
+use App\Models\Message;
 use App\Models\Price;
 use Auth;
 use Image;
@@ -29,8 +30,13 @@ class DashboardController extends Controller
 				->where('ads.user_id', '=', Auth::user()->id)
 				->where('comments.user_id', '!=', Auth::user()->id)
         ->paginate(15);
-
 		return view('dashboard.dashboard', ['ad'=>$ad])->withComments($visitors_comments);
+	}
+
+	public function showMessage()
+	{
+		$messages = Message::where('receiver_id', Auth::user()->id)->first();
+		return view('dashboard.message')->withMessages($messages);
 	}
 
 	//Afficher les Commentaires
@@ -88,12 +94,6 @@ class DashboardController extends Controller
 		$favorites = Favorite::where('user_id','=',Auth::user()->id)->paginate(6);
 		return view('dashboard.favorites')->with('favorites',$favorites);
 
-	}
-
-	//Afficher les messages
-	public function showMessage()
-	{
-		return view('dashboard.message');
 	}
 
 	//Afficher le formulaire d'édition d'une demande

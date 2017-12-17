@@ -18,7 +18,7 @@
 					<nav id="breadcrumbs">
 						<ul>
 							<li><a href="#">Home</a></li>
-							<li><a href="#">Dashboard</a></li>
+							<li><a href="{{ dashboard_path}}">Dashboard</a></li>
 							<li>Messages</li>
 						</ul>
 					</nav>

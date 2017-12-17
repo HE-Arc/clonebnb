@@ -118,8 +118,13 @@ Route::get('/my-expired-ads', [
 ]);
 
 Route::get('/message', [
-	'as' =>'message_path',
+	'as' =>'messages_path',
 	'uses'=>'DashboardController@showMessage'
+]);
+
+Route::post('message', [
+	'as' =>'message_path',
+	'uses'=>'MessagesController@sendMessage'
 ]);
 
 Route::get('/conversation', [

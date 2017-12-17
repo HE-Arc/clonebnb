@@ -31,8 +31,11 @@
             <ul>
               <li><a href="#">Demandes</a>
                 <ul>
-                  <li><a href="listings-list-with-sidebar.html">Créer demande</a></li>
-                  <li><a href="listings-list-full-width.html">Voir demandes</a></li>
+                  @if(Auth::check())
+                  <li><a href="{{ route('demand_path') }}">Créer demande</a></li>
+                  @else
+                  <li><a href="#">Créer demande</a></li>
+                  @endif
                 </ul>
               </li>
             </ul>
@@ -50,16 +53,16 @@
       <div class="header-widget">
         @if(Auth::check())
         <div class="user-menu" style="margin-left: -200px">
-            <a href="#"><i class="fa fa-bell fa-2x" style="color: #161414"></i>
+            <!--<a href="#"><i class="fa fa-bell fa-2x" style="color: #161414"></i>
               <span class="badge" style="background-color: red; color: #fff; position: relative; top: -15px; left: -5px;">0</span>
-            </a>
+            </a>-->
         </div>
         <div class="user-menu">
           <div class="user-name"><span><img src="/uploads/avatars/{{ Auth::user()->photo }}" alt=""></span>{{ Auth::user()->getFullName() }}</div>
             <ul>
               <li><a href="{{ route('dashboard_path') }}">Tableau de bord</a></li>
               <li><a href="{{ route('online_path') }}">Mes annonces</a></li>
-              <li><a href="{{ route('message_path') }}">Messages</a></li>
+              <li><a href="{{ route('messages_path') }}">Messages</a></li>
               <li><a href="{{ route('reviews_path') }}">Avis reçus</a></li>
               <li><a href="{{ route('profil_path') }}">Mon profil</a></li>
               <li><a class="dropdown-item" href="" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Se déconnecter</a>

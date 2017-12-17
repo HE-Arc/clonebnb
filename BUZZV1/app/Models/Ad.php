@@ -41,6 +41,18 @@ class Ad extends Model
         return $this->belongsTo('App\Models\User');
     }
 
+    //Appartient à un utilisateur
+    public function prices()
+    {
+        return $this->hasMany('App\Models\Price');
+    }
+
+    //Les médias de l'annonce
+    public function medias()
+    {
+        return $this->hasMany('App\Models\Media');
+    }
+
     //Possède plusieurs like
     public function favorites(){
       return $this->hasMany("App\Models\Favorite");
@@ -49,6 +61,10 @@ class Ad extends Model
     //Possède plusieurs commentaires
     public function comments(){
       return $this->hasMany("App\Models\Comment");
+    }
+
+    public function messages(){
+      return $this->hasMany("App\Models\Message");
     }
 
     //Nombre de commentaires de l'annonce

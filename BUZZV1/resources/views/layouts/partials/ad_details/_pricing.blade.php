@@ -3,7 +3,7 @@
   <h3 class="listing-desc-headline margin-top-70 margin-bottom-30">Prix</h3>
 
     <div class="pricing-list-container">
-      @foreach($prices as $price)
+      @foreach($ad->prices as $price)
       <h4>{{ $price->category }}</h4>
       <ul>
         <li>

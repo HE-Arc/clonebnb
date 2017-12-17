@@ -4,8 +4,6 @@
     <a href="{{ route('details_path',$ad->id) }}" class="listing-item-container compact" data-adid="{{ $ad->id }}">
       <div class="listing-item">
         <img src="/uploads/ads/medias/{{ $ad->image }}" alt="image de l'annonce">
-        <div class="listing-badge now-open">Now Open</div>
-
         <div class="listing-item-content">
           <div class="numerical-rating" data-rating="{{ $ad->rate() }}"></div>
           <h3>{{ $ad->title }}</h3>

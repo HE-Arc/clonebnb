@@ -1,7 +1,7 @@
 @extends('layouts.slave')
 
 @section('title')
-	Avis
+	Avis reçus
 @stop
 
 @section('content')
@@ -65,7 +65,6 @@
             @endforeach
 					</ul>
 				</div>
-        {{ $visitors_comments->links() }}
 
 			</div>
 
@@ -94,5 +93,4 @@
             @endforeach
 					</ul>
 				</div>
-        {{ $comments->links() }}
 @stop

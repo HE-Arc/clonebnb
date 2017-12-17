@@ -62,13 +62,7 @@ class AdsController extends Controller
     public function showAdDetails($ad_id)
     {
       $ad = Ad::find($ad_id);
-      //On retourne les médias de l'annonce
-      $medias = Media::where('ad_id', '=', $ad_id)
-                ->get();
-      //Les différents prix de l'annonce
-      $prices = Price::where('ad_id', '=', $ad_id)
-                ->get();
-      return view('ads.ad_details')->withAd($ad)->withMedias($medias)->withPrices($prices);
+      return view('ads.ad_details')->withAd($ad);
     }
 
     //Ajouter comme favoris

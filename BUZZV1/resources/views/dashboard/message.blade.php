@@ -13,12 +13,12 @@
 		<div id="titlebar">
 			<div class="row">
 				<div class="col-md-12">
-					<h2>Messages @{{ message }}</h2>
+					<h2>Messages</h2>
 					<!-- Breadcrumbs -->
 					<nav id="breadcrumbs">
 						<ul>
 							<li><a href="#">Accueil</a></li>
-							<li><a href="#">Tableau de bord</a></li>
+							<li><a href="{{ route('dashboard_path') }}">Tableau de bord</a></li>
 							<li>Messages</li>
 						</ul>
 					</nav>
@@ -36,7 +36,7 @@
 						<h4>Boîte de reception</h4>
 					</div>
 
-					@include('layouts.partials.dashboard._user_list')
+					@include('layouts.partials.dashboard._message_list')
 				</div>
 
 				<!-- Pagination -->
