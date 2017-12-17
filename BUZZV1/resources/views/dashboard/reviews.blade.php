@@ -6,8 +6,7 @@
 
 @section('content')
 
-<!-- Content
-	================================================== -->
+<!-- Content -->
 	<div class="dashboard-content">
 
 		<div id="titlebar">
@@ -93,6 +92,7 @@
             @endforeach
 					</ul>
 				</div>
+
 			</div>
 		</div>
 @stop
