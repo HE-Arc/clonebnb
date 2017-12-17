@@ -11,7 +11,7 @@
 
 				<!-- Logo -->
 				<div id="logo">
-					<a href="{{ route('root_path') }}"><img src="{{ asset('images/logo.png') }}" alt="logo"></a>
+					<a href="{{ route('root_path') }}"><img src="{{ secure_asset('images/logo.png') }}" alt="logo"></a>
 				</div>
 
 				<!-- Mobile Navigation -->

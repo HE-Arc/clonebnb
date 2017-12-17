@@ -6,8 +6,7 @@
 
 @section('content')
 
-<!-- Content
-	================================================== -->
+<!-- Content -->
 	<div class="dashboard-content">
 
 		<div id="titlebar">
@@ -49,7 +48,7 @@
 							<div class="comments listing-reviews">
 								<ul>
 									<li>
-										<div class="avatar"><img src="/uploads/avatars/{{ $vc->photo }}" alt="image utilisateur" /> </div>
+										<div class="avatar"><img src="{{ secure_asset('/uploads/avatars/{{ $vc->photo }}') }}" alt="image utilisateur" /> </div>
 										<div class="comment-content"><div class="arrow-comment"></div>
 											<div class="comment-by">{{ $vc->last_name.' '.$vc->first_name }} <div class="comment-by-listing">pour <a href="#">{{ $vc->title }}</a></div> <span class="date">{{ $vc->created_at }}</span>
 												<div class="star-rating" data-rating="{{ $vc->rate }}"></div>
@@ -78,7 +77,7 @@
 							<div class="comments listing-reviews">
 								<ul>
 									<li>
-										<div class="avatar"><img src="/uploads/avatars/{{ Auth::user()->photo }}" alt="photo utilisateur" /> </div>
+										<div class="avatar"><img src="{{ secure_asset('/uploads/avatars/{{ Auth::user()->photo }}') }}" alt="photo utilisateur" /> </div>
 										<div class="comment-content"><div class="arrow-comment"></div>
 											<div class="comment-by">Votre avis <div class="comment-by-listing own-comment">pour <a href="#">{{ $comment->ad->title }}</a></div> <span class="date">{{ $comment->created_at->diffForHumans() }}</span>
 												<div class="star-rating" data-rating="{{ $comment->rate }}"></div>

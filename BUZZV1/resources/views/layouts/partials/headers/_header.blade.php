@@ -8,7 +8,7 @@
 
       <!-- Logo -->
       <div id="logo">
-        <a href="{{ route('root_path') }}"><img src="{{ asset('images/logo.png') }}" alt="logo"></a>
+        <a href="{{ route('root_path') }}"><img src="{{ secure_asset('images/logo.png') }}" alt="logo"></a>
       </div>
 
       <!-- Mobile Navigation -->
@@ -58,7 +58,7 @@
             </a>-->
         </div>
         <div class="user-menu">
-          <div class="user-name"><span><img src="/uploads/avatars/{{ Auth::user()->photo }}" alt=""></span>{{ Auth::user()->getFullName() }}</div>
+          <div class="user-name"><span><img src="{{ secure_asset('/uploads/avatars/{{ Auth::user()->photo }}') }}" alt=""></span>{{ Auth::user()->getFullName() }}</div>
             <ul>
               <li><a href="{{ route('dashboard_path') }}">Tableau de bord</a></li>
               <li><a href="{{ route('online_path') }}">Mes annonces</a></li>

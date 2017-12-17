@@ -4,7 +4,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-5 col-sm-6">
-			<img class="footer-logo" src="/images/logo.png" alt="">
+			<img class="footer-logo" src="{{ secure_asset('/images/logo.png') }}" alt="">
 			<br><br>
 			<p >Buzz! est une plateforme de location en tout genre entre particuliers.</p>
 		</div>

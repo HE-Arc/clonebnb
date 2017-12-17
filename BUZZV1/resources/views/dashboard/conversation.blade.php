@@ -18,7 +18,7 @@
 					<nav id="breadcrumbs">
 						<ul>
 							<li><a href="#">Home</a></li>
-							<li><a href="{{ dashboard_path}}">Dashboard</a></li>
+							<li><a href="{{ dashboard_path }}">Dashboard</a></li>
 							<li>Messages</li>
 						</ul>
 					</nav>
@@ -47,22 +47,22 @@
 						<div class="message-content">
 
 							<div class="message-bubble">
-								<div class="message-avatar"><img src="uploads/avatars/default.png" alt="" /></div>
+								<div class="message-avatar"><img src="{{ secure_asset('uploads/avatars/default.png') }}" alt="" /></div>
 								<div class="message-text"><p>@{{ message }} Hello, I want to talk about your great listing! Morbi velit eros, sagittis in facilisis non, rhoncus et erat. Nam posuere tristique sem, eu ultricies tortor lacinia neque imperdiet vitae.</p></div>
 							</div>
 
 							<div class="message-bubble me">
-								<div class="message-avatar"><img src="uploads/avatars/{{ Auth::user()->photo }}" alt="" /></div>
+								<div class="message-avatar"><img src="{{ secure_asset('uploads/avatars/{{ Auth::user()->photo }}') }}'" alt="" /></div>
 								<div class="message-text"><p>Nam ut hendrerit orci, ac gravida orci. Cras tristique rutrum libero at consequat. Vestibulum vehicula neque maximus sapien iaculis, nec vehicula sapien fringilla.</p></div>
 							</div>
 
 							<div class="message-bubble me">
-								<div class="message-avatar"><img src="uploads/avatars/{{ Auth::user()->photo }}" alt="" /></div>
+								<div class="message-avatar"><img src="{{ secure_asset('uploads/avatars/{{ Auth::user()->photo }}') }}'" alt="" /></div>
 								<div class="message-text"><p>Accumsan et porta ac, volutpat id ligula. Donec neque neque, blandit eu pharetra in, tristique id enim.</p></div>
 							</div>
 
 							<div class="message-bubble">
-								<div class="message-avatar"><img src="uploads/avatars/default.png" alt="" /></div>
+								<div class="message-avatar"><img src="{{ secure_asset('uploads/avatars/default.png') }}" alt="" /></div>
 								<div class="message-text"><p>Vivamus lobortis vel nibh nec maximus. Donec dolor erat, rutrum ut feugiat sed, ornare vitae nunc. Donec massa nisl, bibendum id ultrices sed, accumsan sed dolor.</p></div>
 							</div>
 

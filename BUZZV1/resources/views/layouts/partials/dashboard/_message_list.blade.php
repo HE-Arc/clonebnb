@@ -4,7 +4,7 @@
     @foreach($messages as $message)
     <li class="active-message">
       <a href="{{ route('conversation_path') }}">
-        <div class="message-avatar"><img src="uploads/avatars/default.png" alt="" /></div>
+        <div class="message-avatar"><img src="{{ secure_asset('uploads/avatars/default.png') }}" alt="" /></div>
         <div class="message-by">
           <div class="message-by-headline">
             <h5></h5>

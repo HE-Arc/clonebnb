@@ -4,7 +4,7 @@
 			<div class="boxed-widget margin-top-35">
 				<div class="hosted-by-title">
 					<h4><span>Publier par</span> <a href="{{ route('user_profile_path', $ad->user->id) }}">{{ $ad->user->first_name }}</a></h4>
-					<a href="{{ route('user_profile_path', $ad->user->id) }}" class="hosted-by-avatar"><img src="/uploads/avatars/{{ $ad->user->photo }}" alt="Avatar"></a>
+					<a href="{{ route('user_profile_path', $ad->user->id) }}" class="hosted-by-avatar"><img src="{{ secure_asset('/uploads/avatars/{{ $ad->user->photo }}') }}" alt="Avatar"></a>
 				</div>
 				<ul class="listing-details-sidebar">
 					<li style="margin-bottom: 10px"><i class="fa fa-phone"></i> {{ $ad->user->phone }}</li>

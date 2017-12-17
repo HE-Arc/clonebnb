@@ -20,7 +20,7 @@
 	<div class="fw-carousel-item">
 		<a href="listings-single-page.html" class="listing-item-container compact">
 			<div class="listing-item">
-				<img src="images/listing-item-01.jpg" alt="">
+				<img src="{{ secure_asset('images/listing-item-01.jpg') }}" alt="">
 
 				<div class="listing-badge now-open">Nouveau</div>
 

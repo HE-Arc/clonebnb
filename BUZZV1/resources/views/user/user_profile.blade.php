@@ -13,7 +13,7 @@
 			<div class="col-md-12">
 
 				<div class="user-profile-titlebar">
-					<div class="user-profile-avatar"><img src="/uploads/avatars/{{ $user->photo }}" alt=""></div>
+					<div class="user-profile-avatar"><img src="{{ secure_asset('/uploads/avatars/{{ $user->photo }}') }}" alt=""></div>
 					<div class="user-profile-name">
 						<h2>{{ $user->first_name }}</h2>
               <p><span><a href="#listing-reviews">{{ $user->first_name }}</span></p>
@@ -85,7 +85,7 @@
 						<a href="{{ route('details_path',$ad->id) }}" class="listing-item" data-adid="{{ $ad->id }}">
 							<!-- Image -->
 							<div class="listing-item-image">
-								<img src="/uploads/ads/medias/{{ $ad->image }}" alt="image de l'annonce">
+								<img src="{{ secure_asset('/uploads/ads/medias/{{ $ad->image }}') }}" alt="image de l'annonce">
 								<span class="tag">{{ $ad->category->name }}</span>
 							</div>
 
@@ -122,43 +122,9 @@
 
 				<div class="clearfix"></div>
 
-				<!-- Reviews -->
-				<!--<section class="comments listing-reviews">
-					<ul>
-            @foreach($user->ads as $comment)
-						<li>
-              {{ $comment->content }}
-							<div class="avatar"><img src="http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;s=70" alt="" /></div>
-							<div class="comment-content"><div class="arrow-comment"></div>
-								<div class="comment-by">Kathy Brown <div class="comment-by-listing">on <a href="#">Burger House</a></div> <span class="date">June 2017</span>
-									<div class="star-rating" data-rating="5"></div>
-								</div>
-								<p>Morbi velit eros, sagittis in facilisis non, rhoncus et erat. Nam posuere tristique sem, eu ultricies tortor imperdiet vitae. Curabitur lacinia neque non metus</p>
-
-								<div class="review-images mfp-gallery-container">
-									<a href="images/review-image-01.jpg" class="mfp-gallery"><img src="images/review-image-01.jpg" alt=""></a>
-								</div>
-							</div>
-						</li>
-            @endforeach
-					 </ul>
-				</section>-->
 
 				<!-- Pagination -->
 				<div class="clearfix"></div>
-				<!--<div class="row">
-					<div class="col-md-12">
-						<div class="pagination-container margin-top-30">
-							<nav class="pagination">
-								<ul>
-									<li><a href="#" class="current-page">1</a></li>
-									<li><a href="#">2</a></li>
-									<li><a href="#"><i class="sl sl-icon-arrow-right"></i></a></li>
-								</ul>
-							</nav>
-						</div>
-					</div>
-				</div>-->
 				<div class="clearfix"></div>
 				<!-- Pagination / End -->
 			</div>
