@@ -35,7 +35,7 @@
             @foreach($ads as $ad)
 						<li>
 							<div class="list-box-listing">
-								<div class="list-box-listing-img"><a href="#"><img src="{{ secure_asset('/uploads/ads/medias/{{ $ad->image }}') }}" alt=""></a></div>
+								<div class="list-box-listing-img"><a href="#"><img src="{{ secure_asset('/uploads/ads/medias/')}}{{ $ad->image }}" alt=""></a></div>
 								<div class="list-box-listing-content">
 									<div class="inner">
 										<h3><a href="#">{{ $ad['title'] }}</a></h3>

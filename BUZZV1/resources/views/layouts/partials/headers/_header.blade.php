@@ -58,7 +58,7 @@
             </a>-->
         </div>
         <div class="user-menu">
-          <div class="user-name"><span><img src="{{ secure_asset('/uploads/avatars/{{ Auth::user()->photo }}') }}" alt=""></span>{{ Auth::user()->getFullName() }}</div>
+          <div class="user-name"><span><img src="{{ secure_asset('/uploads/avatars')}} Auth::user()->photo " alt=""></span>{{ Auth::user()->getFullName() }}</div>
             <ul>
               <li><a href="{{ route('dashboard_path') }}">Tableau de bord</a></li>
               <li><a href="{{ route('online_path') }}">Mes annonces</a></li>

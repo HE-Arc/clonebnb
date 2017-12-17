@@ -3,7 +3,7 @@
   <div class="col-lg-4 col-md-6 item_">
     <a href="{{ route('details_path',$ad->id) }}" class="listing-item-container compact" data-adid="{{ $ad->id }}">
       <div class="listing-item">
-        <img src="{{ secure_asset('/uploads/ads/medias/{{ $ad->image }}') }}" alt="image de l'annonce">
+        <img src="{{ secure_asset('/uploads/ads/medias')}} $ad->image " alt="image de l'annonce">
         <div class="listing-item-content">
           <div class="numerical-rating" data-rating="{{ $ad->rate() }}"></div>
           <h3>{{ $ad->title }}</h3>

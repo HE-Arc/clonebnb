@@ -51,7 +51,7 @@
 					</nav>
 				</div>
 				<!-- Pagination / End -->
-<script src="{{ secure_asset('public/js/app.js') }}"></script>
+<script src="{{ scure_asset('public/js/app.js')}}"></script>
 			</div>
 @stop
 
