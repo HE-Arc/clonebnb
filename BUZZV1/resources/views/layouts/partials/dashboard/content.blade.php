@@ -89,68 +89,9 @@
       </div>
     </div>
 
-    <!-- Facturations -->
-    <!--<div class="col-lg-6 col-md-12">
-      <div class="dashboard-list-box invoices with-icons margin-top-20">
-        <h4>Facturation</h4>
-        <ul>
-
-          <li><i class="list-box-icon sl sl-icon-doc"></i>
-            <strong>Plan Buzz de bronze</strong>
-            <ul>
-              <li class="unpaid">Non-payé</li>
-              <li>Référence: #00124</li>
-              <li>Date: 20/07/2017</li>
-            </ul>
-            <div class="buttons-to-right">
-              <a href="dashboard-invoice.html" class="button gray">Voir</a>
-            </div>
-          </li>
-
-          <li><i class="list-box-icon sl sl-icon-doc"></i>
-            <strong>Plan Buzz d'argent</strong>
-            <ul>
-              <li class="paid">Payé</li>
-              <li>Référence: #00108</li>
-              <li>Date: 14/07/2017</li>
-            </ul>
-            <div class="buttons-to-right">
-              <a href="dashboard-invoice.html" class="button gray">Voir</a>
-            </div>
-          </li>
-
-          <li><i class="list-box-icon sl sl-icon-doc"></i>
-            <strong>Plan Buzz d'or</strong>
-            <ul>
-              <li class="paid">Payé</li>
-              <li>Référence: #00097</li>
-              <li>Date: 10/07/2017</li>
-            </ul>
-            <div class="buttons-to-right">
-              <a href="dashboard-invoice.html" class="button gray">Voir</a>
-            </div>
-          </li>
-
-          <li><i class="list-box-icon sl sl-icon-doc"></i>
-            <strong>Basic Plan</strong>
-            <ul>
-              <li class="paid">Paid</li>
-              <li>Référence: #00091</li>
-              <li>Date: 30/06/2017</li>
-            </ul>
-            <div class="buttons-to-right">
-              <a href="dashboard-invoice.html" class="button gray">Voir</a>
-            </div>
-          </li>
-
-        </ul>
-      </div>
-    </div>-->
-
-
     <!-- Copyrights -->
     <div class="col-md-12">
-      <div class="copyrights">© 2017 Listeo. All Rights Reserved.</div>
+      <div class="copyrights">©2017 · By LONG.</div>
     </div>
   </div>
 

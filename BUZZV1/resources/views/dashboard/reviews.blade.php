@@ -26,21 +26,6 @@
 
 				<div class="dashboard-list-box margin-top-0">
 
-					<!-- Sort by -->
-					<!--<div class="sort-by">
-						<div class="sort-by-select">
-							<select data-placeholder="Default order" class="chosen-select-no-single">
-								<option>All Listings</option>
-								<option>Tom's Restaurant</option>
-								<option>Sticky Band</option>
-								<option>Hotel Govendor</option>
-								<option>Burger House</option>
-								<option>Airport</option>
-								<option>Think Coffee</option>
-							</select>
-						</div>
-					</div>-->
-
 					<h4>Avis reçus <span>({{ $visitors_comments->total() }})</span></h4>
 
 					<!-- Reply to review popup -->
@@ -75,8 +60,6 @@
             @endforeach
 					</ul>
 				</div>
-        {{ $visitors_comments->links() }}
-
 			</div>
 
 			<!-- Listings -->
@@ -104,6 +87,7 @@
             @endforeach
 					</ul>
 				</div>
-        {{ $comments->links() }}
+			</div>
+		</div>
 
 @stop

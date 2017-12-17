@@ -47,7 +47,7 @@
 						</ul>
 					</div>
 
-					<a href="{{ route('publish_path') }}" class="button border with-icon">Buzzer! maintenant <i class="fa fa-plus"></i></a>
+					<a href="{{ route('publish_path') }}" class="button border with-icon">Buzzer!<i class="fa fa-plus"></i></a>
 				</div>
 			</div>
 
