@@ -12,48 +12,8 @@ class AdsTableSeeder extends Seeder
     public function run()
     {
       DB::table('ads')->insert([
-          'title' => 'PlayStation 4',
-          'description' => 'PlayStation 4 neuve en location quand vous voulez',
-          'online' => 0,
-          'expired' => 0,
-          'address' => 'Rue de la rue 6, 2000 Neuchâtel',
-          'category_id' => 4,
-          'user_id' => 1
-      ]);
-
-      DB::table('ads')->insert([
-          'title' => 'PlayStation 4',
-          'description' => 'PlayStation 4 neuve en location quand vous voulez',
-          'online' => 0,
-          'expired' => 0,
-          'address' => 'Rue de la rue 6, 2000 Neuchâtel',
-          'category_id' => 6,
-          'user_id' => 1
-      ]);
-
-      DB::table('ads')->insert([
-          'title' => 'PlayStation 4',
-          'description' => 'PlayStation 4 neuve en location quand vous voulez',
-          'online' => 0,
-          'expired' => 0,
-          'address' => 'Rue de la rue 6, 2000 Neuchâtel',
-          'category_id' => 3,
-          'user_id' => 1
-      ]);
-
-      DB::table('ads')->insert([
-          'title' => 'PlayStation 4',
-          'description' => 'PlayStation 4 neuve en location quand vous voulez',
-          'online' => 0,
-          'expired' => 0,
-          'address' => 'Rue de la rue 6, 2000 Neuchâtel',
-          'category_id' => 3,
-          'user_id' => 1
-      ]);
-
-      DB::table('ads')->insert([
-          'title' => 'PlayStation 4',
-          'description' => 'PlayStation 4 neuve en location quand vous voulez',
+          'title' => 'Asus VP278H',
+          'description' => 'Moniteur avec un temps de réponse rapide de 1 ms',
           'online' => 0,
           'expired' => 0,
           'address' => 'Rue de la rue 6, 2000 Neuchâtel',
@@ -62,33 +22,59 @@ class AdsTableSeeder extends Seeder
       ]);
 
       DB::table('ads')->insert([
-          'title' => 'PlayStation 4',
-          'description' => 'PlayStation 4 neuve en location quand vous voulez',
+          'title' => 'Microsoft Surface Pro (i5, 128GB, 4GB)',
+          'description' => 'La tablette qui remplace votre ordinateur',
+          'online' => 0,
+          'expired' => 0,
+          'address' => 'Rue de la rue 6, 2000 Neuchâtel',
+          'category_id' => 1,
+          'user_id' => 1
+      ]);
+
+      DB::table('ads')->insert([
+          'title' => 'Mercedes-AMG A 45 4MATIC',
+          'description' => 'Confort propice aux performances et sécurité exemplaire.',
           'online' => 0,
           'expired' => 0,
           'address' => 'Rue de la rue 6, 2000 Neuchâtel',
           'category_id' => 2,
-          'user_id' => 1
+          'user_id' => 2
       ]);
-
       DB::table('ads')->insert([
-          'title' => 'PlayStation 4',
-          'description' => 'PlayStation 4 neuve en location quand vous voulez',
+          'title' => 'Mercedes-AMG A 45 4MATIC',
+          'description' => 'Confort propice aux performances et sécurité exemplaire.',
           'online' => 0,
           'expired' => 0,
           'address' => 'Rue de la rue 6, 2000 Neuchâtel',
-          'category_id' => 1,
-          'user_id' => 1
+          'category_id' => 2,
+          'user_id' => 2
       ]);
-
       DB::table('ads')->insert([
-          'title' => 'PlayStation 4',
-          'description' => 'PlayStation 4 neuve en location quand vous voulez',
+          'title' => 'Mercedes-AMG A 45 4MATIC',
+          'description' => 'Confort propice aux performances et sécurité exemplaire.',
           'online' => 0,
           'expired' => 0,
           'address' => 'Rue de la rue 6, 2000 Neuchâtel',
-          'category_id' => 3,
-          'user_id' => 1
+          'category_id' => 2,
+          'user_id' => 2
+      ]);
+      DB::table('ads')->insert([
+          'title' => 'Mercedes-AMG A 45 4MATIC',
+          'description' => 'Confort propice aux performances et sécurité exemplaire.',
+          'online' => 0,
+          'expired' => 0,
+          'address' => 'Rue de la rue 6, 2000 Neuchâtel',
+          'category_id' => 2,
+          'user_id' => 2
+      ]);
+      DB::table('ads')->insert([
+          'title' => 'Mercedes-AMG A 45 4MATIC',
+          'description' => 'Confort propice aux performances et sécurité exemplaire.',
+          'online' => 0,
+          'expired' => 0,
+          'address' => 'Rue de la rue 6, 2000 Neuchâtel',
+          'category_id' => 2,
+          'user_id' => 2
       ]);
     }
 }
