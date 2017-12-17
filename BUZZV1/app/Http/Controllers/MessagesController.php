@@ -2,17 +2,13 @@
 
 namespace App\Http\Controllers;
 use App\Models\Message;
+use App\Models\User;
 use App\Http\Requests\MessageRequest;
 use Auth;
+use DB;
 
 class MessagesController extends Controller
 {
-    //Page de messages
-    public function showMessage()
-    {
-    	return view('dashboard.message');
-    }
-
     //Envoyer un message
     public function sendMessage(MessageRequest $request)
     {

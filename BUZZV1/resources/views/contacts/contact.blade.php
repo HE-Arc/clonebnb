@@ -4,7 +4,7 @@
 	Contactez nous
 @stop
 
-@section('content') 
+@section('content')
 		<div class="container">
 			<div class="row" style="margin-top: 100px">
 			<div class="col-md">
@@ -35,11 +35,11 @@
 					</div>
 				</form>
 			</div>
-				
+
 			</div>
 		</div>
 @stop
 
 @section('stylesheet')
-	
+
 @stop

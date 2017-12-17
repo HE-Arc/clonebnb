@@ -17,7 +17,7 @@
 					<!-- Breadcrumbs -->
 					<nav id="breadcrumbs">
 						<ul>
-							<li><a href="#">Accueil</a></li>
+							<li><a href="{{ route('root_path') }}">Accueil</a></li>
 							<li><a href="{{ route('dashboard_path') }}">Tableau de bord</a></li>
 							<li>Mon profil</li>
 						</ul>
@@ -100,12 +100,11 @@
 			</div>
 
 			<!-- Change Password -->
-			<div class="col-lg-6 col-md-12">
+			<!--<div class="col-lg-6 col-md-12">
 				<div class="dashboard-list-box margin-top-0">
 					<h4 class="gray">Changer le mot de passe</h4>
 					<div class="dashboard-list-box-static">
 
-						<!-- Change Password -->
 						<div class="my-profile">
 							<label class="margin-top-0">Mot de passe actuel</label>
 							<input type="password">
@@ -121,6 +120,6 @@
 
 					</div>
 				</div>
-			</div>
+			</div>-->
 
 @stop

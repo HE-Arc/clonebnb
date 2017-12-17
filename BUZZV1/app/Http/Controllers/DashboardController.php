@@ -33,12 +33,6 @@ class DashboardController extends Controller
 		return view('dashboard.dashboard', ['ad'=>$ad])->withComments($visitors_comments);
 	}
 
-	public function showMessage()
-	{
-		$messages = Message::where('receiver_id', Auth::user()->id)->first();
-		return view('dashboard.message')->withMessages($messages);
-	}
-
 	//Afficher les Commentaires
 	public function reviews()
 	{
@@ -130,6 +124,8 @@ class DashboardController extends Controller
 		$ad->telephone = $request->telephone;
 		$ad->site = $request->site;
 		$ad->email = $request->email;
+		//Pour le moment les annonces sont immédiatement en ligne sans contrôle de l'admin
+		$ad->online = 1;
 		$ad->facebook = $request->facebook;
 		$ad->twitter = $request->twitter;
 		$ad->google = $request->google;
@@ -197,6 +193,17 @@ class DashboardController extends Controller
       $favorite = Favorite::where('id', $fav_id)->first();
       if (Auth::user() == $favorite->user) {
 				$favorite->delete();
+      }
+			return $request->all();
+  }
+
+	//Supprimer un favoris
+	public function deleteAd(Request $request)
+  {
+			$ad_id = $request['adid'];
+      $ad = Ad::where('id', $ad_id)->first();
+      if (Auth::user() == $ad->user) {
+				$ad->delete();
       }
 			return $request->all();
   }

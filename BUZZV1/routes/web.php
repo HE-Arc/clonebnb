@@ -112,19 +112,14 @@ Route::post('/favorites', [
 	'uses' => 'DashboardController@deleteFavorite'
 ]);
 
+Route::post('/ads', [
+	'as' => 'delete_ad_path',
+	'uses' => 'DashboardController@deleteAd'
+]);
+
 Route::get('/my-expired-ads', [
 	'as' =>'expired_path',
 	'uses'=>'DashboardController@expiredAds'
-]);
-
-Route::get('/message', [
-	'as' =>'messages_path',
-	'uses'=>'DashboardController@showMessage'
-]);
-
-Route::post('message', [
-	'as' =>'message_path',
-	'uses'=>'MessagesController@sendMessage'
 ]);
 
 Route::get('/conversation', [
