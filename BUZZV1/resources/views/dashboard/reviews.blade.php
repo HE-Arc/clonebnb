@@ -39,7 +39,7 @@
 						</div>
 						<div class="message-reply margin-top-0">
 							<textarea cols="40" rows="3"></textarea>
-							<button class="button">Répondre</button>
+							<!--<button class="button">Répondre</button>-->
 						</div>
 					</div>
 					<ul>
@@ -54,9 +54,9 @@
 												<div class="star-rating" data-rating="{{ $vc->rate }}"></div>
 											</div>
 											<p>{{ $vc->content }}</p>
-											<a href="#small-dialog" class="rate-review popup-with-zoom-anim"><i class="sl sl-icon-action-undo"></i> Répondre</a>
+											<!--<a href="#small-dialog" class="rate-review popup-with-zoom-anim"><i class="sl sl-icon-action-undo"></i> Répondre</a>-->
 										</div>
-
+										<!--<a href="#" class="rate-review"><i class="sl sl-icon-note"></i> Editer</a>-->
 									</li>
 								</ul>
 							</div>
@@ -64,6 +64,7 @@
             @endforeach
 					</ul>
 				</div>
+
 			</div>
 
 			<!-- Listings -->
@@ -82,7 +83,7 @@
 												<div class="star-rating" data-rating="{{ $comment->rate }}"></div>
 											</div>
 											<p>{{ $comment->content }}</p>
-											<a href="#" class="rate-review"><i class="sl sl-icon-note"></i> Editer</a>
+											<!--<a href="#" class="rate-review"><i class="sl sl-icon-note"></i> Editer</a>-->
 										</div>
 									</li>
 								</ul>
@@ -91,6 +92,7 @@
             @endforeach
 					</ul>
 				</div>
+
 			</div>
 		</div>
 @stop
