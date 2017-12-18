@@ -1,6 +1,6 @@
 <tr>
     <td class="header">
-        <a href="{{ secure_asset('{{ $url }}') }}'">
+        <a href="{{ $url }}'">
             {{ $slot }}
         </a>
     </td>
