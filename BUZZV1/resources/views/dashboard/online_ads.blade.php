@@ -33,7 +33,7 @@
 					<h4>Annonces en ligne</h4>
 					<ul>
             @foreach($ads as $ad)
-						<li>
+						<li data-adid="{{ $ad->id }}">
 							<div class="list-box-listing">
 								<div class="list-box-listing-img"><a href="#"><img src="{{ secure_asset('/uploads/ads/medias/')}}{{ $ad->image }}" alt="image annonce"></a></div>
 								<div class="list-box-listing-content">
@@ -47,13 +47,20 @@
 								</div>
 							</div>
 							<div class="buttons-to-right">
-								<a href="#" class="button gray"><i class="sl sl-icon-note"></i> Editer</a>
-								<a href="#" class="button gray"><i class="sl sl-icon-close"></i> Supprimer</a>
+								<a href="#" class="button gray delete_ad"><i class="sl sl-icon-close"></i> Supprimer</a>
 							</div>
 						</li>
             @endforeach
 					</ul>
 				</div>
 			</div>
-
+			<div class="col-md-12">
+				<div class="copyrights">©2017 · By LONG.</div>
+			</div>
+		</div>
+	</div>
+	<script>
+	  var token = '{{ Session::token() }}';
+		 var url_delete = '{{ route('delete_ad_path') }}';
+	</script>
 @stop

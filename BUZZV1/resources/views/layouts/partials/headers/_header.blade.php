@@ -62,7 +62,6 @@
             <ul>
               <li><a href="{{ route('dashboard_path') }}">Tableau de bord</a></li>
               <li><a href="{{ route('online_path') }}">Mes annonces</a></li>
-              <li><a href="{{ route('messages_path') }}">Messages</a></li>
               <li><a href="{{ route('reviews_path') }}">Avis reçus</a></li>
               <li><a href="{{ route('profil_path') }}">Mon profil</a></li>
               <li><a class="dropdown-item" href="" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Se déconnecter</a>
@@ -71,10 +70,10 @@
               </form></li>
             </ul>
           </div>
+          <a href="{{ route('publish_path') }}" class="button border with-icon">Buzzer <i class="fa fa-plus-circle"></i></a>
         @else
         <a href="#sign-in-dialog" class="sign-in popup-with-zoom-anim"><i class="fa fa-sign-in"></i> Connexion</a>
         @endif
-        <a href="{{ route('publish_path') }}" class="button border with-icon">Buzzer <i class="fa fa-plus-circle"></i></a>
       </div>
     </div>
         <!--Modal pour login et Inscription -->

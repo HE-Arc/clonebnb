@@ -34,17 +34,11 @@
         <!--Inclusion reviews-->
         @include('layouts.partials.ad_details._reviews')
         <!--Fin reviews-->
-
-        <!--Inclusion pagination-->
-        @include('layouts.partials.paginations._pagination')
-        <!--Fin pagination-->
 			</div>
 
       <!--Inclusion reviews-->
       @include('layouts.partials.ad_details._write_review')
       <!--Fin reviews-->
-
-
 
 		</div>
 

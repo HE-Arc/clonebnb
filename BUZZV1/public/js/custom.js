@@ -512,6 +512,20 @@
             });
         });
 
+        //Suppression annonce
+        $('.delete_ad').on('click', function(e) {
+            e.preventDefault();
+            var adid = e.target.parentNode.parentNode.dataset['adid'];
+            $.ajax({
+              method: 'POST',
+              url: url_delete,
+              data: {adid: adid, _token: token}
+            })
+            .done(function(){
+              $('#item').load(location.href+'#item');
+            });
+        });
+
         $('.more-search-options-trigger').on('click', function(e) {
             e.preventDefault();
             $('.more-search-options, .more-search-options-trigger').toggleClass('active');

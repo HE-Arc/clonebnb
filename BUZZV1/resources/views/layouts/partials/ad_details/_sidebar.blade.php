@@ -1,5 +1,8 @@
 <!-- Sidebar -->
 <div class="col-lg-4 col-md-4 margin-top-75 sticky">
+  <div class="verified-badge with-tip" data-tip-content="Informations de l'utilisateur">
+    <i class="fa fa-info"></i> Informations
+  </div>
 <!-- Contact -->
 			<div class="boxed-widget margin-top-35">
 				<div class="hosted-by-title">
@@ -7,32 +10,13 @@
 					<a href="{{ route('user_profile_path', $ad->user->id) }}" class="hosted-by-avatar"><img src="{{ secure_asset('/uploads/avatars')}} $ad->user->photo " alt="Avatar"></a>
 				</div>
 				<ul class="listing-details-sidebar">
-					<li style="margin-bottom: 10px"><i class="fa fa-phone"></i> {{ $ad->user->phone }}</li>
+					<li style="padding-bottom: 25px"><i class="fa fa-phone"></i> {{ $ad->user->phone }}</li>
 					<li><i class="fa fa-envelope-o"></i> <a href="#"><span class="__cf_email__" data-cfemail="2a5e45476a4f524b475a464f04494547">{{ $ad->user->email }}</span></a></li>
 				</ul>
 
 				<ul class="listing-details-sidebar social-profiles">
 					<li><a href="{{ $ad->user->facebook_id }}" class="facebook-profile"><i class="fa fa-facebook-square"></i> Facebook</a></li>
 				</ul>
-
-				<!-- Reply to review popup -->
-				<div id="small-dialog" class="zoom-anim-dialog mfp-hide">
-					<div class="small-dialog-header">
-						<h3>Envoyer un message</h3>
-            <h4>Minimum 150 caractères</h4>
-					</div>
-          <form action="{{ route('message_path') }}" method="POST">
-            {{ csrf_field() }}
-					<div class="message-reply margin-top-0">
-						<textarea cols="40" rows="3" placeholder="Your message to {{ $ad->user->first_name }}" name="message"></textarea>
-            <input type="hidden" class="button border margin-top-5" name="user_id" value="{{ $ad->user->id }}"/>
-              <input type="submit" class="button border margin-top-5" value="Envoyer" />
-					</div>
-          </form>
-				</div>
-        @if(Auth::check() && Auth::user()->id != $ad->user->id)
-				<a href="#small-dialog" class="send-message-to-owner button popup-with-zoom-anim"><i class="fa fa-envelope-open-o"></i> Envoyer un message</a>
-        @endif
       </div>
 			<!-- Contact / End-->
   <!-- Share / Like -->

@@ -63,10 +63,6 @@ class Ad extends Model
       return $this->hasMany("App\Models\Comment");
     }
 
-    public function messages(){
-      return $this->hasMany("App\Models\Message");
-    }
-
     //Nombre de commentaires de l'annonce
     public function getNumComments(){
       $num = $this->comments()->count();

@@ -35,15 +35,15 @@
 		<div class="col-lg-4 col-md-4 margin-top-0">
 
 			<!-- Verified Badge -->
-			<div class="verified-badge with-tip" data-tip-content="Account has been verified and belongs to the person or organization represented.">
-				<i class="sl sl-icon-user-following"></i> Compte vérifié
+			<div class="verified-badge with-tip" data-tip-content="Informations de l'utilisateur">
+				<i class="fa fa-info"></i> Informations
 			</div>
 
 			<!-- Contact -->
 			<div class="boxed-widget margin-top-30 margin-bottom-50">
 				<h3>Contact</h3>
 				<ul class="listing-details-sidebar">
-					<li><i class="fa fa-phone"></i> {{ $user->phone }}</li>
+					<li style="padding-bottom: 25px"><i class="fa fa-phone"></i> {{ $user->phone }}</li>
 					<li><i class="fa fa-envelope-o"></i> <a href="#"><span class="__cf_email__" data-cfemail="592d3634193c21383429353c773a3634">{{ $user->email }}</span></a></li>
 				</ul>
 
@@ -52,17 +52,6 @@
 				</ul>
 
 				<!-- Reply to review popup -->
-				<div id="small-dialog" class="zoom-anim-dialog mfp-hide">
-					<div class="small-dialog-header">
-						<h3>Envoyer un message</h3>
-					</div>
-					<div class="message-reply margin-top-0">
-						<textarea cols="40" rows="3" placeholder="Votre message à {{ $user->first_name }}"></textarea>
-						<button class="button">Envoyer un message</button>
-					</div>
-				</div>
-
-				<a href="#small-dialog" class="send-message-to-owner button popup-with-zoom-anim"><i class="fa fa-envelope-open"></i> Send Message</a>
 			</div>
 			<!-- Contact / End-->
 
@@ -108,9 +97,6 @@
 				</div>
 				<!-- Listing Item / End -->
         @endforeach
-				<div class="col-md-12 browse-all-user-listings">
-					<a href="#">Browse All Listings <i class="fa fa-angle-right"></i> </a>
-				</div>
 
 			</div>
 			<!-- Listings Container / End -->

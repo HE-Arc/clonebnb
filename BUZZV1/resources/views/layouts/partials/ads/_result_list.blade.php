@@ -10,7 +10,6 @@
         </div>
 
         <div class="listing-item-content">
-					<div class="listing-badge now-open">Now Open</div>
 						<div class="listing-item-inner">
 							<h3>{{ $ad->title }}</h3>
 							<span>{{ $ad->address }}</span>
