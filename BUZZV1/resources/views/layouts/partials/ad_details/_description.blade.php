@@ -1,5 +1,5 @@
 <!-- Listing Nav -->
-<div id="listing-nav" class="listing-nav-container">
+<div id="listing-na" class="">
   <ul class="listing-nav">
     <li><a href="#listing-overview" class="active">Description</a></li>
     <li><a href="#listing-pricing-list">Prix</a></li>
