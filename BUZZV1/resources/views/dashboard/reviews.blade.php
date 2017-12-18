@@ -1,25 +1,20 @@
 @extends('layouts.slave')
 
 @section('title')
-	Avis reçus
+	Avis
 @stop
 
 @section('content')
 
-<!-- Content -->
+<!-- Content
+	================================================== -->
 	<div class="dashboard-content">
 
+		<!-- Titlebar -->
 		<div id="titlebar">
 			<div class="row">
 				<div class="col-md-12">
 					<h2>Avis</h2>
-					<nav id="breadcrumbs">
-						<ul>
-							<li><a href="{{ route('root_path') }}">Accueil</a></li>
-							<li><a href="{{ route('dashboard_path') }}">Tableau de bord</a></li>
-							<li>Avis</li>
-						</ul>
-					</nav>
 				</div>
 			</div>
 		</div>
@@ -39,7 +34,7 @@
 						</div>
 						<div class="message-reply margin-top-0">
 							<textarea cols="40" rows="3"></textarea>
-							<!--<button class="button">Répondre</button>-->
+							<button class="button">Répondre</button>
 						</div>
 					</div>
 					<ul>
@@ -54,9 +49,9 @@
 												<div class="star-rating" data-rating="{{ $vc->rate }}"></div>
 											</div>
 											<p>{{ $vc->content }}</p>
-											<!--<a href="#small-dialog" class="rate-review popup-with-zoom-anim"><i class="sl sl-icon-action-undo"></i> Répondre</a>-->
+											<a href="#small-dialog" class="rate-review popup-with-zoom-anim"><i class="sl sl-icon-action-undo"></i> Répondre</a>
 										</div>
-										<!--<a href="#" class="rate-review"><i class="sl sl-icon-note"></i> Editer</a>-->
+
 									</li>
 								</ul>
 							</div>
@@ -93,6 +88,4 @@
 					</ul>
 				</div>
 
-			</div>
-		</div>
 @stop

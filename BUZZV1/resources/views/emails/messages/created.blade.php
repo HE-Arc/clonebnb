@@ -10,5 +10,5 @@
 {{ $msg }}
 @endcomponent
 
-@{{ config('app.name') }}
+{{ config('app.name') }}
 @endcomponent
