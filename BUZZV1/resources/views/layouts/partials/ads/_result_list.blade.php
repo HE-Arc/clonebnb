@@ -5,7 +5,7 @@
     <div class="listing-item-container list-layout">
       <a href="{{ route('details_path',$ad->id) }}" class="listing-item" data-adid="{{ $ad->id }}">
         <div class="listing-item-image">
-          <img src="{{ secure_asset('/uploads/ads/medias/')}}{{ $ad->image }}" alt="image de l'annonce">
+          <img src="{{ secure_asset('/uploads/ads/medias/')}}/{{ $ad->image }}" alt="image de l'annonce">
           <span class="tag">{{ $category["name"] }}</span>
         </div>
 

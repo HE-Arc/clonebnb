@@ -52,12 +52,12 @@
 							</div>
 
 							<div class="message-bubble me">
-								<div class="message-avatar"><img src="{{ secure_asset('uploads/avatars/')}}{{ Auth::user()->photo }}" alt="" /></div>
+								<div class="message-avatar"><img src="{{ secure_asset('uploads/avatars')}}/{{ Auth::user()->photo }}" alt="" /></div>
 								<div class="message-text"><p>Nam ut hendrerit orci, ac gravida orci. Cras tristique rutrum libero at consequat. Vestibulum vehicula neque maximus sapien iaculis, nec vehicula sapien fringilla.</p></div>
 							</div>
 
 							<div class="message-bubble me">
-								<div class="message-avatar"><img src="{{ secure_asset('uploads/avatars/')}}{{ Auth::user()->photo }}" alt="" /></div>
+								<div class="message-avatar"><img src="{{ secure_asset('uploads/avatars')}}/{{ Auth::user()->photo }}" alt="" /></div>
 								<div class="message-text"><p>Accumsan et porta ac, volutpat id ligula. Donec neque neque, blandit eu pharetra in, tristique id enim.</p></div>
 							</div>
 

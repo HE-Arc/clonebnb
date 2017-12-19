@@ -13,7 +13,7 @@
 			<div class="col-md-12">
 
 				<div class="user-profile-titlebar">
-					<div class="user-profile-avatar"><img src="{{ secure_asset('/uploads/avatars/')}}{{ $user->photo }}" alt=""></div>
+					<div class="user-profile-avatar"><img src="{{ secure_asset('/uploads/avatars/')}}/{{ $user->photo }}" alt=""></div>
 					<div class="user-profile-name">
 						<h2>{{ $user->first_name }}</h2>
               <p><span><a href="#listing-reviews">{{ $user->first_name }}</span></p>
@@ -74,7 +74,7 @@
 						<a href="{{ route('details_path',$ad->id) }}" class="listing-item" data-adid="{{ $ad->id }}">
 							<!-- Image -->
 							<div class="listing-item-image">
-								<img src="{{ secure_asset('/uploads/ads/medias/')}}{{ $ad->image }}" alt="image de l'annonce">
+								<img src="{{ secure_asset('/uploads/ads/medias/')}}/{{ $ad->image }}" alt="image de l'annonce">
 								<span class="tag">{{ $ad->category->name }}</span>
 							</div>
 

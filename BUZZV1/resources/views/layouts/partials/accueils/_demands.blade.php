@@ -27,7 +27,7 @@
           </div>
 				</div>
 				<div class="testimonial-author">
-					<img src="{{ secure_asset('/uploads/avatars/')}}{{ $demand->user->photo }}" alt="">
+					<img src="{{ secure_asset('/uploads/avatars/')}}/{{ $demand->user->photo }}" alt="">
 				</div>
 			</div>
       @endforeach

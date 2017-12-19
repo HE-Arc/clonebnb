@@ -33,7 +33,7 @@
 						@foreach($favorites as $favorite)
 						<li data-favid="{{ $favorite->id }}">
 							<div class="list-box-listing">
-								<div class="list-box-listing-img"><a href="{{ route('details_path', $favorite->ad_id) }}"><img src="{{ secure_asset('/uploads/ads/medias/')}}{{ $favorite->ad->image }}" alt="image annonce"></a></div>
+								<div class="list-box-listing-img"><a href="{{ route('details_path', $favorite->ad_id) }}"><img src="{{ secure_asset('/uploads/ads/medias')}}/{{ $favorite->ad->image }}" alt="image annonce"></a></div>
 								<div class="list-box-listing-content">
 									<div class="inner">
 										<h3>{{ $favorite->ad->title }}</h3>
