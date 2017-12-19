@@ -23,7 +23,6 @@ class DashboardController extends Controller
 	public function showDashboard()
 	{
 		$ad = new Ad();
-
 		$visitors_comments= DB::table('comments')
 				->join('ads','comments.ad_id','=','ads.id')
 				->join('users','comments.user_id','=','users.id')
@@ -149,7 +148,7 @@ class DashboardController extends Controller
 			flashy()->error("Impossible d'enregistrer votre annonce");
 		}
 
-		return redirect()->route('pending_path');
+		return redirect()->route('online_path');
 	}
 
 	//Ajouter les média d'une annonces
