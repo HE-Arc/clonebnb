@@ -10,7 +10,6 @@
 
 				<!-- Logo -->
 				<div id="logo">
-					<a href="{{ route('root_path') }}"><img src="{{ secure_asset('images/logo.png') }}" alt=""></a>
 					<a href="{{ route('root_path') }}" class="dashboard-logo"><img src="{{ secure_asset('images/logo.png') }}" alt=""></a>
 				</div>
 
