@@ -33,16 +33,13 @@
 			<div class="right-side">
 				<div class="header-widget">
 					<div class="user-menu">
-<<<<<<< HEAD
 						<a href="#"><i class="fa fa-bell fa-2x" style="color: #161414"></i>
 							<span class="badge" style="background-color: red; color: #fff; position: relative; top: -15px; left: -5px;">0</span>
 						</a>
 					</div>
 					<div class="user-menu">
 						<div class="user-name"><span><img src="{{ secure_asset('/uploads/avatars')}} Auth::user()->photo " alt=""></span>Mon Compte</div>
-=======
 						<div class="user-name"><span><img src="/uploads/avatars/{{ Auth::user()->photo }}" alt=""></span>Mon Compte</div>
->>>>>>> master
 						<ul>
               <li><a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();"><i class="fa fa-power-off"></i> Déconnexion</a>
               <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

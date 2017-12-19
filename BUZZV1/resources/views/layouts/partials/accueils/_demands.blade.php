@@ -27,12 +27,8 @@
           </div>
 				</div>
 				<div class="testimonial-author">
-<<<<<<< HEAD
 					<img src="{{ secure_asset('/uploads/avatars')}} $demand->user->photo " alt="">
 					<h4>{{ $demand->user->first_name }}<span><a href="" class="button">Lire la suite...</a></h4></span>
-=======
-					<img src="/uploads/avatars/{{ $demand->user->photo }}" alt="">
->>>>>>> master
 				</div>
 			</div>
       @endforeach
