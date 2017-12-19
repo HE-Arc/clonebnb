@@ -147,7 +147,7 @@ class DashboardController extends Controller
 		}else{
 			flashy()->error("Impossible d'enregistrer votre annonce");
 		}
-
+lon
 		return redirect()->route('online_path');
 	}
 
