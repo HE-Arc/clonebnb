@@ -11,7 +11,7 @@
 
       @foreach($ad->comments as $comment)
       <li>
-        <div class="avatar"><img src="/uploads/avatars/{{ $comment->user->photo }}" alt="" /></div>
+        <div class="avatar"><img src="{{ secure_asset('/uploads/avatars/')}}{{ $comment->user->photo }}" alt="" /></div>
         <div class="comment-content"><div class="arrow-comment"></div>
           <div class="comment-by">{{ $comment->user->first_name }}<span class="date">{{ $comment->created_at->diffForHumans() }}</span>
             <div class="star-rating" data-rating="{{ $comment->rate }}"></div>

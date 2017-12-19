@@ -38,7 +38,7 @@
 
 						<!-- Avatar -->
 						<div class="edit-profile-photo">
-							<img src="uploads/avatars/{{ Auth::user()->photo}}" alt="">
+							<img src="{{ secure_asset('uploads/avatars/')}}{{ Auth::user()->photo}}" alt="">
 							<div class="change-photo-btn">
 								<div class="photoUpload">
 								    <span><i class="fa fa-upload"></i> Charger une photo</span>

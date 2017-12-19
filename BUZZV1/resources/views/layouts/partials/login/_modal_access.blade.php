@@ -2,7 +2,7 @@
 <div id="sign-in-dialog" class="zoom-anim-dialog mfp-hide">
 
   <div class="small-dialog-header">
-    <img src="{{ asset('images/logo.png') }}" alt="">
+    <img src="{{ secure_asset('images/logo.png') }}" alt="">
   </div>
   <!--Tabs -->
   <div class="sign-in-form style-1">
