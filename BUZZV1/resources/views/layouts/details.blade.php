@@ -54,7 +54,7 @@
 
 
 <!-- Maps -->
-<script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyAoAs-fbvnTAyV7WQG5gDpowPSC25oKv7M"></script>
+<script type="text/javascript" src="https://maps.google.com/maps/api/js?key=AIzaSyAoAs-fbvnTAyV7WQG5gDpowPSC25oKv7M"></script>
 <script type="text/javascript" src="{{ asset('js/infobox.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/markerclusterer.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/map.js') }}"></script>
