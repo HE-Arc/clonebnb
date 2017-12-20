@@ -5,7 +5,7 @@ Buzz est une plateforme payante de réservation et de location d'objets en toute
 ## Installation   
 `$ composer install`  
 `$ composer update`  
-`$ créer une nouvelle base de données`   
+créer une nouvelle base de données    
 `$ copier le fichier .env.example en .env et modifier DB_DATABASE, DB_USERNAME et DB_PASSWORD`   
 `$ php artisan key:generate`   
 `$ php artisan migrate`  
